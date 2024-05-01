@@ -1,0 +1,28 @@
+# Installation de KIAUH (Klipper Installation And Update Helper)
+
+Un ensemble de scripts permet une installation facilitée des éléments composants l'«écosysteme Klipper». Grâce à celui-ci, il est possible d'installer, mettre à jour, supprimer des éléments de la suite.
+
+Il suffit juste de récupérer le dépôt Github de cet outil puis d'exécuter son script shell.
+
+1. installer le paquer "git"
+```
+sudo apt update && sudo apt install git -y
+```
+2. cloner le dépôt
+```
+cd && git clone https://github.com/dw-0/kiauh.git
+```
+3. Exécuter le script
+```
+~/kiauh/kiauh.sh
+```
+
+La première fenêtre donne accès au menu principal de KIAUH
+![](../Images/rufus-2.jpg)
+
+Installer dans l'ordre :
+1. Klipper
+2. Moonraker
+3. Mainsail
+4. Fluidd (port 10088)
+
