@@ -8,18 +8,18 @@ Matériel:
 
 Logiciels:
 - [Rufus](https://rufus.ie/fr/), [BalenaEtcher](https://etcher.balena.io/), [Raspberry Imager](https://www.raspberrypi.com/software/) (au choix)
-- [image récente du système Armbian](https://github.com/redrathnure/armbian-mkspi/releases/tag/mkspi%2F0.3.4-24.2.0-trunk) (j'utilise la dernière version stable (Bookworm (24.2.0), noyau (6.6.17) )
+- [image récente du système Armbian](https://github.com/redrathnure/armbian-mkspi/releases/tag/mkspi%2F0.3.4-24.2.0-trunk) (au moment de la rédaction de  cette documentation (20240402), j'utilise cette version (Bookworm (24.2.0), noyau (6.6.17) )
 - accès SSH ([Putty](https://putty.org/), [MobaXterm](https://mobaxterm.mobatek.net/), …)
 - transfert de fichier ([WinSCP](https://winscp.net/eng/index.php)
 - archiveur de fichiers [7zip](https://7-zip.org/) 
 
 ## Préalable
 
-**Le système d'exploitation va être complètement remplacé par un plus récent**, il est donc nécessaire de sauvegarder la totalité du dossier ~/klipper_config (contient les fichiers de configuration) et ~/gcode_files (contient vos G-codes).
+**Le système d'exploitation sera complètement remplacé par un plus récent**, il est donc nécessaire de sauvegarder la totalité du dossier ~/klipper_config (contient les fichiers de configuration) et ~/gcode_files (contient les G-codes).
 
 - éteindre l'imprimante et débrancher le câble d'alimentation
 - accéder à l'arrière pour démonter la plaque donnant accès à la partie électronique
-- dévisser les deux vis maintenant l'eMMC sur la carte et extraire celle-ci (on peut évidemment se mettre à la terre avant de le faire ;-) ). Qidi met à disposition [cette vidéo](https://drive.google.com/drive/folders/1EPYKbYz4ecUIf17z5wtP-jDAOPeDkXJP) de la procédure.
+- dévisser les deux vis maintenant l'eMMC sur la carte et extraire celle-ci (on peut évidemment se mettre à la terre avant de le faire :smiley: ). Qidi met à disposition [cette vidéo](https://drive.google.com/drive/folders/1EPYKbYz4ecUIf17z5wtP-jDAOPeDkXJP) montrant la procédure.
 
 
 ## Installation Armbian Bookworm
@@ -55,6 +55,7 @@ Retirer le lecteur contenant l'eMMC du PC via la procédure standard pour l'éje
 - démarrer le logiciel SSH (Putty, SSH natif, Mobaxterm, …) et accéder à l'imprimante via son adresse IP
 - l'accès se fait en tant qu'utilisateur "root", mot de passe "1234". La première connexion lance le setup initial du systéme Armbian (changer le mot de passe "root", choix de la zone horaire, choix du shell entre autre)
 - créer un nouvel utilisateur "mks", mot de passe "makerbase", par exemple, confirmer par ENTRÉE
+- la zone horaire (timezone) ayant été détectée (Europe/Paris), l'installateur propose de générer les locales. Plusieurs choix étant possible, je sélectionne le 4 (fr_FR@UTF8)
 - à l'aide du logiciel SSH, ouvrir une nouvelle session en tant que le nouvel utilisateur créé ( "mks" )
 - mettre à jour le système :
 
@@ -71,6 +72,6 @@ Confirmer la mise à jour (manuellement) ou ajouter le paramètre "-y" à la sui
 sudo apt upgrade -y
 ```
 
-[La documentation suivante](./kiaug.md) permet de poursuivre l'installation de l'écosystème Klipper
+[La documentation suivante](./installation-ecosysteme-klipper.md) permet de poursuivre l'installation de l'écosystème Klipper
 
 :smiley:
