@@ -2,9 +2,9 @@
 
 Un ensemble de scripts permet une installation facilitée des éléments composants l'«écosysteme Klipper». Grâce à celui-ci, il est possible d'installer, mettre à jour, supprimer des éléments de la suite.
 
-Il suffit juste de récupérer le dépôt Github de cet outil puis d'exécuter son script shell.
+Il suffit simplement de récupérer le dépôt Github de cet outil puis d'exécuter son script shell.
 
-1. installer le paquer "git"
+1. installer le paquet "git"
 ```
 sudo apt update && sudo apt install git -y
 ```
