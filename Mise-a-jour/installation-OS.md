@@ -1,5 +1,11 @@
 # Installation d'un système plus à jour
 
+## IMPORTANT
+
+En suivant ces instructions, vous perdez la garantie de Qidi Tech. L'écran tactile ne sera plus utilisable, le Wifi non plus à moins de remplacer la clé Wifi Tenda par une autre supportée par le système d'exploitation (Armbian).
+Les manipulations décrites ne s'adressent pas à un débutant mais plutôt à un utilisateur ayant un peu d'expérience avec Linux et sa ligne de commandes.
+En gros, je n'assume aucune responsabilité en cas de mauvaises manipulations. Ce qui a fonctionné pour moi peut très bien s'avérer un cauchemar pour d'autres… comme disent les anglo-saxons YMMV.
+
 ## Prérequis
 
 Matériel:
@@ -10,7 +16,7 @@ Logiciels:
 - [Rufus](https://rufus.ie/fr/), [BalenaEtcher](https://etcher.balena.io/), [Raspberry Imager](https://www.raspberrypi.com/software/) (au choix)
 - [image récente du système Armbian](https://github.com/redrathnure/armbian-mkspi/releases/tag/mkspi%2F0.3.4-24.2.0-trunk) (au moment de la rédaction de  cette documentation (20240402), j'utilise cette version (Bookworm (24.2.0), noyau (6.6.17) )
 - accès SSH ([Putty](https://putty.org/), [MobaXterm](https://mobaxterm.mobatek.net/), …)
-- transfert de fichier ([WinSCP](https://winscp.net/eng/index.php)
+- transfert de fichier ([WinSCP](https://winscp.net/eng/index.php) )
 - archiveur de fichiers [7zip](https://7-zip.org/) 
 
 ## Préalable
