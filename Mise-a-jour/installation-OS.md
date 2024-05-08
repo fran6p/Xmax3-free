@@ -8,16 +8,17 @@ Python cohabite en deux versions (v2 et v3), la v2 n'est plus supportée depuis 
 
 Le Klipper (klippy) proposé par Qidi Tech a été installé avec Python2. Klipper préconise actuellement de construire l'environnement virtuel (klippy) en utilisant Python en version 3.
 
-## IMPORTANT
-
-    En suivant ces instructions, vous perdrez la garantie de Qidi Tech
+> [!CAUTION]
+> En suivant ces instructions, vous perdrez la garantie de Qidi Tech
 
 Au moins deux éléments matériels ne seront plus directement utilisables :
 - l'actuel écran tactile,
 - l'accès réseau Wifi non plus à moins de remplacer la clé Wifi Tenda par une autre supportée par l'OS (Armbian).
 
+> [!WARNING]
 > Les manipulations décrites ne s'adressent pas à un débutant mais plutôt à un utilisateur ayant un peu d'expérience avec Linux et sa ligne de commandes.
-En gros, je n'assume aucune responsabilité en cas de mauvaises manipulations. Ce qui a fonctionné pour moi peut très bien s'avérer un cauchemar pour d'autres… comme disent les anglo-saxons YMMV.
+>
+> En gros, je n'assume aucune responsabilité en cas de mauvaises manipulations. Ce qui a fonctionné pour moi peut très bien s'avérer un cauchemar pour d'autres… comme disent les anglo-saxons YMMV.
 
 ## Prérequis
 
