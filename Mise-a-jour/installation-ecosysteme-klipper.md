@@ -455,7 +455,8 @@ Created symlink /etc/systemd/system/multi-user.target.wants/klipper.service → 
 
 Klipper est installé
 
-<details><sumarry>Klipper</sumarry>
+<details>
+ <sumarry>Klipper</sumarry>
  
  ![](../Images/kiauh-klipper-installed.jpg)
  
@@ -792,7 +793,8 @@ Created symlink /etc/systemd/system/multi-user.target.wants/moonraker.service �
 
 Moonraker est installé
 
-<details><sumarry>Moonraker</sumarry>
+<details>
+ <sumarry>Moonraker</sumarry>
  
  ![](../Images/kiauh-moonraker-installed.jpg)
  
