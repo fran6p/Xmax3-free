@@ -75,6 +75,8 @@ Une fois terminé, retirer le lecteur contenant l'eMMC via la procédure standar
 - réinsérer l'eMMC sur la carte contrôleur de l'imprimante (voir la vidéo citée plus haut)
 - brancher le câble d'alimentation et **le câble Ethernet** (rappel: la clé Wifi Tenda n'est plus fonctionnelle)
 - allumer l'imprimante (le système démarre, une adresse IP est attribuée (Box internet, routeur)
+  - le firmware indépendant de l'écran ne pouvant plus communiquer avec le système (absence des «logiciels» le permettant), l'écran affiche ceci :
+  - ![Écran en erreur!!!](../Images/BSOD-screen.jpg)
 - récupérer l'adresse IP par le moyen qui convient (Box internet, routeur, logiciel type [AngryIP](https://angryip.org/)
 - démarrer le logiciel SSH (Putty, SSH natif, Mobaxterm, …) et accéder à l'imprimante via son adresse IP
 - le premier accès se fait en tant qu'utilisateur "**root**", mot de passe "**1234**". Cette première connexion lance le setup initial du systéme Armbian (changer le mot de passe "root", choisir la zone horaire, choisir le shell entre autre)
