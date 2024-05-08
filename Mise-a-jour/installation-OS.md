@@ -26,20 +26,22 @@ Matériel:
 
 - Lecteur eMMC (si achat de l'eMMC de 32Gio de Qidi, un adaptateur μSD est inclus). Je préfère [cet adaptateur là](https://www.aliexpress.com/item/1005005614719377.html).
 
-Logiciels (*à télécharger si nécessaire* (⬇️)) :
-- ⬇️ [Rufus](https://rufus.ie/fr/) ou ⬇️ [BalenaEtcher](https://etcher.balena.io/) ou encore ⬇️ [Raspberry Imager](https://www.raspberrypi.com/software/) (au choix)
-- ⬇️ [image récente du système Armbian](https://github.com/redrathnure/armbian-mkspi/releases/tag/mkspi%2F0.3.4-24.2.0-trunk) (au moment de la rédaction de  cette documentation (20240402), j'utilise cette version (Bookworm (24.2.0), noyau (6.6.17) )
-- accès SSH (⬇️ [Putty](https://putty.org/), ⬇️ [MobaXterm](https://mobaxterm.mobatek.net/), …)
-- transfert de fichier (⬇️ [WinSCP](https://winscp.net/eng/index.php) )
-- archiveur de fichiers ⬇️ [7zip](https://7-zip.org/) 
+Logiciels (*à télécharger si nécessaire* (⏬)) :
+- ⏬ [Rufus](https://rufus.ie/fr/) ou ⏬ [BalenaEtcher](https://etcher.balena.io/) ou encore ⏬ [Raspberry Imager](https://www.raspberrypi.com/software/) (au choix)
+- ⏬ [image récente du système Armbian](https://github.com/redrathnure/armbian-mkspi/releases/tag/mkspi%2F0.3.4-24.2.0-trunk) (au moment de la rédaction de  cette documentation (20240402), j'utilise cette version (Bookworm (24.2.0), noyau (6.6.17) )
+- accès SSH (⏬ [Putty](https://putty.org/), ⏬ [MobaXterm](https://mobaxterm.mobatek.net/), …)
+- transfert de fichier (⏬ [WinSCP](https://winscp.net/eng/index.php) )
+- archiveur de fichiers ⏬ [7zip](https://7-zip.org/) 
 
 ## Préalable
 
-    Le système d'exploitation sera complètement remplacé par un plus récent
+> [!IMPORTANT]
+> Le système d'exploitation sera complètement remplacé par un plus récent
    
-Avant toute chose, il est préférable d'avoir réalisé une sauvegarde de la totalité des dossiers:
-- ~/klipper_config (contient les fichiers de configuration)
-- ~/gcode_files (contient les G-codes).
+>[!TIP]
+> Avant toute chose, il est préférable d'avoir réalisé une sauvegarde de la totalité des dossiers:
+> - ~/klipper_config (contient les fichiers de configuration)
+> - ~/gcode_files (contient les G-codes).
 
 Une fois ces précautions prises :
 - éteindre l'imprimante et débrancher le câble d'alimentation
@@ -68,35 +70,34 @@ La procédure dure un certain temps (moins de dix minutes), la progression de la
 
 ![](../Images/rufus-4.jpg)
 
-Une fois terminé, le nom du périphérique est affiché (armbi_boot)
-
-![](../Images/rufus-5.jpg)
-
-Retirer le lecteur contenant l'eMMC via la procédure standard pour l'éjecter proprement du PC 
+Une fois terminé, retirer le lecteur contenant l'eMMC via la procédure standard pour l'éjecter proprement du PC 
 
 - réinsérer l'eMMC sur la carte contrôleur de l'imprimante (voir la vidéo citée plus haut)
 - brancher le câble d'alimentation et **le câble Ethernet** (rappel: la clé Wifi Tenda n'est plus fonctionnelle)
 - allumer l'imprimante (le système démarre, une adresse IP est attribuée (Box internet, routeur)
 - récupérer l'adresse IP par le moyen qui convient (Box internet, routeur, logiciel type [AngryIP](https://angryip.org/)
 - démarrer le logiciel SSH (Putty, SSH natif, Mobaxterm, …) et accéder à l'imprimante via son adresse IP
-- le premier accès se fait en tant qu'utilisateur "root", mot de passe "1234". La première connexion lance le setup initial du systéme Armbian (changer le mot de passe "root", choix de la zone horaire, choix du shell entre autre)
-- créer un nouvel utilisateur "mks", mot de passe "makerbase", par exemple, confirmer par ENTRÉE
+- le premier accès se fait en tant qu'utilisateur "**root**", mot de passe "**1234**". Cette première connexion lance le setup initial du systéme Armbian (changer le mot de passe "root", choisir la zone horaire, choisir le shell entre autre)
+- ensuite il est demandé de créer un nouvel utilisateur ( par exemple: "**mks**", mot de passe "***makerbase***" ), confirmer par ENTRÉE
 - la zone horaire (timezone) ayant été détectée (Europe/Paris), l'installateur propose de générer les locales. Plusieurs choix étant possible, je sélectionne le 4 (fr_FR.UTF-8)
-- à l'aide du logiciel SSH, ouvrir une nouvelle session en tant que le nouvel utilisateur créé ( "mks" )
+- à l'aide du logiciel SSH, ouvrir une nouvelle session en tant que le nouvel utilisateur créé ( "**mks**" )
 - mettre à jour le système :
 
-``` title="SSG Command Prompt"
+```sh
 sudo apt update
 sudo apt upgrade
 ```
 ou en une seule ligne
-```
+```sh
 sudo apt update && sudo apt upgrade
 ```
 Confirmer la mise à jour (manuellement) ou ajouter le paramètre "-y" à la suite de "upgrade" 
-```
+```sh
 sudo apt upgrade -y
 ```
+
+Le système de base est installé sur l'eMMC, il occupe moins de 2Gio sur la capacité totale de 8Gio
+***df -H***
 
 [La documentation suivante](./installation-ecosysteme-klipper.md) permet de poursuivre l'installation de l'écosystème Klipper
 
