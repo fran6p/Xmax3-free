@@ -54,7 +54,7 @@ Nombre d'instances de Klipper (plusieurs imprimantes)
 ![](../Images/kiauh-installation-klipper-python3-une-instance.jpg)
 
 <details>
-  <summary>Détails de l'installation</summary>
+  <summary>(Détails de l'installation)</summary>
     
 ```
 ###### Installing single Klipper instance ...
@@ -456,7 +456,7 @@ Created symlink /etc/systemd/system/multi-user.target.wants/klipper.service → 
 Klipper est installé
 
 <details>
- <sumarry>Klipper</sumarry>
+ <sumarry>(Klipper)</sumarry>
  
  ![](../Images/kiauh-klipper-installed.jpg)
  
@@ -469,7 +469,7 @@ Klipper est installé
  Moonraker détecte combien d'instances Klipper ont été installées (ici, une seule) puis prépare son environnement.
 
 <details>
- <summary>Détails de l'installation</summary>
+ <summary>(Détails de l'installation)</summary>
 
 ```
 /=======================================================\
@@ -794,7 +794,7 @@ Created symlink /etc/systemd/system/multi-user.target.wants/moonraker.service �
 Moonraker est installé
 
 <details>
- <sumarry>Moonraker</sumarry>
+ <sumarry>(Moonraker)</sumarry>
  
  ![](../Images/kiauh-moonraker-installed.jpg)
  
@@ -807,7 +807,7 @@ Interfaces Web permettant l'accès via un navigateur Internet à Klipper via les
 On peut n'en installer qu'une des deux, l'installation de la première, par défaut, communiquera avec le port HTTP standard (80). Pour la seconde, il faudra fournir un autre numéro de port, par exemple 10088, celui utilisé par Qidi et son trancheur Qidislicer.
 
 <details>
- <sumarry>Détails de l'installation de Mainsail</sumarry>
+ <sumarry>(Détails de l'installation de Mainsail)</sumarry>
 
 ```
 /=======================================================\
@@ -956,7 +956,7 @@ Résolution des deltas: 100% (52/52), fait.
 </details>
 
 <details>
- <sumarry>Détails de l'installation de Fluidd</sumarry>
+ <sumarry>(Détails de l'installation de Fluidd)</sumarry>
 
 ```
 /=======================================================\
@@ -1073,7 +1073,7 @@ fluidd.zip          100%[===================>]   3,51M  9,63MB/s    ds 0,4s
 
 
 <details>
- <sumarry>Détails de l'installation de Crowsnest</sumarry>
+ <sumarry>(Détails de l'installation de Crowsnest)</sumarry>
 
 ```
 /=======================================================\
@@ -1345,7 +1345,7 @@ Goodbye ...
 
 
 <details>
- <summary>Installation de Gcode shell command</summary>
+ <summary>(Installation de Gcode shell command)</summary>
  
 ``` 
 /=======================================================\
@@ -1429,7 +1429,18 @@ tmpfs              456M     16K  456M   1% /tmp
 tmpfs               92M       0   92M   0% /run/user/1000
 ```
 
-L'accès à l'imprimante via Fluidd et/ou Mainsail affiche des messages d'erreurs. Le firmware Klipper n'est à jour sur aucun des MCUs. Klipper est désomrais à jour en version 0.12.x alors que les MCUs sont encore en version 0.10.x.
+L'accès à l'imprimante via Fluidd et/ou Mainsail affiche des messages d'erreurs. 
+![Erreurs Mainsail](./Images/mainsail-error-no-printercfg.jpg)
+
+![Erreurs Fluidd](./Images/fluidd-error-no-printercfg.jpg)
+
+Le fichier de configuration, `printer.cfg` est minimaliste, Une fois remplacé par celui de Qiditech, les erreurs sont plus précises:
+![Erreurs Mainsail](./Images/mainsail-error-versions-firmwares.jpg)
+
+![Erreurs Mainsail](./Images/fluidd-error-versions-firmwares.jpg)
+
+
+Le firmware Klipper n'est à jour sur aucun des MCUs. Klipper est désomrais à jour en version 0.12.x alors que les MCUs sont encore en version 0.10.x.
 
 Dernière étape décrite [ici](./firmware-mcus.md).
 
