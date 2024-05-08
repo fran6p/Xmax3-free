@@ -2,8 +2,11 @@
 
 ## IMPORTANT
 
-En suivant ces instructions, vous perdez la garantie de Qidi Tech. L'écran tactile ne sera plus utilisable, le Wifi non plus à moins de remplacer la clé Wifi Tenda par une autre supportée par le système d'exploitation (Armbian).
-Les manipulations décrites ne s'adressent pas à un débutant mais plutôt à un utilisateur ayant un peu d'expérience avec Linux et sa ligne de commandes.
+**En suivant ces instructions, vous perdez la garantie de Qidi Tech**:
+- l'actuel écran tactile ne sera plus utilisable,
+- le Wifi non plus à moins de remplacer la clé Wifi Tenda par une autre supportée par le système d'exploitation (Armbian).
+
+> Les manipulations décrites ne s'adressent pas à un débutant mais plutôt à un utilisateur ayant un peu d'expérience avec Linux et sa ligne de commandes.
 En gros, je n'assume aucune responsabilité en cas de mauvaises manipulations. Ce qui a fonctionné pour moi peut très bien s'avérer un cauchemar pour d'autres… comme disent les anglo-saxons YMMV.
 
 ## Prérequis
