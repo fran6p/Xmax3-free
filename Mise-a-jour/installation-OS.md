@@ -2,9 +2,11 @@
 
 ## IMPORTANT
 
-**En suivant ces instructions, vous perdez la garantie de Qidi Tech**:
-- l'actuel écran tactile ne sera plus utilisable,
-- le Wifi non plus à moins de remplacer la clé Wifi Tenda par une autre supportée par le système d'exploitation (Armbian).
+**En suivant ces instructions, vous perdez la garantie de Qidi Tech**
+
+Au moins deux éléments matériels ne seront plus directement utilisables :
+- l'actuel écran tactile,
+- l'accès réseau Wifi non plus à moins de remplacer la clé Wifi Tenda par une autre supportée par l'OS (Armbian).
 
 > Les manipulations décrites ne s'adressent pas à un débutant mais plutôt à un utilisateur ayant un peu d'expérience avec Linux et sa ligne de commandes.
 En gros, je n'assume aucune responsabilité en cas de mauvaises manipulations. Ce qui a fonctionné pour moi peut très bien s'avérer un cauchemar pour d'autres… comme disent les anglo-saxons YMMV.
@@ -34,7 +36,7 @@ Logiciels:
 ## Installation Armbian Bookworm
 
 - connecter l'eMMC à l'aide de son adaptateur sur le PC de travail
-- démarrer Rufus pour flasher l'image Armbian précédemment téléchargée (au moment de la rédaction : Armbian-unofficial_24.2.0-trunk_Mkspi_bookworm_current_6.6.17.img.xz) puis décompressée via 7zip pour obtenir le fichier d'extension .img (Armbian-unofficial_24.2.0-trunk_Mkspi_bookworm_current_6.6.17.img)
+- démarrer Rufus pour flasher l'image Armbian précédemment téléchargée (***au moment de la rédaction : Armbian-unofficial_24.2.0-trunk_Mkspi_bookworm_current_6.6.17.img.xz***) puis décompressée via 7zip pour obtenir le fichier d'extension .img (Armbian-unofficial_24.2.0-trunk_Mkspi_bookworm_current_6.6.17.img)
 
 ![](../Images/rufus-1.jpg)
 
@@ -55,14 +57,14 @@ Une fois terminé, le nom du périphérique est affiché (armbi_boot)
 
 ![](../Images/rufus-5.jpg)
 
-Retirer le lecteur contenant l'eMMC du PC via la procédure standard pour l'éjecter proprement
+Retirer le lecteur contenant l'eMMC via la procédure standard pour l'éjecter proprement du PC 
 
 - réinsérer l'eMMC sur la carte contrôleur de l'imprimante (voir la vidéo citée plus haut)
-- brancher le câble d'alimentation et le câble Ethernet
+- brancher le câble d'alimentation et **le câble Ethernet** (rappel: la clé Wifi Tenda n'est plus fonctionnelle)
 - allumer l'imprimante (le système démarre, une adresse IP est attribuée (Box internet, routeur)
 - récupérer l'adresse IP par le moyen qui convient (Box internet, routeur, logiciel type [AngryIP](https://angryip.org/)
 - démarrer le logiciel SSH (Putty, SSH natif, Mobaxterm, …) et accéder à l'imprimante via son adresse IP
-- l'accès se fait en tant qu'utilisateur "root", mot de passe "1234". La première connexion lance le setup initial du systéme Armbian (changer le mot de passe "root", choix de la zone horaire, choix du shell entre autre)
+- le premier accès se fait en tant qu'utilisateur "root", mot de passe "1234". La première connexion lance le setup initial du systéme Armbian (changer le mot de passe "root", choix de la zone horaire, choix du shell entre autre)
 - créer un nouvel utilisateur "mks", mot de passe "makerbase", par exemple, confirmer par ENTRÉE
 - la zone horaire (timezone) ayant été détectée (Europe/Paris), l'installateur propose de générer les locales. Plusieurs choix étant possible, je sélectionne le 4 (fr_FR.UTF-8)
 - à l'aide du logiciel SSH, ouvrir une nouvelle session en tant que le nouvel utilisateur créé ( "mks" )
