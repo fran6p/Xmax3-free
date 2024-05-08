@@ -13,7 +13,8 @@ sudo apt update && sudo apt install git -y
 cd && git clone https://github.com/dw-0/kiauh.git
 ```
 <details>
- <summary>(Détails de l'installation)</summary>
+ 
+ <summary>Détails de l'installation</summary>
  
 ```
 mks@mkspi:~$ cd && git clone https://github.com/dw-0/kiauh.git
@@ -54,7 +55,8 @@ Nombre d'instances de Klipper (plusieurs imprimantes)
 ![](../Images/kiauh-installation-klipper-python3-une-instance.jpg)
 
 <details>
-  <summary>(Détails de l'installation)</summary>
+ 
+  <summary>Détails de l'installation</summary>
     
 ```
 ###### Installing single Klipper instance ...
@@ -456,7 +458,8 @@ Created symlink /etc/systemd/system/multi-user.target.wants/klipper.service → 
 Klipper est installé
 
 <details>
- <sumarry>(Klipper)</sumarry>
+ 
+ <sumarry>Klipper</sumarry>
  
  ![](../Images/kiauh-klipper-installed.jpg)
  
@@ -469,7 +472,8 @@ Klipper est installé
  Moonraker détecte combien d'instances Klipper ont été installées (ici, une seule) puis prépare son environnement.
 
 <details>
- <summary>(Détails de l'installation)</summary>
+ 
+ <summary>Détails de l'installation</summary>
 
 ```
 /=======================================================\
@@ -794,7 +798,8 @@ Created symlink /etc/systemd/system/multi-user.target.wants/moonraker.service �
 Moonraker est installé
 
 <details>
- <sumarry>(Moonraker)</sumarry>
+ 
+ <sumarry>Moonraker</sumarry>
  
  ![](../Images/kiauh-moonraker-installed.jpg)
  
@@ -807,7 +812,8 @@ Interfaces Web permettant l'accès via un navigateur Internet à Klipper via les
 On peut n'en installer qu'une des deux, l'installation de la première, par défaut, communiquera avec le port HTTP standard (80). Pour la seconde, il faudra fournir un autre numéro de port, par exemple 10088, celui utilisé par Qidi et son trancheur Qidislicer.
 
 <details>
- <sumarry>(Détails de l'installation de Mainsail)</sumarry>
+ 
+ <sumarry>Détails de l'installation de Mainsail</sumarry>
 
 ```
 /=======================================================\
@@ -956,7 +962,8 @@ Résolution des deltas: 100% (52/52), fait.
 </details>
 
 <details>
- <sumarry>(Détails de l'installation de Fluidd)</sumarry>
+ 
+ <sumarry>Détails de l'installation de Fluidd</sumarry>
 
 ```
 /=======================================================\
@@ -1073,7 +1080,8 @@ fluidd.zip          100%[===================>]   3,51M  9,63MB/s    ds 0,4s
 
 
 <details>
- <sumarry>(Détails de l'installation de Crowsnest)</sumarry>
+ 
+ <sumarry>Détails de l'installation de Crowsnest</sumarry>
 
 ```
 /=======================================================\
@@ -1345,7 +1353,8 @@ Goodbye ...
 
 
 <details>
- <summary>(Installation de Gcode shell command)</summary>
+ 
+ <summary>Installation de Gcode shell command</summary>
  
 ``` 
 /=======================================================\
@@ -1394,7 +1403,8 @@ Goodbye ...
 
 </details>
 
-Le menu Update de KIAUH affiche les versions installées et les dernières en date sur les dépôts respectifs. Si besoin, on peut réaliser les miese à jour.
+> [!NOTE]
+> Le menu Update de KIAUH affiche les versions installées et les dernières en date sur les dépôts respectifs. Si besoin, on peut réaliser les mises à jour.
 ![KIAUH Update Menu](../Images/kiauh-update-menu.jpg)
 
 A la fin de ces installations, l'écosystème Klipper est prêt. L'eMMC de 8Gio est occupée à plus de 50%, il reste encore plus de 3Gio disponibles (avec le système originel, on disposait de moins de 1Gio).
