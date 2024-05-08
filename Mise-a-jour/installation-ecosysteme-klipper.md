@@ -18,7 +18,7 @@ cd && git clone https://github.com/dw-0/kiauh.git
 ```
 
 La première fenêtre donne accès au menu principal de KIAUH
-![](../Images/rufus-2.jpg)
+![](../Images/kiauh-installation-vierge.jpg)
 
 Installer dans l'ordre :
 1. Klipper
