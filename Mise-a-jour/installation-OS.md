@@ -4,9 +4,9 @@
 
 La distribution Linux installée d'origine est une Armbian en version Buster, version qui n'est plus supportée (la mise à jour du système remonte des erreurs, Armbian ayant supprimé depuis quleques mois ses dépôts, seuls restent disponibles les dépôts Debian).
 
-Python cohabite en deux versions (v2 et v3), la v2 n'est plus supportée depuis quelques années, la v3 reste bloqué en version 3.7.
+Python cohabite en deux versions (v2 et v3), la v2 n'est plus supportée depuis quelques années, la v3 reste bloquée en version 3.7.
 
-La version de Klipper installée par Qidi Tech a été faite avec Python2 alors que les versions actuelles et officielles de Klipper recommandent plutôt la version 3 de Python.
+Le Klipper (klippy) proposé par Qidi Tech a été installé avec Python2. Klipper préconise actuellement de construire l'environnement virtuel (klippy) en utilisant Python en version 3.
 
 ## IMPORTANT
 
