@@ -70,7 +70,7 @@ Retirer le lecteur contenant l'eMMC via la procédure standard pour l'éjecter p
 - à l'aide du logiciel SSH, ouvrir une nouvelle session en tant que le nouvel utilisateur créé ( "mks" )
 - mettre à jour le système :
 
-```
+``` title="SSG Command Prompt"
 sudo apt update
 sudo apt upgrade
 ```
