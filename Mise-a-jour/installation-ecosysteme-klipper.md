@@ -14,7 +14,8 @@ cd && git clone https://github.com/dw-0/kiauh.git
 ```
 <details>
  <summary>(Détails de l'installation)</summary>
- ```
+ 
+```
 mks@mkspi:~$ cd && git clone https://github.com/dw-0/kiauh.git
 Clonage dans 'kiauh'...
 remote: Enumerating objects: 5584, done.
@@ -23,9 +24,10 @@ remote: Compressing objects: 100% (1673/1673), done.
 remote: Total 5584 (delta 4043), reused 5274 (delta 3879), pack-reused 0
 Réception d'objets: 100% (5584/5584), 1.46 Mio | 4.99 Mio/s, fait.
 Résolution des deltas: 100% (4043/4043), fait.
- ```
+```
   
 </details>
+
 3. Exécuter le script
 ```
 ~/kiauh/kiauh.sh
