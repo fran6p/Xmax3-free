@@ -463,4 +463,1217 @@ Klipper est installé
 
  ### MOONRAKER
 
+ Choix de l'option (2) pour installer Moonraker
+
+ Moonraker détecte combien d'instances Klipper ont été installées (ici, une seule) puis prépare son environnement.
+
+<details>
+ <summary>(installation détaillée)</summary>
+
+```
+/=======================================================\
+|     ~~~~~~~~~~~~~~~~~ [ KIAUH ] ~~~~~~~~~~~~~~~~~     |
+|        Klipper Installation And Update Helper         |
+|     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     |
+\=======================================================/
+
+###### Initializing Moonraker installation ...
+[✓ OK] Klipper installation found!
+
+###### Install Moonraker? (Y/n):
+   [➔] Yes
+
+###### Installing Moonraker ...
+
+###### Checking for the following dependencies:
+● git
+● wget
+● curl
+● unzip
+● dfu-util
+● virtualenv
+● libjpeg-dev
+● zlib1g-dev
+
+###### Installing the following dependencies:
+● libjpeg-dev
+
+
+###### Installing packages...
+Lecture des listes de paquets... Fait
+Construction de l'arbre des dépendances... Fait
+Lecture des informations d'état... Fait
+Les paquets supplémentaires suivants seront installés :
+  libjpeg62-turbo libjpeg62-turbo-dev
+Les NOUVEAUX paquets suivants seront installés :
+  libjpeg-dev libjpeg62-turbo libjpeg62-turbo-dev
+0 mis à jour, 3 nouvellement installés, 0 à enlever et 8 non mis à jour.
+Il est nécessaire de prendre 535 ko dans les archives.
+Après cette opération, 1381 ko d'espace disque supplémentaires seront utilisés.
+Réception de :1 http://deb.debian.org/debian bookworm/main arm64 libjpeg62-turbo arm64 1:2.1.5-2 [171 kB]
+Réception de :2 http://deb.debian.org/debian bookworm/main arm64 libjpeg62-turbo-dev arm64 1:2.1.5-2 [292 kB]
+Réception de :3 http://deb.debian.org/debian bookworm/main arm64 libjpeg-dev arm64 1:2.1.5-2 [71,8 kB]
+535 ko réceptionnés en 0s (2493 ko/s)
+Sélection du paquet libjpeg62-turbo:arm64 précédemment désélectionné.
+(Lecture de la base de données... 74863 fichiers et répertoires déjà installés.)
+Préparation du dépaquetage de .../libjpeg62-turbo_1%3a2.1.5-2_arm64.deb ...
+Dépaquetage de libjpeg62-turbo:arm64 (1:2.1.5-2) ...
+Sélection du paquet libjpeg62-turbo-dev:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../libjpeg62-turbo-dev_1%3a2.1.5-2_arm64.deb ...
+Dépaquetage de libjpeg62-turbo-dev:arm64 (1:2.1.5-2) ...
+Sélection du paquet libjpeg-dev:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../libjpeg-dev_1%3a2.1.5-2_arm64.deb ...
+Dépaquetage de libjpeg-dev:arm64 (1:2.1.5-2) ...
+Paramétrage de libjpeg62-turbo:arm64 (1:2.1.5-2) ...
+Paramétrage de libjpeg62-turbo-dev:arm64 (1:2.1.5-2) ...
+Paramétrage de libjpeg-dev:arm64 (1:2.1.5-2) ...
+Traitement des actions différées (« triggers ») pour libc-bin (2.36-9+deb12u6) ...
+[✓ OK] Dependencies packages installed!
+
+###### Cloning Moonraker from https://github.com/Arksine/moonraker.git ...
+Clonage dans '/home/mks/moonraker'...
+remote: Enumerating objects: 10747, done.
+remote: Counting objects: 100% (3772/3772), done.
+remote: Compressing objects: 100% (463/463), done.
+remote: Total 10747 (delta 3460), reused 3527 (delta 3307), pack-reused 6975
+Réception d'objets: 100% (10747/10747), 4.02 Mio | 4.70 Mio/s, fait.
+Résolution des deltas: 100% (7995/7995), fait.
+
+###### Installing dependencies ...
+
+###### Reading dependencies...
+
+python3-virtualenv
+python3-dev
+liblmdb-dev
+libopenjp2-7
+libsodium-dev
+zlib1g-dev
+libjpeg-dev
+packagekit
+wireless-tools
+curl
+
+###### Installing packages...
+Lecture des listes de paquets... Fait
+Construction de l'arbre des dépendances... Fait
+Lecture des informations d'état... Fait
+python3-virtualenv est déjà la version la plus récente (20.17.1+ds-1).
+python3-virtualenv passé en « installé manuellement ».
+python3-dev est déjà la version la plus récente (3.11.2-1+b1).
+zlib1g-dev est déjà la version la plus récente (1:1.2.13.dfsg-1).
+zlib1g-dev passé en « installé manuellement ».
+libjpeg-dev est déjà la version la plus récente (1:2.1.5-2).
+packagekit est déjà la version la plus récente (1.2.6-5).
+packagekit passé en « installé manuellement ».
+wireless-tools est déjà la version la plus récente (30~pre9-14).
+curl est déjà la version la plus récente (7.88.1-10+deb12u5).
+Les paquets supplémentaires suivants seront installés :
+  liblmdb0 libsodium23
+Paquets recommandés :
+  lmdb-doc
+Les NOUVEAUX paquets suivants seront installés :
+  liblmdb-dev liblmdb0 libopenjp2-7 libsodium-dev libsodium23
+0 mis à jour, 5 nouvellement installés, 0 à enlever et 8 non mis à jour.
+Il est nécessaire de prendre 536 ko dans les archives.
+Après cette opération, 1757 ko d'espace disque supplémentaires seront utilisés.
+Réception de :1 http://deb.debian.org/debian bookworm/main arm64 liblmdb0 arm64 0.9.24-1 [43,7 kB]
+Réception de :2 http://deb.debian.org/debian bookworm/main arm64 liblmdb-dev arm64 0.9.24-1 [60,5 kB]
+Réception de :3 http://deb.debian.org/debian bookworm/main arm64 libopenjp2-7 arm64 2.5.0-2 [175 kB]
+Réception de :4 http://deb.debian.org/debian bookworm/main arm64 libsodium23 arm64 1.0.18-1 [119 kB]
+Réception de :5 http://deb.debian.org/debian bookworm/main arm64 libsodium-dev arm64 1.0.18-1 [137 kB]
+536 ko réceptionnés en 0s (1962 ko/s)
+Sélection du paquet liblmdb0:arm64 précédemment désélectionné.
+(Lecture de la base de données... 74898 fichiers et répertoires déjà installés.)
+Préparation du dépaquetage de .../liblmdb0_0.9.24-1_arm64.deb ...
+Dépaquetage de liblmdb0:arm64 (0.9.24-1) ...
+Sélection du paquet liblmdb-dev:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../liblmdb-dev_0.9.24-1_arm64.deb ...
+Dépaquetage de liblmdb-dev:arm64 (0.9.24-1) ...
+Sélection du paquet libopenjp2-7:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../libopenjp2-7_2.5.0-2_arm64.deb ...
+Dépaquetage de libopenjp2-7:arm64 (2.5.0-2) ...
+Sélection du paquet libsodium23:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../libsodium23_1.0.18-1_arm64.deb ...
+Dépaquetage de libsodium23:arm64 (1.0.18-1) ...
+Sélection du paquet libsodium-dev:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../libsodium-dev_1.0.18-1_arm64.deb ...
+Dépaquetage de libsodium-dev:arm64 (1.0.18-1) ...
+Paramétrage de liblmdb0:arm64 (0.9.24-1) ...
+Paramétrage de libsodium23:arm64 (1.0.18-1) ...
+Paramétrage de libsodium-dev:arm64 (1.0.18-1) ...
+Paramétrage de liblmdb-dev:arm64 (0.9.24-1) ...
+Paramétrage de libopenjp2-7:arm64 (2.5.0-2) ...
+Traitement des actions différées (« triggers ») pour libc-bin (2.36-9+deb12u6) ...
+[✓ OK] Moonraker packages installed!
+
+###### Installing python virtual environment...
+created virtual environment CPython3.11.2.final.0-64 in 997ms
+  creator CPython3Posix(dest=/home/mks/moonraker-env, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/mks/.local/share/virtualenv)
+    added seed packages: pip==23.0.1, setuptools==66.1.1, wheel==0.38.4
+  activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+Requirement already satisfied: pip in ./moonraker-env/lib/python3.11/site-packages (23.0.1)
+Collecting pip
+  Using cached pip-24.0-py3-none-any.whl (2.1 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 23.0.1
+    Uninstalling pip-23.0.1:
+      Successfully uninstalled pip-23.0.1
+Successfully installed pip-24.0
+Looking in links: /home/mks/moonraker/scripts/python_wheels
+Ignoring tornado: markers 'python_version == "3.7"' don't match your environment
+Ignoring pillow: markers 'python_version == "3.7"' don't match your environment
+Ignoring streaming-form-data: markers 'python_version == "3.7"' don't match your environment
+Collecting tornado==6.4.0 (from -r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 4))
+  Downloading tornado-6.4-cp38-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.5 kB)
+Collecting pyserial==3.4 (from -r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 5))
+  Using cached pyserial-3.4-py2.py3-none-any.whl.metadata (1.6 kB)
+Collecting pyserial-asyncio==0.6 (from -r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 6))
+  Downloading pyserial_asyncio-0.6-py3-none-any.whl.metadata (1.3 kB)
+Collecting pillow==10.3.0 (from -r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 8))
+  Downloading pillow-10.3.0-cp311-cp311-manylinux_2_28_aarch64.whl.metadata (9.2 kB)
+Collecting lmdb==1.4.1 (from -r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 9))
+  Downloading lmdb-1.4.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (1.2 kB)
+Collecting streaming-form-data==1.13.0 (from -r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 11))
+  Downloading streaming-form-data-1.13.0.tar.gz (95 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.0/95.0 kB 1.4 MB/s eta 0:00:00
+  Preparing metadata (setup.py) ... done
+Collecting distro==1.9.0 (from -r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 12))
+  Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+Collecting inotify-simple==1.3.5 (from -r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 13))
+  Downloading inotify_simple-1.3.5.tar.gz (9.7 kB)
+  Preparing metadata (setup.py) ... done
+Collecting libnacl==2.1.0 (from -r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 14))
+  Downloading libnacl-2.1.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting paho-mqtt==1.6.1 (from -r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 15))
+  Downloading paho-mqtt-1.6.1.tar.gz (99 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.4/99.4 kB 4.3 MB/s eta 0:00:00
+  Preparing metadata (setup.py) ... done
+Collecting zeroconf==0.131.0 (from -r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 16))
+  Downloading zeroconf-0.131.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (6.1 kB)
+Collecting preprocess-cancellation==0.2.1 (from -r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 17))
+  Downloading preprocess_cancellation-0.2.1-py3-none-any.whl.metadata (3.6 kB)
+Collecting jinja2==3.1.3 (from -r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 18))
+  Downloading Jinja2-3.1.3-py3-none-any.whl.metadata (3.3 kB)
+Collecting dbus-next==0.2.3 (from -r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 19))
+  Downloading dbus_next-0.2.3-py3-none-any.whl.metadata (7.0 kB)
+Collecting apprise==1.7.1 (from -r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 20))
+  Downloading apprise-1.7.1-py3-none-any.whl.metadata (44 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.0/44.0 kB 2.0 MB/s eta 0:00:00
+Collecting ldap3==2.9.1 (from -r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 21))
+  Downloading ldap3-2.9.1-py2.py3-none-any.whl.metadata (5.4 kB)
+Collecting python-periphery==2.4.1 (from -r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 22))
+  Downloading python_periphery-2.4.1-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting smart_open<=6.4.0 (from -r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 23))
+  Downloading smart_open-6.4.0-py3-none-any.whl.metadata (21 kB)
+Collecting ifaddr>=0.1.7 (from zeroconf==0.131.0->-r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 16))
+  Downloading ifaddr-0.2.0-py3-none-any.whl.metadata (4.9 kB)
+Collecting MarkupSafe>=2.0 (from jinja2==3.1.3->-r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 18))
+  Downloading MarkupSafe-2.1.5-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.0 kB)
+Collecting certifi (from apprise==1.7.1->-r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 20))
+  Downloading certifi-2024.2.2-py3-none-any.whl.metadata (2.2 kB)
+Collecting requests (from apprise==1.7.1->-r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 20))
+  Downloading requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting requests-oauthlib (from apprise==1.7.1->-r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 20))
+  Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl.metadata (11 kB)
+Collecting click>=5.0 (from apprise==1.7.1->-r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 20))
+  Downloading click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting markdown (from apprise==1.7.1->-r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 20))
+  Downloading Markdown-3.6-py3-none-any.whl.metadata (7.0 kB)
+Collecting PyYAML (from apprise==1.7.1->-r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 20))
+  Downloading PyYAML-6.0.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.1 kB)
+Collecting pyasn1>=0.4.6 (from ldap3==2.9.1->-r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 21))
+  Downloading pyasn1-0.6.0-py2.py3-none-any.whl.metadata (8.3 kB)
+Collecting charset-normalizer<4,>=2 (from requests->apprise==1.7.1->-r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 20))
+  Downloading charset_normalizer-3.3.2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (33 kB)
+Collecting idna<4,>=2.5 (from requests->apprise==1.7.1->-r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 20))
+  Downloading idna-3.7-py3-none-any.whl.metadata (9.9 kB)
+Collecting urllib3<3,>=1.21.1 (from requests->apprise==1.7.1->-r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 20))
+  Downloading urllib3-2.2.1-py3-none-any.whl.metadata (6.4 kB)
+Collecting oauthlib>=3.0.0 (from requests-oauthlib->apprise==1.7.1->-r /home/mks/moonraker/scripts/moonraker-requirements.txt (line 20))
+  Downloading oauthlib-3.2.2-py3-none-any.whl.metadata (7.5 kB)
+Downloading tornado-6.4-cp38-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (435 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 435.9/435.9 kB 5.7 MB/s eta 0:00:00
+Using cached pyserial-3.4-py2.py3-none-any.whl (193 kB)
+Downloading pyserial_asyncio-0.6-py3-none-any.whl (7.6 kB)
+Downloading pillow-10.3.0-cp311-cp311-manylinux_2_28_aarch64.whl (4.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 6.4 MB/s eta 0:00:00
+Downloading lmdb-1.4.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (301 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 301.6/301.6 kB 4.6 MB/s eta 0:00:00
+Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+Downloading libnacl-2.1.0-py3-none-any.whl (21 kB)
+Downloading zeroconf-0.131.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (11.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 5.9 MB/s eta 0:00:00
+Downloading preprocess_cancellation-0.2.1-py3-none-any.whl (18 kB)
+Downloading Jinja2-3.1.3-py3-none-any.whl (133 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.2/133.2 kB 4.8 MB/s eta 0:00:00
+Downloading dbus_next-0.2.3-py3-none-any.whl (57 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.9/57.9 kB 2.5 MB/s eta 0:00:00
+Downloading apprise-1.7.1-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 6.7 MB/s eta 0:00:00
+Downloading ldap3-2.9.1-py2.py3-none-any.whl (432 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 432.2/432.2 kB 5.9 MB/s eta 0:00:00
+Downloading python_periphery-2.4.1-py2.py3-none-any.whl (36 kB)
+Downloading smart_open-6.4.0-py3-none-any.whl (57 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.0/57.0 kB 2.4 MB/s eta 0:00:00
+Downloading click-8.1.7-py3-none-any.whl (97 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.9/97.9 kB 4.1 MB/s eta 0:00:00
+Downloading ifaddr-0.2.0-py3-none-any.whl (12 kB)
+Downloading MarkupSafe-2.1.5-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (29 kB)
+Downloading pyasn1-0.6.0-py2.py3-none-any.whl (85 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.3/85.3 kB 3.4 MB/s eta 0:00:00
+Downloading certifi-2024.2.2-py3-none-any.whl (163 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.8/163.8 kB 3.6 MB/s eta 0:00:00
+Downloading Markdown-3.6-py3-none-any.whl (105 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 105.4/105.4 kB 4.2 MB/s eta 0:00:00
+Downloading PyYAML-6.0.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (732 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 732.2/732.2 kB 5.6 MB/s eta 0:00:00
+Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 kB 2.6 MB/s eta 0:00:00
+Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl (24 kB)
+Downloading charset_normalizer-3.3.2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (136 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 136.6/136.6 kB 4.9 MB/s eta 0:00:00
+Downloading idna-3.7-py3-none-any.whl (66 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.8/66.8 kB 3.0 MB/s eta 0:00:00
+Downloading oauthlib-3.2.2-py3-none-any.whl (151 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.7/151.7 kB 5.5 MB/s eta 0:00:00
+Downloading urllib3-2.2.1-py3-none-any.whl (121 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.1/121.1 kB 4.6 MB/s eta 0:00:00
+Building wheels for collected packages: streaming-form-data, inotify-simple, paho-mqtt
+  Building wheel for streaming-form-data (setup.py) ... done
+  Created wheel for streaming-form-data: filename=streaming_form_data-1.13.0-cp311-cp311-linux_aarch64.whl size=355800 sha256=55da5955dde096c2b1d2e0714552afa492b82b28165af611e6118f48b9c8348c
+  Stored in directory: /home/mks/.cache/pip/wheels/d4/97/18/9025a411325fdb035145d6c4c8bafaed4b0ce325540f094d18
+  Building wheel for inotify-simple (setup.py) ... done
+  Created wheel for inotify-simple: filename=inotify_simple-1.3.5-py3-none-any.whl size=7689 sha256=d5b38900167d59f95f04adb595f1fae23ce15a85873197accf0f644b6c2466ad
+  Stored in directory: /home/mks/.cache/pip/wheels/62/4d/7f/e5e1cee8d11c6cd5bde3b7a60afe4498e46123173d92dd981c
+  Building wheel for paho-mqtt (setup.py) ... done
+  Created wheel for paho-mqtt: filename=paho_mqtt-1.6.1-py3-none-any.whl size=62118 sha256=57545148afee0afbea31576f34cc6a2ff6620d0e0abbcb6cab8d2d6394e77ca0
+  Stored in directory: /home/mks/.cache/pip/wheels/29/ea/a5/ba9a63aaf4cd4e16e8a87ee31fb4d11b04ff5e1735d312619a
+Successfully built streaming-form-data inotify-simple paho-mqtt
+Installing collected packages: python-periphery, pyserial, paho-mqtt, lmdb, ifaddr, zeroconf, urllib3, tornado, smart_open, PyYAML, pyserial-asyncio, pyasn1, preprocess-cancellation, pillow, oauthlib, MarkupSafe, markdown, libnacl, inotify-simple, idna, distro, dbus-next, click, charset-normalizer, certifi, streaming-form-data, requests, ldap3, jinja2, requests-oauthlib, apprise
+Successfully installed MarkupSafe-2.1.5 PyYAML-6.0.1 apprise-1.7.1 certifi-2024.2.2 charset-normalizer-3.3.2 click-8.1.7 dbus-next-0.2.3 distro-1.9.0 idna-3.7 ifaddr-0.2.0 inotify-simple-1.3.5 jinja2-3.1.3 ldap3-2.9.1 libnacl-2.1.0 lmdb-1.4.1 markdown-3.6 oauthlib-3.2.2 paho-mqtt-1.6.1 pillow-10.3.0 preprocess-cancellation-0.2.1 pyasn1-0.6.0 pyserial-3.4 pyserial-asyncio-0.6 python-periphery-2.4.1 requests-2.31.0 requests-oauthlib-2.0.0 smart_open-6.4.0 streaming-form-data-1.13.0 tornado-6.4 urllib3-2.2.1 zeroconf-0.131.0
+
+###### Creating moonraker.conf in /home/mks/printer_data/config ...
+[✓ OK] moonraker.conf created!
+
+###### Creating Moonraker Service  ...
+[✓ OK] Moonraker instance created!
+
+###### Installing Moonraker policykit rules ...
+
+
+###### PolicyKit Version 122 Detected
+
+
+###### Installing PolicyKit Rules to /usr/share/polkit-1/rules.d/moonraker.rules...
+
+
+###### Restarting Moonraker...
+[✓ OK] Moonraker policykit rules installed!
+
+###### Enable moonraker.service ...
+Created symlink /etc/systemd/system/multi-user.target.wants/moonraker.service → /etc/systemd/system/moonraker.service.
+[✓ OK] Enable moonraker.service successfull!
+
+###### Start moonraker.service ...
+[✓ OK] Start moonraker.service successfull!
+
+#=======================================================#
+ Moonraker has been set up!
+#=======================================================#
+
+   ● Instance 1: 192.168.1.126:7125
+```
  
+</details>
+
+
+Moonraker est installé
+
+<details>
+ 
+ ![](../Images/kiauh-moonrak-installed.jpg)
+ 
+ </details>
+
+### MAINSAIL / FLUIDD
+
+Interfaces Web permettant l'accès visuel à Klipper via les APIs de Moonraker. 
+
+On peut n'en installer qu'une des deux, l'installation de la première, par défaut, communiquera avec le port HTTP standard (80). Pour la seconde, il faudra fournir un autre port, par exemple 10088, numéro de port utilisé par Qidi et son trancheur Qidislicer.
+
+<details>
+ <sumarry>(mainsail)</sumarry>
+
+```
+/=======================================================\
+|     ~~~~~~~~~~~~~~~~~ [ KIAUH ] ~~~~~~~~~~~~~~~~~     |
+|        Klipper Installation And Update Helper         |
+|     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     |
+\=======================================================/
+
+###### Checking for the following dependencies:
+● wget
+● nginx
+
+###### Installing the following dependencies:
+● nginx
+
+
+###### Installing packages...
+Lecture des listes de paquets... Fait
+Construction de l'arbre des dépendances... Fait
+Lecture des informations d'état... Fait
+Les paquets supplémentaires suivants seront installés :
+  nginx-common
+Paquets suggérés :
+  fcgiwrap nginx-doc ssl-cert
+Les NOUVEAUX paquets suivants seront installés :
+  nginx nginx-common
+0 mis à jour, 2 nouvellement installés, 0 à enlever et 8 non mis à jour.
+Il est nécessaire de prendre 606 ko dans les archives.
+Après cette opération, 1708 ko d'espace disque supplémentaires seront utilisés.
+Réception de :1 http://deb.debian.org/debian bookworm/main arm64 nginx-common all 1.22.1-9 [112 kB]
+Réception de :2 http://deb.debian.org/debian bookworm/main arm64 nginx arm64 1.22.1-9 [494 kB]
+606 ko réceptionnés en 0s (2253 ko/s)
+Preconfiguring packages ...
+Sélection du paquet nginx-common précédemment désélectionné.
+(Lecture de la base de données... 74996 fichiers et répertoires déjà installés.)
+Préparation du dépaquetage de .../nginx-common_1.22.1-9_all.deb ...
+Dépaquetage de nginx-common (1.22.1-9) ...
+Sélection du paquet nginx précédemment désélectionné.
+Préparation du dépaquetage de .../nginx_1.22.1-9_arm64.deb ...
+Dépaquetage de nginx (1.22.1-9) ...
+Paramétrage de nginx-common (1.22.1-9) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /lib/systemd/system/nginx.service.
+Paramétrage de nginx (1.22.1-9) ...
+Upgrading binary: nginx.
+Traitement des actions différées (« triggers ») pour man-db (2.11.2-2) ...
+[✓ OK] Dependencies packages installed!
+
+###### Initializing Mainsail installation ...
+
+###### Create KIAUH backup directory ...
+[✓ OK] Directory created!
+
+###### Timestamp: 240501-1719
+
+###### Create backup of /home/mks/printer_data/config ...
+[✓ OK] Backup created in:
+/home/mks/kiauh-backups/configs/240501-1719/printer_data
+
+###### Downloading Mainsail from https://github.com/mainsail-crew/mainsail/releases/latest/download/mainsail.zip ...
+--2024-05-01 17:19:02--  https://github.com/mainsail-crew/mainsail/releases/latest/download/mainsail.zip
+Résolution de github.com (github.com)… 140.82.121.3
+Connexion à github.com (github.com)|140.82.121.3|:443… connecté.
+requête HTTP transmise, en attente de la réponse… 302 Found
+Emplacement : https://github.com/mainsail-crew/mainsail/releases/download/v2.11.1/mainsail.zip [suivant]
+--2024-05-01 17:19:02--  https://github.com/mainsail-crew/mainsail/releases/download/v2.11.1/mainsail.zip
+Réutilisation de la connexion existante à github.com:443.
+requête HTTP transmise, en attente de la réponse… 302 Found
+Emplacement : https://objects.githubusercontent.com/github-production-release-asset-2e65be/240875926/9cc07641-5ed4-4195-ba80-2c13aefcd6c5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240501%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240501T151902Z&X-Amz-Expires=300&X-Amz-Signature=0bdf2e3c08915e29b1d1d8a4b89d20ce5ac4c3c9b2092134dcd7844377d5d420&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=240875926&response-content-disposition=attachment%3B%20filename%3Dmainsail.zip&response-content-type=application%2Foctet-stream [suivant]
+--2024-05-01 17:19:02--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/240875926/9cc07641-5ed4-4195-ba80-2c13aefcd6c5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240501%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240501T151902Z&X-Amz-Expires=300&X-Amz-Signature=0bdf2e3c08915e29b1d1d8a4b89d20ce5ac4c3c9b2092134dcd7844377d5d420&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=240875926&response-content-disposition=attachment%3B%20filename%3Dmainsail.zip&response-content-type=application%2Foctet-stream
+Résolution de objects.githubusercontent.com (objects.githubusercontent.com)… 185.199.111.133, 185.199.110.133, 185.199.108.133, ...
+Connexion à objects.githubusercontent.com (objects.githubusercontent.com)|185.199.111.133|:443… connecté.
+requête HTTP transmise, en attente de la réponse… 200 OK
+Taille : 2114772 (2,0M) [application/octet-stream]
+Sauvegarde en : « mainsail.zip »
+
+mainsail.zip        100%[===================>]   2,02M  9,79MB/s    ds 0,2s
+
+2024-05-01 17:19:03 (9,79 MB/s) — « mainsail.zip » sauvegardé [2114772/2114772]
+
+[✓ OK] Download complete!
+
+###### Extracting archive ...
+[✓ OK] Done!
+
+###### Remove downloaded archive ...
+[✓ OK] Done!
+
+/=======================================================\
+| It is recommended to use special macros in order to   |
+| have Mainsail fully functional and working.           |
+|                                                       |
+| The recommended macros for Mainsail can be seen here: |
+| https://github.com/mainsail-crew/mainsail-config      |
+|                                                       |
+| If you already use these macros skip this step.       |
+| Otherwise you should consider to answer with 'yes' to |
+| download the recommended macros.                      |
+\=======================================================/
+###### Download the recommended macros? (Y/n):
+   [➔] Yes
+
+###### Cloning mainsail-config ...
+Clonage dans '/home/mks/mainsail-config'...
+remote: Enumerating objects: 89, done.
+remote: Counting objects: 100% (56/56), done.
+remote: Compressing objects: 100% (35/35), done.
+remote: Total 89 (delta 51), reused 21 (delta 21), pack-reused 33
+Réception d'objets: 100% (89/89), 43.76 Kio | 1.68 Mio/s, fait.
+Résolution des deltas: 100% (52/52), fait.
+
+###### Adding Mainsail-Config to update manager in file:
+       /home/mks/printer_data/config/moonraker.conf
+
+###### Restart moonraker.service ...
+[✓ OK] Restart moonraker.service successfull!
+[✓ OK] Done!
+
+###### Checking for the following dependencies:
+● nginx
+[✓ OK] Dependencies already met!
+
+###### Creating NGINX configuration for Mainsail ...
+[✓ OK] Mainsail configured for port 80!
+[✓ OK] NGINX configuration for Mainsail was set!
+
+###### Granting NGINX the required permissions ...
+[✓ OK] Done!
+
+###### Creating symlink for /var/log/nginx/mainsail-access.log ...
+[✓ OK] Symlink created: /home/mks/printer_data/logs/mainsail-access.log
+
+###### Creating symlink for /var/log/nginx/mainsail-error.log ...
+[✓ OK] Symlink created: /home/mks/printer_data/logs/mainsail-error.log
+
+###### Adding Mainsail to update manager in file:
+       /home/mks/printer_data/config/moonraker.conf
+
+###### Restart moonraker.service ...
+[✓ OK] Restart moonraker.service successfull!
+
+#=======================================================#
+ Mainsail has been set up!
+#=======================================================#
+``` 
+ 
+</details>
+
+<details>
+ <sumarry>(fluidd)</sumarry>
+
+```
+/=======================================================\
+|     ~~~~~~~~~~~~~~~~~ [ KIAUH ] ~~~~~~~~~~~~~~~~~     |
+|        Klipper Installation And Update Helper         |
+|     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     |
+\=======================================================/
+
+###### Checking for the following dependencies:
+● wget
+● nginx
+[✓ OK] Dependencies already met!
+
+###### Initializing Fluidd installation ...
+
+###### Timestamp: 240501-1720
+
+###### Create backup of /home/mks/printer_data/config ...
+[✓ OK] Backup created in:
+/home/mks/kiauh-backups/configs/240501-1720/printer_data
+
+###### Detected other enabled interfaces:
+   ● Mainsail - Port: 80
+
+/=======================================================\
+|                    !!!WARNING!!!                      |
+| You need to choose a different port for Fluidd!       |
+| The following web interface is listening at port 80:  |
+|                                                       |
+|  ● Mainsail                                           |
+|                                                       |
+| Make sure you don't choose a port which was already   |
+| assigned to another webinterface!                     |
+|                                                       |
+| Be aware: there is NO sanity check for the following  |
+| input. So make sure to choose a valid port!           |
+\=======================================================/
+Please enter a new Port: 10088
+   [➔] Setting port 10088 for Fluidd!
+
+###### Downloading Fluidd from https://github.com/fluidd-core/fluidd/releases/latest/download/fluidd.zip ...
+--2024-05-01 17:20:42--  https://github.com/fluidd-core/fluidd/releases/latest/download/fluidd.zip
+Résolution de github.com (github.com)… 140.82.121.3
+Connexion à github.com (github.com)|140.82.121.3|:443… connecté.
+requête HTTP transmise, en attente de la réponse… 302 Found
+Emplacement : https://github.com/fluidd-core/fluidd/releases/download/v1.29.1/fluidd.zip [suivant]
+--2024-05-01 17:20:42--  https://github.com/fluidd-core/fluidd/releases/download/v1.29.1/fluidd.zip
+Réutilisation de la connexion existante à github.com:443.
+requête HTTP transmise, en attente de la réponse… 302 Found
+Emplacement : https://objects.githubusercontent.com/github-production-release-asset-2e65be/295836951/71aafabe-9e9a-4a9f-b9a5-2e09cd260505?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240501%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240501T152042Z&X-Amz-Expires=300&X-Amz-Signature=299bc438661e5cadaa68d3ce18bc341ed7a4eeabafe973d269bcb6c5f53515a3&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=295836951&response-content-disposition=attachment%3B%20filename%3Dfluidd.zip&response-content-type=application%2Foctet-stream [suivant]
+--2024-05-01 17:20:42--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/295836951/71aafabe-9e9a-4a9f-b9a5-2e09cd260505?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240501%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240501T152042Z&X-Amz-Expires=300&X-Amz-Signature=299bc438661e5cadaa68d3ce18bc341ed7a4eeabafe973d269bcb6c5f53515a3&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=295836951&response-content-disposition=attachment%3B%20filename%3Dfluidd.zip&response-content-type=application%2Foctet-stream
+Résolution de objects.githubusercontent.com (objects.githubusercontent.com)… 185.199.109.133, 185.199.108.133, 185.199.110.133, ...
+Connexion à objects.githubusercontent.com (objects.githubusercontent.com)|185.199.109.133|:443… connecté.
+requête HTTP transmise, en attente de la réponse… 200 OK
+Taille : 3684373 (3,5M) [application/octet-stream]
+Sauvegarde en : « fluidd.zip »
+
+fluidd.zip          100%[===================>]   3,51M  9,63MB/s    ds 0,4s
+
+2024-05-01 17:20:43 (9,63 MB/s) — « fluidd.zip » sauvegardé [3684373/3684373]
+
+[✓ OK] Download complete!
+
+###### Extracting archive ...
+[✓ OK] Done!
+
+###### Remove downloaded archive ...
+[✓ OK] Done!
+
+/=======================================================\
+| It is recommended to use special macros in order to   |
+| have Fluidd fully functional and working.             |
+|                                                       |
+| The recommended macros for Fluidd can be found here:  |
+| https://github.com/fluidd-core/fluidd-config           |
+|                                                       |
+| If you already use these macros skip this step.       |
+| Otherwise you should consider to answer with 'yes' to |
+| download the recommended macros.                      |
+\=======================================================/
+###### Download the recommended macros? (Y/n): n
+   [➔] No
+
+###### Checking for the following dependencies:
+● nginx
+[✓ OK] Dependencies already met!
+
+###### Creating NGINX configuration for Fluidd ...
+[✓ OK] Fluidd configured for port 10088!
+[✓ OK] NGINX configuration for Fluidd was set!
+
+###### Granting NGINX the required permissions ...
+[✓ OK] Done!
+
+###### Creating symlink for /var/log/nginx/fluidd-access.log ...
+[✓ OK] Symlink created: /home/mks/printer_data/logs/fluidd-access.log
+
+###### Creating symlink for /var/log/nginx/fluidd-error.log ...
+[✓ OK] Symlink created: /home/mks/printer_data/logs/fluidd-error.log
+
+###### Adding Fluidd to update manager in file:
+       /home/mks/printer_data/config/moonraker.conf
+
+###### Restart moonraker.service ...
+[✓ OK] Restart moonraker.service successfull!
+
+#=======================================================#
+ Fluidd has been set up!
+#=======================================================#
+``` 
+ 
+</details>
+
+
+
+<details>
+ <sumarry>(crowsnest)</sumarry>
+
+```
+/=======================================================\
+|     ~~~~~~~~~~~~~~~~~ [ KIAUH ] ~~~~~~~~~~~~~~~~~     |
+|        Klipper Installation And Update Helper         |
+|     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     |
+\=======================================================/
+
+###### Cloning 'crowsnest' repository ...
+Clonage dans '/home/mks/crowsnest'...
+remote: Enumerating objects: 1698, done.
+remote: Counting objects: 100% (320/320), done.
+remote: Compressing objects: 100% (163/163), done.
+remote: Total 1698 (delta 197), reused 235 (delta 150), pack-reused 1378
+Réception d'objets: 100% (1698/1698), 656.79 Kio | 3.08 Mio/s, fait.
+Résolution des deltas: 100% (1021/1021), fait.
+
+###### Checking for the following dependencies:
+● git
+● make
+[✓ OK] Dependencies already met!
+Installer will prompt you for sudo password!
+
+###### Launching crowsnest installer ...
+crowsnest - A webcam daemon for multiple cams and stream services.
+
+        Ahoy!
+        Thank you for installing crowsnest ;)
+        This will take a while ...
+        Please reboot after the installation has finished.
+
+Running apt-get update first ...
+
+Atteint :1 http://security.debian.org bookworm-security InRelease
+Atteint :2 http://deb.debian.org/debian bookworm InRelease
+Réception de :3 http://deb.debian.org/debian bookworm-updates InRelease [55,4 kB]
+Réception de :4 http://deb.debian.org/debian bookworm-backports InRelease [56,5 kB]
+Atteint :5 http://fi.mirror.armbian.de/apt bookworm InRelease
+Réception de :6 http://deb.debian.org/debian bookworm-backports/main arm64 Packages.diff/Index [63,3 kB]
+Réception de :7 http://deb.debian.org/debian bookworm-backports/main arm64 Contents (deb).diff/Index [63,4 kB]
+Réception de :8 http://deb.debian.org/debian bookworm-backports/main all Contents (deb).diff/Index [63,6 kB]
+Réception de :9 http://deb.debian.org/debian bookworm-backports/main arm64 Packages T-2024-05-01-1413.56-F-2024-05-01-1413.56.pdiff [3429 B]
+Réception de :10 http://deb.debian.org/debian bookworm-backports/main arm64 Contents (deb) T-2024-05-01-1413.56-F-2024-05-01-1413.56.pdiff [401 B]
+Réception de :9 http://deb.debian.org/debian bookworm-backports/main arm64 Packages T-2024-05-01-1413.56-F-2024-05-01-1413.56.pdiff [3429 B]
+Réception de :10 http://deb.debian.org/debian bookworm-backports/main arm64 Contents (deb) T-2024-05-01-1413.56-F-2024-05-01-1413.56.pdiff [401 B]
+Réception de :11 http://deb.debian.org/debian bookworm-backports/main all Contents (deb) T-2024-05-01-1413.56-F-2024-05-01-1413.56.pdiff [579 B]
+Réception de :11 http://deb.debian.org/debian bookworm-backports/main all Contents (deb) T-2024-05-01-1413.56-F-2024-05-01-1413.56.pdiff [579 B]
+307 ko réceptionnés en 10s (29,6 ko/s)
+Lecture des listes de paquets…
+Running apt-get update first ... [OK]
+Doing some tests ...
+
+Checking for mjpg-streamer ...
+
+Checking for mjpg-streamer ... [OK]
+Checking for camera-streamer dependencies ...
+
+Checking if device is a Raspberry Pi ...
+
+Checking if device is a Raspberry Pi ... [FAILED]
+This device is not a Raspberry Pi therefore camera-streeamer cannot be installed ...
+Doing some tests ... [OK]
+Installing without camera-streamer ...
+
+Installing dependencies ...
+
+Lecture des listes de paquets... Fait
+Construction de l'arbre des dépendances... Fait
+Lecture des informations d'état... Fait
+git est déjà la version la plus récente (1:2.39.2-1.1).
+bsdutils est déjà la version la plus récente (1:2.38.1-5+deb12u1).
+findutils est déjà la version la plus récente (4.9.0-4).
+curl est déjà la version la plus récente (7.88.1-10+deb12u5).
+build-essential est déjà la version la plus récente (12.9).
+libjpeg-dev est déjà la version la plus récente (1:2.1.5-2).
+Les paquets supplémentaires suivants seront installés :
+  libevent-2.1-7 libevent-extra-2.1-7 libevent-openssl-2.1-7
+  libevent-pthreads-2.1-7 libmd-dev libv4l-0 libv4l2rds0 libv4lconvert0
+  python3-iniparse
+Les NOUVEAUX paquets suivants seront installés :
+  crudini libbsd-dev libevent-2.1-7 libevent-dev libevent-extra-2.1-7
+  libevent-openssl-2.1-7 libevent-pthreads-2.1-7 libmd-dev libv4l-0
+  libv4l2rds0 libv4lconvert0 python3-iniparse v4l-utils
+0 mis à jour, 13 nouvellement installés, 0 à enlever et 8 non mis à jour.
+Il est nécessaire de prendre 1953 ko dans les archives.
+Après cette opération, 8080 ko d'espace disque supplémentaires seront utilisés.
+Réception de :1 http://deb.debian.org/debian bookworm/main arm64 python3-iniparse all 0.5-1 [21,9 kB]
+Réception de :2 http://deb.debian.org/debian bookworm/main arm64 crudini arm64 0.9.4-1 [18,6 kB]
+Réception de :3 http://deb.debian.org/debian bookworm/main arm64 libmd-dev arm64 1.0.4-2 [47,4 kB]
+Réception de :4 http://deb.debian.org/debian bookworm/main arm64 libbsd-dev arm64 0.11.7-2 [242 kB]
+Réception de :5 http://deb.debian.org/debian bookworm/main arm64 libevent-2.1-7 arm64 2.1.12-stable-8 [168 kB]
+Réception de :6 http://deb.debian.org/debian bookworm/main arm64 libevent-extra-2.1-7 arm64 2.1.12-stable-8 [101 kB]
+Réception de :7 http://deb.debian.org/debian bookworm/main arm64 libevent-pthreads-2.1-7 arm64 2.1.12-stable-8 [53,7 kB]
+Réception de :8 http://deb.debian.org/debian bookworm/main arm64 libevent-openssl-2.1-7 arm64 2.1.12-stable-8 [59,7 kB]
+Réception de :9 http://deb.debian.org/debian bookworm/main arm64 libevent-dev arm64 2.1.12-stable-8 [302 kB]
+Réception de :10 http://deb.debian.org/debian bookworm/main arm64 libv4lconvert0 arm64 1.22.1-5+b2 [141 kB]
+Réception de :11 http://deb.debian.org/debian bookworm/main arm64 libv4l-0 arm64 1.22.1-5+b2 [107 kB]
+Réception de :12 http://deb.debian.org/debian bookworm/main arm64 libv4l2rds0 arm64 1.22.1-5+b2 [80,3 kB]
+Réception de :13 http://deb.debian.org/debian bookworm/main arm64 v4l-utils arm64 1.22.1-5+b2 [610 kB]
+1953 ko réceptionnés en 0s (4501 ko/s)
+Sélection du paquet python3-iniparse précédemment désélectionné.
+(Lecture de la base de données... 75051 fichiers et répertoires déjà installés.)
+Préparation du dépaquetage de .../00-python3-iniparse_0.5-1_all.deb ...
+Dépaquetage de python3-iniparse (0.5-1) ...
+Sélection du paquet crudini précédemment désélectionné.
+Préparation du dépaquetage de .../01-crudini_0.9.4-1_arm64.deb ...
+Dépaquetage de crudini (0.9.4-1) ...
+Sélection du paquet libmd-dev:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../02-libmd-dev_1.0.4-2_arm64.deb ...
+Dépaquetage de libmd-dev:arm64 (1.0.4-2) ...
+Sélection du paquet libbsd-dev:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../03-libbsd-dev_0.11.7-2_arm64.deb ...
+Dépaquetage de libbsd-dev:arm64 (0.11.7-2) ...
+Sélection du paquet libevent-2.1-7:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../04-libevent-2.1-7_2.1.12-stable-8_arm64.deb ...
+Dépaquetage de libevent-2.1-7:arm64 (2.1.12-stable-8) ...
+Sélection du paquet libevent-extra-2.1-7:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../05-libevent-extra-2.1-7_2.1.12-stable-8_arm64.deb ...
+Dépaquetage de libevent-extra-2.1-7:arm64 (2.1.12-stable-8) ...
+Sélection du paquet libevent-pthreads-2.1-7:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../06-libevent-pthreads-2.1-7_2.1.12-stable-8_arm64.deb ...
+Dépaquetage de libevent-pthreads-2.1-7:arm64 (2.1.12-stable-8) ...
+Sélection du paquet libevent-openssl-2.1-7:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../07-libevent-openssl-2.1-7_2.1.12-stable-8_arm64.deb ...
+Dépaquetage de libevent-openssl-2.1-7:arm64 (2.1.12-stable-8) ...
+Sélection du paquet libevent-dev précédemment désélectionné.
+Préparation du dépaquetage de .../08-libevent-dev_2.1.12-stable-8_arm64.deb ...
+Dépaquetage de libevent-dev (2.1.12-stable-8) ...
+Sélection du paquet libv4lconvert0:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../09-libv4lconvert0_1.22.1-5+b2_arm64.deb ...
+Dépaquetage de libv4lconvert0:arm64 (1.22.1-5+b2) ...
+Sélection du paquet libv4l-0:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../10-libv4l-0_1.22.1-5+b2_arm64.deb ...
+Dépaquetage de libv4l-0:arm64 (1.22.1-5+b2) ...
+Sélection du paquet libv4l2rds0:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../11-libv4l2rds0_1.22.1-5+b2_arm64.deb ...
+Dépaquetage de libv4l2rds0:arm64 (1.22.1-5+b2) ...
+Sélection du paquet v4l-utils précédemment désélectionné.
+Préparation du dépaquetage de .../12-v4l-utils_1.22.1-5+b2_arm64.deb ...
+Dépaquetage de v4l-utils (1.22.1-5+b2) ...
+Paramétrage de libevent-extra-2.1-7:arm64 (2.1.12-stable-8) ...
+Paramétrage de libevent-openssl-2.1-7:arm64 (2.1.12-stable-8) ...
+Paramétrage de libevent-2.1-7:arm64 (2.1.12-stable-8) ...
+Paramétrage de libv4lconvert0:arm64 (1.22.1-5+b2) ...
+Paramétrage de libmd-dev:arm64 (1.0.4-2) ...
+Paramétrage de libv4l2rds0:arm64 (1.22.1-5+b2) ...
+Paramétrage de libbsd-dev:arm64 (0.11.7-2) ...
+Paramétrage de python3-iniparse (0.5-1) ...
+Paramétrage de libevent-pthreads-2.1-7:arm64 (2.1.12-stable-8) ...
+Paramétrage de crudini (0.9.4-1) ...
+Paramétrage de libv4l-0:arm64 (1.22.1-5+b2) ...
+Paramétrage de libevent-dev (2.1.12-stable-8) ...
+Paramétrage de v4l-utils (1.22.1-5+b2) ...
+Traitement des actions différées (« triggers ») pour libc-bin (2.36-9+deb12u6) ...
+Traitement des actions différées (« triggers ») pour man-db (2.11.2-2) ...
+Install dependencies ... [OK]
+Reading configuration ...
+No user configuration file found ...
+Using default configuration ... [OK]
+Creating file structure ...
+Directory /home/mks/printer_data/config already exists ...
+Directory /home/mks/printer_data/logs already exists ...
+Directory /home/mks/printer_data/systemd already exists ...
+Creating file structure ... [OK]
+Link crowsnest to /usr/local/bin ... [OK]
+Install service file ... [OK]
+Install environment file ... [OK]
+Install logrotate configuration ... [OK]
+Install crowsnest.conf ... [OK]
+Enable crowsnest.service ... [OK]
+Add User mks to group 'video' ... [SKIPPED]
+        ==> User mks is already in group 'video'
+Build dependend Stream Apps ...
+Cloning ustreamer repository ...
+Clonage dans 'bin/ustreamer'...
+remote: Enumerating objects: 201, done.
+remote: Counting objects: 100% (201/201), done.
+remote: Compressing objects: 100% (142/142), done.
+remote: Total 201 (delta 69), reused 119 (delta 36), pack-reused 0
+Réception d'objets: 100% (201/201), 178.44 Kio | 2.44 Mio/s, fait.
+Résolution des deltas: 100% (69/69), fait.
+Note : basculement sur '9ec59143dda445859e0ddb4027b44029ced5ac14'.
+
+Vous êtes dans l'état « HEAD détachée ». Vous pouvez visiter, faire des modifications
+expérimentales et les valider. Il vous suffit de faire un autre basculement pour
+abandonner les commits que vous faites dans cet état sans impacter les autres branches
+
+Si vous voulez créer une nouvelle branche pour conserver les commits que vous créez,
+il vous suffit d'utiliser l'option -c de la commande switch comme ceci :
+
+  git switch -c <nom-de-la-nouvelle-branche>
+
+Ou annuler cette opération avec :
+
+  git switch -
+
+Désactivez ce conseil en renseignant la variable de configuration advice.detachedHead à false
+
+Install of camera-streamer skipped, only supported on Raspberry SBC's! ...
+Build 'ustreamer' using 2 Cores ...
+make apps
+make[1] : on entre dans le répertoire « /home/mks/crowsnest/bin/ustreamer »
+make -C src
+make[2] : on entre dans le répertoire « /home/mks/crowsnest/bin/ustreamer/src »
+-- CC libs/base64.c
+-- CC libs/capture.c
+-- CC libs/fpsi.c
+-- CC libs/frame.c
+-- CC libs/frametext.c
+-- CC libs/frametext_font.c
+-- CC libs/logging.c
+-- CC libs/memsink.c
+-- CC libs/memsinksh.c
+-- CC libs/options.c
+-- CC libs/queue.c
+-- CC libs/ring.c
+-- CC libs/signal.c
+-- CC libs/tc358743.c
+-- CC libs/unjpeg.c
+-- CC ustreamer/blank.c
+-- CC ustreamer/data/favicon_ico.c
+-- CC ustreamer/data/index_html.c
+-- CC ustreamer/encoder.c
+-- CC ustreamer/encoders/cpu/encoder.c
+-- CC ustreamer/encoders/hw/encoder.c
+-- CC ustreamer/http/bev.c
+-- CC ustreamer/http/mime.c
+-- CC ustreamer/http/path.c
+-- CC ustreamer/http/server.c
+-- CC ustreamer/http/static.c
+-- CC ustreamer/http/unix.c
+-- CC ustreamer/http/uri.c
+-- CC ustreamer/m2m.c
+-- CC ustreamer/main.c
+-- CC ustreamer/options.c
+-- CC ustreamer/stream.c
+-- CC ustreamer/workers.c
+-- CC dump/file.c
+-- CC dump/main.c
+== LD ustreamer.bin
+== LD ustreamer-dump.bin
+make[2] : on quitte le répertoire « /home/mks/crowsnest/bin/ustreamer/src »
+for i in src/*.bin; do \
+        test ! -x $i || ln -sf $i `basename $i .bin`; \
+done
+make[1] : on quitte le répertoire « /home/mks/crowsnest/bin/ustreamer »
+Build 'ustreamer' ... [SUCCESS]
+'/home/mks/crowsnest/bin/camera-streamer' does not exist! Build skipped ... [WARN]
+
+
+Do you want to add 'update manager' entry to your moonraker.conf? [Y/n]: Y
+Trying to add 'update manager' entry to moonraker.conf ...
+Adding Crowsnest Update Manager entry to moonraker.conf ...  [OK]
+
+Installation successful.
+
+        Reboot your machine for the changes to take effect!
+
+Reboot NOW? [y/N]: N
+
+Not to reboot may cause issues!
+Reboot as soon as possible!
+
+Goodbye ...
+``` 
+ 
+</details>
+
+
+<details>
+ <summary>(crowsnest)</summary>
+ 
+``` 
+/=======================================================\
+|     ~~~~~~~~~~~~~~~~~ [ KIAUH ] ~~~~~~~~~~~~~~~~~     |
+|        Klipper Installation And Update Helper         |
+|     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     |
+\=======================================================/
+
+###### Cloning 'crowsnest' repository ...
+Clonage dans '/home/mks/crowsnest'...
+remote: Enumerating objects: 1698, done.
+remote: Counting objects: 100% (320/320), done.
+remote: Compressing objects: 100% (163/163), done.
+remote: Total 1698 (delta 197), reused 235 (delta 150), pack-reused 1378
+Réception d'objets: 100% (1698/1698), 656.79 Kio | 3.08 Mio/s, fait.
+Résolution des deltas: 100% (1021/1021), fait.
+
+###### Checking for the following dependencies:
+● git
+● make
+[✓ OK] Dependencies already met!
+Installer will prompt you for sudo password!
+
+###### Launching crowsnest installer ...
+crowsnest - A webcam daemon for multiple cams and stream services.
+
+        Ahoy!
+        Thank you for installing crowsnest ;)
+        This will take a while ...
+        Please reboot after the installation has finished.
+
+Running apt-get update first ...
+
+Atteint :1 http://security.debian.org bookworm-security InRelease
+Atteint :2 http://deb.debian.org/debian bookworm InRelease
+Réception de :3 http://deb.debian.org/debian bookworm-updates InRelease [55,4 kB]
+Réception de :4 http://deb.debian.org/debian bookworm-backports InRelease [56,5 kB]
+Atteint :5 http://fi.mirror.armbian.de/apt bookworm InRelease
+Réception de :6 http://deb.debian.org/debian bookworm-backports/main arm64 Packages.diff/Index [63,3 kB]
+Réception de :7 http://deb.debian.org/debian bookworm-backports/main arm64 Contents (deb).diff/Index [63,4 kB]
+Réception de :8 http://deb.debian.org/debian bookworm-backports/main all Contents (deb).diff/Index [63,6 kB]
+Réception de :9 http://deb.debian.org/debian bookworm-backports/main arm64 Packages T-2024-05-01-1413.56-F-2024-05-01-1413.56.pdiff [3429 B]
+Réception de :10 http://deb.debian.org/debian bookworm-backports/main arm64 Contents (deb) T-2024-05-01-1413.56-F-2024-05-01-1413.56.pdiff [401 B]
+Réception de :9 http://deb.debian.org/debian bookworm-backports/main arm64 Packages T-2024-05-01-1413.56-F-2024-05-01-1413.56.pdiff [3429 B]
+Réception de :10 http://deb.debian.org/debian bookworm-backports/main arm64 Contents (deb) T-2024-05-01-1413.56-F-2024-05-01-1413.56.pdiff [401 B]
+Réception de :11 http://deb.debian.org/debian bookworm-backports/main all Contents (deb) T-2024-05-01-1413.56-F-2024-05-01-1413.56.pdiff [579 B]
+Réception de :11 http://deb.debian.org/debian bookworm-backports/main all Contents (deb) T-2024-05-01-1413.56-F-2024-05-01-1413.56.pdiff [579 B]
+307 ko réceptionnés en 10s (29,6 ko/s)
+Lecture des listes de paquets…
+Running apt-get update first ... [OK]
+Doing some tests ...
+
+Checking for mjpg-streamer ...
+
+Checking for mjpg-streamer ... [OK]
+Checking for camera-streamer dependencies ...
+
+Checking if device is a Raspberry Pi ...
+
+Checking if device is a Raspberry Pi ... [FAILED]
+This device is not a Raspberry Pi therefore camera-streeamer cannot be installed ...
+Doing some tests ... [OK]
+Installing without camera-streamer ...
+
+Installing dependencies ...
+
+Lecture des listes de paquets... Fait
+Construction de l'arbre des dépendances... Fait
+Lecture des informations d'état... Fait
+git est déjà la version la plus récente (1:2.39.2-1.1).
+bsdutils est déjà la version la plus récente (1:2.38.1-5+deb12u1).
+findutils est déjà la version la plus récente (4.9.0-4).
+curl est déjà la version la plus récente (7.88.1-10+deb12u5).
+build-essential est déjà la version la plus récente (12.9).
+libjpeg-dev est déjà la version la plus récente (1:2.1.5-2).
+Les paquets supplémentaires suivants seront installés :
+  libevent-2.1-7 libevent-extra-2.1-7 libevent-openssl-2.1-7
+  libevent-pthreads-2.1-7 libmd-dev libv4l-0 libv4l2rds0 libv4lconvert0
+  python3-iniparse
+Les NOUVEAUX paquets suivants seront installés :
+  crudini libbsd-dev libevent-2.1-7 libevent-dev libevent-extra-2.1-7
+  libevent-openssl-2.1-7 libevent-pthreads-2.1-7 libmd-dev libv4l-0
+  libv4l2rds0 libv4lconvert0 python3-iniparse v4l-utils
+0 mis à jour, 13 nouvellement installés, 0 à enlever et 8 non mis à jour.
+Il est nécessaire de prendre 1953 ko dans les archives.
+Après cette opération, 8080 ko d'espace disque supplémentaires seront utilisés.
+Réception de :1 http://deb.debian.org/debian bookworm/main arm64 python3-iniparse all 0.5-1 [21,9 kB]
+Réception de :2 http://deb.debian.org/debian bookworm/main arm64 crudini arm64 0.9.4-1 [18,6 kB]
+Réception de :3 http://deb.debian.org/debian bookworm/main arm64 libmd-dev arm64 1.0.4-2 [47,4 kB]
+Réception de :4 http://deb.debian.org/debian bookworm/main arm64 libbsd-dev arm64 0.11.7-2 [242 kB]
+Réception de :5 http://deb.debian.org/debian bookworm/main arm64 libevent-2.1-7 arm64 2.1.12-stable-8 [168 kB]
+Réception de :6 http://deb.debian.org/debian bookworm/main arm64 libevent-extra-2.1-7 arm64 2.1.12-stable-8 [101 kB]
+Réception de :7 http://deb.debian.org/debian bookworm/main arm64 libevent-pthreads-2.1-7 arm64 2.1.12-stable-8 [53,7 kB]
+Réception de :8 http://deb.debian.org/debian bookworm/main arm64 libevent-openssl-2.1-7 arm64 2.1.12-stable-8 [59,7 kB]
+Réception de :9 http://deb.debian.org/debian bookworm/main arm64 libevent-dev arm64 2.1.12-stable-8 [302 kB]
+Réception de :10 http://deb.debian.org/debian bookworm/main arm64 libv4lconvert0 arm64 1.22.1-5+b2 [141 kB]
+Réception de :11 http://deb.debian.org/debian bookworm/main arm64 libv4l-0 arm64 1.22.1-5+b2 [107 kB]
+Réception de :12 http://deb.debian.org/debian bookworm/main arm64 libv4l2rds0 arm64 1.22.1-5+b2 [80,3 kB]
+Réception de :13 http://deb.debian.org/debian bookworm/main arm64 v4l-utils arm64 1.22.1-5+b2 [610 kB]
+1953 ko réceptionnés en 0s (4501 ko/s)
+Sélection du paquet python3-iniparse précédemment désélectionné.
+(Lecture de la base de données... 75051 fichiers et répertoires déjà installés.)
+Préparation du dépaquetage de .../00-python3-iniparse_0.5-1_all.deb ...
+Dépaquetage de python3-iniparse (0.5-1) ...
+Sélection du paquet crudini précédemment désélectionné.
+Préparation du dépaquetage de .../01-crudini_0.9.4-1_arm64.deb ...
+Dépaquetage de crudini (0.9.4-1) ...
+Sélection du paquet libmd-dev:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../02-libmd-dev_1.0.4-2_arm64.deb ...
+Dépaquetage de libmd-dev:arm64 (1.0.4-2) ...
+Sélection du paquet libbsd-dev:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../03-libbsd-dev_0.11.7-2_arm64.deb ...
+Dépaquetage de libbsd-dev:arm64 (0.11.7-2) ...
+Sélection du paquet libevent-2.1-7:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../04-libevent-2.1-7_2.1.12-stable-8_arm64.deb ...
+Dépaquetage de libevent-2.1-7:arm64 (2.1.12-stable-8) ...
+Sélection du paquet libevent-extra-2.1-7:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../05-libevent-extra-2.1-7_2.1.12-stable-8_arm64.deb ...
+Dépaquetage de libevent-extra-2.1-7:arm64 (2.1.12-stable-8) ...
+Sélection du paquet libevent-pthreads-2.1-7:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../06-libevent-pthreads-2.1-7_2.1.12-stable-8_arm64.deb ...
+Dépaquetage de libevent-pthreads-2.1-7:arm64 (2.1.12-stable-8) ...
+Sélection du paquet libevent-openssl-2.1-7:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../07-libevent-openssl-2.1-7_2.1.12-stable-8_arm64.deb ...
+Dépaquetage de libevent-openssl-2.1-7:arm64 (2.1.12-stable-8) ...
+Sélection du paquet libevent-dev précédemment désélectionné.
+Préparation du dépaquetage de .../08-libevent-dev_2.1.12-stable-8_arm64.deb ...
+Dépaquetage de libevent-dev (2.1.12-stable-8) ...
+Sélection du paquet libv4lconvert0:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../09-libv4lconvert0_1.22.1-5+b2_arm64.deb ...
+Dépaquetage de libv4lconvert0:arm64 (1.22.1-5+b2) ...
+Sélection du paquet libv4l-0:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../10-libv4l-0_1.22.1-5+b2_arm64.deb ...
+Dépaquetage de libv4l-0:arm64 (1.22.1-5+b2) ...
+Sélection du paquet libv4l2rds0:arm64 précédemment désélectionné.
+Préparation du dépaquetage de .../11-libv4l2rds0_1.22.1-5+b2_arm64.deb ...
+Dépaquetage de libv4l2rds0:arm64 (1.22.1-5+b2) ...
+Sélection du paquet v4l-utils précédemment désélectionné.
+Préparation du dépaquetage de .../12-v4l-utils_1.22.1-5+b2_arm64.deb ...
+Dépaquetage de v4l-utils (1.22.1-5+b2) ...
+Paramétrage de libevent-extra-2.1-7:arm64 (2.1.12-stable-8) ...
+Paramétrage de libevent-openssl-2.1-7:arm64 (2.1.12-stable-8) ...
+Paramétrage de libevent-2.1-7:arm64 (2.1.12-stable-8) ...
+Paramétrage de libv4lconvert0:arm64 (1.22.1-5+b2) ...
+Paramétrage de libmd-dev:arm64 (1.0.4-2) ...
+Paramétrage de libv4l2rds0:arm64 (1.22.1-5+b2) ...
+Paramétrage de libbsd-dev:arm64 (0.11.7-2) ...
+Paramétrage de python3-iniparse (0.5-1) ...
+Paramétrage de libevent-pthreads-2.1-7:arm64 (2.1.12-stable-8) ...
+Paramétrage de crudini (0.9.4-1) ...
+Paramétrage de libv4l-0:arm64 (1.22.1-5+b2) ...
+Paramétrage de libevent-dev (2.1.12-stable-8) ...
+Paramétrage de v4l-utils (1.22.1-5+b2) ...
+Traitement des actions différées (« triggers ») pour libc-bin (2.36-9+deb12u6) ...
+Traitement des actions différées (« triggers ») pour man-db (2.11.2-2) ...
+Install dependencies ... [OK]
+Reading configuration ...
+No user configuration file found ...
+Using default configuration ... [OK]
+Creating file structure ...
+Directory /home/mks/printer_data/config already exists ...
+Directory /home/mks/printer_data/logs already exists ...
+Directory /home/mks/printer_data/systemd already exists ...
+Creating file structure ... [OK]
+Link crowsnest to /usr/local/bin ... [OK]
+Install service file ... [OK]
+Install environment file ... [OK]
+Install logrotate configuration ... [OK]
+Install crowsnest.conf ... [OK]
+Enable crowsnest.service ... [OK]
+Add User mks to group 'video' ... [SKIPPED]
+        ==> User mks is already in group 'video'
+Build dependend Stream Apps ...
+Cloning ustreamer repository ...
+Clonage dans 'bin/ustreamer'...
+remote: Enumerating objects: 201, done.
+remote: Counting objects: 100% (201/201), done.
+remote: Compressing objects: 100% (142/142), done.
+remote: Total 201 (delta 69), reused 119 (delta 36), pack-reused 0
+Réception d'objets: 100% (201/201), 178.44 Kio | 2.44 Mio/s, fait.
+Résolution des deltas: 100% (69/69), fait.
+Note : basculement sur '9ec59143dda445859e0ddb4027b44029ced5ac14'.
+
+Vous êtes dans l'état « HEAD détachée ». Vous pouvez visiter, faire des modifications
+expérimentales et les valider. Il vous suffit de faire un autre basculement pour
+abandonner les commits que vous faites dans cet état sans impacter les autres branches
+
+Si vous voulez créer une nouvelle branche pour conserver les commits que vous créez,
+il vous suffit d'utiliser l'option -c de la commande switch comme ceci :
+
+  git switch -c <nom-de-la-nouvelle-branche>
+
+Ou annuler cette opération avec :
+
+  git switch -
+
+Désactivez ce conseil en renseignant la variable de configuration advice.detachedHead à false
+
+Install of camera-streamer skipped, only supported on Raspberry SBC's! ...
+Build 'ustreamer' using 2 Cores ...
+make apps
+make[1] : on entre dans le répertoire « /home/mks/crowsnest/bin/ustreamer »
+make -C src
+make[2] : on entre dans le répertoire « /home/mks/crowsnest/bin/ustreamer/src »
+-- CC libs/base64.c
+-- CC libs/capture.c
+-- CC libs/fpsi.c
+-- CC libs/frame.c
+-- CC libs/frametext.c
+-- CC libs/frametext_font.c
+-- CC libs/logging.c
+-- CC libs/memsink.c
+-- CC libs/memsinksh.c
+-- CC libs/options.c
+-- CC libs/queue.c
+-- CC libs/ring.c
+-- CC libs/signal.c
+-- CC libs/tc358743.c
+-- CC libs/unjpeg.c
+-- CC ustreamer/blank.c
+-- CC ustreamer/data/favicon_ico.c
+-- CC ustreamer/data/index_html.c
+-- CC ustreamer/encoder.c
+-- CC ustreamer/encoders/cpu/encoder.c
+-- CC ustreamer/encoders/hw/encoder.c
+-- CC ustreamer/http/bev.c
+-- CC ustreamer/http/mime.c
+-- CC ustreamer/http/path.c
+-- CC ustreamer/http/server.c
+-- CC ustreamer/http/static.c
+-- CC ustreamer/http/unix.c
+-- CC ustreamer/http/uri.c
+-- CC ustreamer/m2m.c
+-- CC ustreamer/main.c
+-- CC ustreamer/options.c
+-- CC ustreamer/stream.c
+-- CC ustreamer/workers.c
+-- CC dump/file.c
+-- CC dump/main.c
+== LD ustreamer.bin
+== LD ustreamer-dump.bin
+make[2] : on quitte le répertoire « /home/mks/crowsnest/bin/ustreamer/src »
+for i in src/*.bin; do \
+        test ! -x $i || ln -sf $i `basename $i .bin`; \
+done
+make[1] : on quitte le répertoire « /home/mks/crowsnest/bin/ustreamer »
+Build 'ustreamer' ... [SUCCESS]
+'/home/mks/crowsnest/bin/camera-streamer' does not exist! Build skipped ... [WARN]
+
+
+Do you want to add 'update manager' entry to your moonraker.conf? [Y/n]: Y
+Trying to add 'update manager' entry to moonraker.conf ...
+Adding Crowsnest Update Manager entry to moonraker.conf ...  [OK]
+
+Installation successful.
+
+        Reboot your machine for the changes to take effect!
+
+Reboot NOW? [y/N]: N
+
+Not to reboot may cause issues!
+Reboot as soon as possible!
+
+Goodbye ... 
+```
+
+</details>
+
+
+</details>
+
+
+<details>
+ <summary>(gcode shell command)</summary>
+ 
+``` 
+/=======================================================\
+|     ~~~~~~~~~~~~~~~~~ [ KIAUH ] ~~~~~~~~~~~~~~~~~     |
+|        Klipper Installation And Update Helper         |
+|     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     |
+\=======================================================/
+/=======================================================\
+| You are about to install the 'G-Code Shell Command'   |
+| extension. Please make sure to read the instructions  |
+| before you continue and remember that potential risks |
+| can be involved after installing this extension!      |
+|                                                       |
+| You accept that you are doing this on your own risk!  |
+\=======================================================/
+###### Do you want to continue? (Y/n):
+   [➔] Yes
+
+###### Installing gcode shell command extension ...
+
+###### Stop klipper.service ...
+[✓ OK] Stop klipper.service successfull!
+
+###### Copy 'gcode_shell_command.py' to '/home/mks/klipper/klippy/extras' ...
+[✓ OK] Done!
+
+###### Create an example shell command? (Y/n):
+   [➔] Yes
+
+###### Timestamp: 240501-1727
+
+###### Create backup of /home/mks/printer_data/config ...
+[✓ OK] Backup created in:
+/home/mks/kiauh-backups/configs/240501-1727/printer_data
+
+###### Copy shell_command.cfg to /home/mks/printer_data/config ...
+[✓ OK] /home/mks/printer_data/config/shell_command.cfg created!
+
+###### Restart klipper.service ...
+[✓ OK] Restart klipper.service successfull!
+
+#=======================================================#
+ Shell command extension installed!
+#=======================================================# 
+```
+
+</details>
+
+A la fin de ces installations, l'écosystème Klipper est prêt. L'eMMC de 8Gio est occupée à plus de 50%, il reste encore plus de 3Gio disponibles (avec le système originel, on disposait de moins de 1Gio).
+
+Avant ces installations :
+
+Après:
+
+
+L'accès à l'imprimante via Fluidd et/ou Mainsail affiche des messages d'erreurs. Le firmware Klipper n'est pas à jour sur aucun des MCUs. Klipper est désomrais à jour en version 0.12.x alors que les MCUs sont encore en version 0.10.x.
+
+Dernière étape décrite [ici](./firmware-mcus.md).
+
+😃
