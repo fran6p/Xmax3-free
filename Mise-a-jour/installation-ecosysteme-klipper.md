@@ -54,7 +54,7 @@ Nombre d'instances de Klipper (plusieurs imprimantes)
 ![](../Images/kiauh-installation-klipper-python3-une-instance.jpg)
 
 <details>
-  <summary>(Installation détaillée)</summary>
+  <summary>Détails de l'installation</summary>
     
 ```
 ###### Installing single Klipper instance ...
@@ -455,7 +455,7 @@ Created symlink /etc/systemd/system/multi-user.target.wants/klipper.service → 
 
 Klipper est installé
 
-<details>
+<details><sumarry>Klipper</sumarry>
  
  ![](../Images/kiauh-klipper-installed.jpg)
  
@@ -468,7 +468,7 @@ Klipper est installé
  Moonraker détecte combien d'instances Klipper ont été installées (ici, une seule) puis prépare son environnement.
 
 <details>
- <summary>(installation détaillée)</summary>
+ <summary>Détails de l'installation</summary>
 
 ```
 /=======================================================\
@@ -792,20 +792,20 @@ Created symlink /etc/systemd/system/multi-user.target.wants/moonraker.service �
 
 Moonraker est installé
 
-<details>
+<details><sumarry>Moonraker</sumarry>
  
- ![](../Images/kiauh-moonrak-installed.jpg)
+ ![](../Images/kiauh-moonraker-installed.jpg)
  
  </details>
 
 ### MAINSAIL / FLUIDD
 
-Interfaces Web permettant l'accès visuel à Klipper via les APIs de Moonraker. 
+Interfaces Web permettant l'accès via un navigateur Internet à Klipper via les APIs de Moonraker. 
 
-On peut n'en installer qu'une des deux, l'installation de la première, par défaut, communiquera avec le port HTTP standard (80). Pour la seconde, il faudra fournir un autre port, par exemple 10088, numéro de port utilisé par Qidi et son trancheur Qidislicer.
+On peut n'en installer qu'une des deux, l'installation de la première, par défaut, communiquera avec le port HTTP standard (80). Pour la seconde, il faudra fournir un autre numéro de port, par exemple 10088, celui utilisé par Qidi et son trancheur Qidislicer.
 
 <details>
- <sumarry>(mainsail)</sumarry>
+ <sumarry>Détails de l'installation de Mainsail</sumarry>
 
 ```
 /=======================================================\
@@ -954,7 +954,7 @@ Résolution des deltas: 100% (52/52), fait.
 </details>
 
 <details>
- <sumarry>(fluidd)</sumarry>
+ <sumarry>Détails de l'installation de Fluidd</sumarry>
 
 ```
 /=======================================================\
@@ -1071,7 +1071,7 @@ fluidd.zip          100%[===================>]   3,51M  9,63MB/s    ds 0,4s
 
 
 <details>
- <sumarry>(crowsnest)</sumarry>
+ <sumarry>Détails de l'installation de Crowsnest</sumarry>
 
 ```
 /=======================================================\
@@ -1341,282 +1341,9 @@ Goodbye ...
 </details>
 
 
-<details>
- <summary>(crowsnest)</summary>
- 
-``` 
-/=======================================================\
-|     ~~~~~~~~~~~~~~~~~ [ KIAUH ] ~~~~~~~~~~~~~~~~~     |
-|        Klipper Installation And Update Helper         |
-|     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     |
-\=======================================================/
-
-###### Cloning 'crowsnest' repository ...
-Clonage dans '/home/mks/crowsnest'...
-remote: Enumerating objects: 1698, done.
-remote: Counting objects: 100% (320/320), done.
-remote: Compressing objects: 100% (163/163), done.
-remote: Total 1698 (delta 197), reused 235 (delta 150), pack-reused 1378
-Réception d'objets: 100% (1698/1698), 656.79 Kio | 3.08 Mio/s, fait.
-Résolution des deltas: 100% (1021/1021), fait.
-
-###### Checking for the following dependencies:
-● git
-● make
-[✓ OK] Dependencies already met!
-Installer will prompt you for sudo password!
-
-###### Launching crowsnest installer ...
-crowsnest - A webcam daemon for multiple cams and stream services.
-
-        Ahoy!
-        Thank you for installing crowsnest ;)
-        This will take a while ...
-        Please reboot after the installation has finished.
-
-Running apt-get update first ...
-
-Atteint :1 http://security.debian.org bookworm-security InRelease
-Atteint :2 http://deb.debian.org/debian bookworm InRelease
-Réception de :3 http://deb.debian.org/debian bookworm-updates InRelease [55,4 kB]
-Réception de :4 http://deb.debian.org/debian bookworm-backports InRelease [56,5 kB]
-Atteint :5 http://fi.mirror.armbian.de/apt bookworm InRelease
-Réception de :6 http://deb.debian.org/debian bookworm-backports/main arm64 Packages.diff/Index [63,3 kB]
-Réception de :7 http://deb.debian.org/debian bookworm-backports/main arm64 Contents (deb).diff/Index [63,4 kB]
-Réception de :8 http://deb.debian.org/debian bookworm-backports/main all Contents (deb).diff/Index [63,6 kB]
-Réception de :9 http://deb.debian.org/debian bookworm-backports/main arm64 Packages T-2024-05-01-1413.56-F-2024-05-01-1413.56.pdiff [3429 B]
-Réception de :10 http://deb.debian.org/debian bookworm-backports/main arm64 Contents (deb) T-2024-05-01-1413.56-F-2024-05-01-1413.56.pdiff [401 B]
-Réception de :9 http://deb.debian.org/debian bookworm-backports/main arm64 Packages T-2024-05-01-1413.56-F-2024-05-01-1413.56.pdiff [3429 B]
-Réception de :10 http://deb.debian.org/debian bookworm-backports/main arm64 Contents (deb) T-2024-05-01-1413.56-F-2024-05-01-1413.56.pdiff [401 B]
-Réception de :11 http://deb.debian.org/debian bookworm-backports/main all Contents (deb) T-2024-05-01-1413.56-F-2024-05-01-1413.56.pdiff [579 B]
-Réception de :11 http://deb.debian.org/debian bookworm-backports/main all Contents (deb) T-2024-05-01-1413.56-F-2024-05-01-1413.56.pdiff [579 B]
-307 ko réceptionnés en 10s (29,6 ko/s)
-Lecture des listes de paquets…
-Running apt-get update first ... [OK]
-Doing some tests ...
-
-Checking for mjpg-streamer ...
-
-Checking for mjpg-streamer ... [OK]
-Checking for camera-streamer dependencies ...
-
-Checking if device is a Raspberry Pi ...
-
-Checking if device is a Raspberry Pi ... [FAILED]
-This device is not a Raspberry Pi therefore camera-streeamer cannot be installed ...
-Doing some tests ... [OK]
-Installing without camera-streamer ...
-
-Installing dependencies ...
-
-Lecture des listes de paquets... Fait
-Construction de l'arbre des dépendances... Fait
-Lecture des informations d'état... Fait
-git est déjà la version la plus récente (1:2.39.2-1.1).
-bsdutils est déjà la version la plus récente (1:2.38.1-5+deb12u1).
-findutils est déjà la version la plus récente (4.9.0-4).
-curl est déjà la version la plus récente (7.88.1-10+deb12u5).
-build-essential est déjà la version la plus récente (12.9).
-libjpeg-dev est déjà la version la plus récente (1:2.1.5-2).
-Les paquets supplémentaires suivants seront installés :
-  libevent-2.1-7 libevent-extra-2.1-7 libevent-openssl-2.1-7
-  libevent-pthreads-2.1-7 libmd-dev libv4l-0 libv4l2rds0 libv4lconvert0
-  python3-iniparse
-Les NOUVEAUX paquets suivants seront installés :
-  crudini libbsd-dev libevent-2.1-7 libevent-dev libevent-extra-2.1-7
-  libevent-openssl-2.1-7 libevent-pthreads-2.1-7 libmd-dev libv4l-0
-  libv4l2rds0 libv4lconvert0 python3-iniparse v4l-utils
-0 mis à jour, 13 nouvellement installés, 0 à enlever et 8 non mis à jour.
-Il est nécessaire de prendre 1953 ko dans les archives.
-Après cette opération, 8080 ko d'espace disque supplémentaires seront utilisés.
-Réception de :1 http://deb.debian.org/debian bookworm/main arm64 python3-iniparse all 0.5-1 [21,9 kB]
-Réception de :2 http://deb.debian.org/debian bookworm/main arm64 crudini arm64 0.9.4-1 [18,6 kB]
-Réception de :3 http://deb.debian.org/debian bookworm/main arm64 libmd-dev arm64 1.0.4-2 [47,4 kB]
-Réception de :4 http://deb.debian.org/debian bookworm/main arm64 libbsd-dev arm64 0.11.7-2 [242 kB]
-Réception de :5 http://deb.debian.org/debian bookworm/main arm64 libevent-2.1-7 arm64 2.1.12-stable-8 [168 kB]
-Réception de :6 http://deb.debian.org/debian bookworm/main arm64 libevent-extra-2.1-7 arm64 2.1.12-stable-8 [101 kB]
-Réception de :7 http://deb.debian.org/debian bookworm/main arm64 libevent-pthreads-2.1-7 arm64 2.1.12-stable-8 [53,7 kB]
-Réception de :8 http://deb.debian.org/debian bookworm/main arm64 libevent-openssl-2.1-7 arm64 2.1.12-stable-8 [59,7 kB]
-Réception de :9 http://deb.debian.org/debian bookworm/main arm64 libevent-dev arm64 2.1.12-stable-8 [302 kB]
-Réception de :10 http://deb.debian.org/debian bookworm/main arm64 libv4lconvert0 arm64 1.22.1-5+b2 [141 kB]
-Réception de :11 http://deb.debian.org/debian bookworm/main arm64 libv4l-0 arm64 1.22.1-5+b2 [107 kB]
-Réception de :12 http://deb.debian.org/debian bookworm/main arm64 libv4l2rds0 arm64 1.22.1-5+b2 [80,3 kB]
-Réception de :13 http://deb.debian.org/debian bookworm/main arm64 v4l-utils arm64 1.22.1-5+b2 [610 kB]
-1953 ko réceptionnés en 0s (4501 ko/s)
-Sélection du paquet python3-iniparse précédemment désélectionné.
-(Lecture de la base de données... 75051 fichiers et répertoires déjà installés.)
-Préparation du dépaquetage de .../00-python3-iniparse_0.5-1_all.deb ...
-Dépaquetage de python3-iniparse (0.5-1) ...
-Sélection du paquet crudini précédemment désélectionné.
-Préparation du dépaquetage de .../01-crudini_0.9.4-1_arm64.deb ...
-Dépaquetage de crudini (0.9.4-1) ...
-Sélection du paquet libmd-dev:arm64 précédemment désélectionné.
-Préparation du dépaquetage de .../02-libmd-dev_1.0.4-2_arm64.deb ...
-Dépaquetage de libmd-dev:arm64 (1.0.4-2) ...
-Sélection du paquet libbsd-dev:arm64 précédemment désélectionné.
-Préparation du dépaquetage de .../03-libbsd-dev_0.11.7-2_arm64.deb ...
-Dépaquetage de libbsd-dev:arm64 (0.11.7-2) ...
-Sélection du paquet libevent-2.1-7:arm64 précédemment désélectionné.
-Préparation du dépaquetage de .../04-libevent-2.1-7_2.1.12-stable-8_arm64.deb ...
-Dépaquetage de libevent-2.1-7:arm64 (2.1.12-stable-8) ...
-Sélection du paquet libevent-extra-2.1-7:arm64 précédemment désélectionné.
-Préparation du dépaquetage de .../05-libevent-extra-2.1-7_2.1.12-stable-8_arm64.deb ...
-Dépaquetage de libevent-extra-2.1-7:arm64 (2.1.12-stable-8) ...
-Sélection du paquet libevent-pthreads-2.1-7:arm64 précédemment désélectionné.
-Préparation du dépaquetage de .../06-libevent-pthreads-2.1-7_2.1.12-stable-8_arm64.deb ...
-Dépaquetage de libevent-pthreads-2.1-7:arm64 (2.1.12-stable-8) ...
-Sélection du paquet libevent-openssl-2.1-7:arm64 précédemment désélectionné.
-Préparation du dépaquetage de .../07-libevent-openssl-2.1-7_2.1.12-stable-8_arm64.deb ...
-Dépaquetage de libevent-openssl-2.1-7:arm64 (2.1.12-stable-8) ...
-Sélection du paquet libevent-dev précédemment désélectionné.
-Préparation du dépaquetage de .../08-libevent-dev_2.1.12-stable-8_arm64.deb ...
-Dépaquetage de libevent-dev (2.1.12-stable-8) ...
-Sélection du paquet libv4lconvert0:arm64 précédemment désélectionné.
-Préparation du dépaquetage de .../09-libv4lconvert0_1.22.1-5+b2_arm64.deb ...
-Dépaquetage de libv4lconvert0:arm64 (1.22.1-5+b2) ...
-Sélection du paquet libv4l-0:arm64 précédemment désélectionné.
-Préparation du dépaquetage de .../10-libv4l-0_1.22.1-5+b2_arm64.deb ...
-Dépaquetage de libv4l-0:arm64 (1.22.1-5+b2) ...
-Sélection du paquet libv4l2rds0:arm64 précédemment désélectionné.
-Préparation du dépaquetage de .../11-libv4l2rds0_1.22.1-5+b2_arm64.deb ...
-Dépaquetage de libv4l2rds0:arm64 (1.22.1-5+b2) ...
-Sélection du paquet v4l-utils précédemment désélectionné.
-Préparation du dépaquetage de .../12-v4l-utils_1.22.1-5+b2_arm64.deb ...
-Dépaquetage de v4l-utils (1.22.1-5+b2) ...
-Paramétrage de libevent-extra-2.1-7:arm64 (2.1.12-stable-8) ...
-Paramétrage de libevent-openssl-2.1-7:arm64 (2.1.12-stable-8) ...
-Paramétrage de libevent-2.1-7:arm64 (2.1.12-stable-8) ...
-Paramétrage de libv4lconvert0:arm64 (1.22.1-5+b2) ...
-Paramétrage de libmd-dev:arm64 (1.0.4-2) ...
-Paramétrage de libv4l2rds0:arm64 (1.22.1-5+b2) ...
-Paramétrage de libbsd-dev:arm64 (0.11.7-2) ...
-Paramétrage de python3-iniparse (0.5-1) ...
-Paramétrage de libevent-pthreads-2.1-7:arm64 (2.1.12-stable-8) ...
-Paramétrage de crudini (0.9.4-1) ...
-Paramétrage de libv4l-0:arm64 (1.22.1-5+b2) ...
-Paramétrage de libevent-dev (2.1.12-stable-8) ...
-Paramétrage de v4l-utils (1.22.1-5+b2) ...
-Traitement des actions différées (« triggers ») pour libc-bin (2.36-9+deb12u6) ...
-Traitement des actions différées (« triggers ») pour man-db (2.11.2-2) ...
-Install dependencies ... [OK]
-Reading configuration ...
-No user configuration file found ...
-Using default configuration ... [OK]
-Creating file structure ...
-Directory /home/mks/printer_data/config already exists ...
-Directory /home/mks/printer_data/logs already exists ...
-Directory /home/mks/printer_data/systemd already exists ...
-Creating file structure ... [OK]
-Link crowsnest to /usr/local/bin ... [OK]
-Install service file ... [OK]
-Install environment file ... [OK]
-Install logrotate configuration ... [OK]
-Install crowsnest.conf ... [OK]
-Enable crowsnest.service ... [OK]
-Add User mks to group 'video' ... [SKIPPED]
-        ==> User mks is already in group 'video'
-Build dependend Stream Apps ...
-Cloning ustreamer repository ...
-Clonage dans 'bin/ustreamer'...
-remote: Enumerating objects: 201, done.
-remote: Counting objects: 100% (201/201), done.
-remote: Compressing objects: 100% (142/142), done.
-remote: Total 201 (delta 69), reused 119 (delta 36), pack-reused 0
-Réception d'objets: 100% (201/201), 178.44 Kio | 2.44 Mio/s, fait.
-Résolution des deltas: 100% (69/69), fait.
-Note : basculement sur '9ec59143dda445859e0ddb4027b44029ced5ac14'.
-
-Vous êtes dans l'état « HEAD détachée ». Vous pouvez visiter, faire des modifications
-expérimentales et les valider. Il vous suffit de faire un autre basculement pour
-abandonner les commits que vous faites dans cet état sans impacter les autres branches
-
-Si vous voulez créer une nouvelle branche pour conserver les commits que vous créez,
-il vous suffit d'utiliser l'option -c de la commande switch comme ceci :
-
-  git switch -c <nom-de-la-nouvelle-branche>
-
-Ou annuler cette opération avec :
-
-  git switch -
-
-Désactivez ce conseil en renseignant la variable de configuration advice.detachedHead à false
-
-Install of camera-streamer skipped, only supported on Raspberry SBC's! ...
-Build 'ustreamer' using 2 Cores ...
-make apps
-make[1] : on entre dans le répertoire « /home/mks/crowsnest/bin/ustreamer »
-make -C src
-make[2] : on entre dans le répertoire « /home/mks/crowsnest/bin/ustreamer/src »
--- CC libs/base64.c
--- CC libs/capture.c
--- CC libs/fpsi.c
--- CC libs/frame.c
--- CC libs/frametext.c
--- CC libs/frametext_font.c
--- CC libs/logging.c
--- CC libs/memsink.c
--- CC libs/memsinksh.c
--- CC libs/options.c
--- CC libs/queue.c
--- CC libs/ring.c
--- CC libs/signal.c
--- CC libs/tc358743.c
--- CC libs/unjpeg.c
--- CC ustreamer/blank.c
--- CC ustreamer/data/favicon_ico.c
--- CC ustreamer/data/index_html.c
--- CC ustreamer/encoder.c
--- CC ustreamer/encoders/cpu/encoder.c
--- CC ustreamer/encoders/hw/encoder.c
--- CC ustreamer/http/bev.c
--- CC ustreamer/http/mime.c
--- CC ustreamer/http/path.c
--- CC ustreamer/http/server.c
--- CC ustreamer/http/static.c
--- CC ustreamer/http/unix.c
--- CC ustreamer/http/uri.c
--- CC ustreamer/m2m.c
--- CC ustreamer/main.c
--- CC ustreamer/options.c
--- CC ustreamer/stream.c
--- CC ustreamer/workers.c
--- CC dump/file.c
--- CC dump/main.c
-== LD ustreamer.bin
-== LD ustreamer-dump.bin
-make[2] : on quitte le répertoire « /home/mks/crowsnest/bin/ustreamer/src »
-for i in src/*.bin; do \
-        test ! -x $i || ln -sf $i `basename $i .bin`; \
-done
-make[1] : on quitte le répertoire « /home/mks/crowsnest/bin/ustreamer »
-Build 'ustreamer' ... [SUCCESS]
-'/home/mks/crowsnest/bin/camera-streamer' does not exist! Build skipped ... [WARN]
-
-
-Do you want to add 'update manager' entry to your moonraker.conf? [Y/n]: Y
-Trying to add 'update manager' entry to moonraker.conf ...
-Adding Crowsnest Update Manager entry to moonraker.conf ...  [OK]
-
-Installation successful.
-
-        Reboot your machine for the changes to take effect!
-
-Reboot NOW? [y/N]: N
-
-Not to reboot may cause issues!
-Reboot as soon as possible!
-
-Goodbye ... 
-```
-
-</details>
-
-
-</details>
-
 
 <details>
- <summary>(gcode shell command)</summary>
+ <summary>Installation de Gcode shell command</summary>
  
 ``` 
 /=======================================================\
@@ -1665,14 +1392,42 @@ Goodbye ...
 
 </details>
 
+Le menu Update de KIAUH affiche les versions installées et les dernières en date sur les dépôts respectifs. Si besoin, on peut réaliser les miese à jour.
+![KIAUH Update Menu](../Images/kiauh-update-menu.jpg)
+
 A la fin de ces installations, l'écosystème Klipper est prêt. L'eMMC de 8Gio est occupée à plus de 50%, il reste encore plus de 3Gio disponibles (avec le système originel, on disposait de moins de 1Gio).
 
 Avant ces installations :
+```
+mks@mkspi:~$ df -h
+Sys. de fichiers Taille Utilisé Dispo Uti% Monté sur
+udev               379M       0  379M   0% /dev
+tmpfs               92M    2,0M   90M   3% /run
+/dev/mmcblk1p2     6,7G    1,9G  4,8G  29% /
+tmpfs              456M       0  456M   0% /dev/shm
+tmpfs              5,0M       0  5,0M   0% /run/lock
+tmpfs              456M       0  456M   0% /tmp
+/dev/mmcblk1p1     256M     88M  169M  35% /boot
+/dev/zram1          47M    740K   43M   2% /var/log
+tmpfs               92M       0   92M   0% /run/user/1000
+```
 
 Après:
+```
+mks@mkspi:~$ df -h
+Sys. de fichiers Taille Utilisé Dispo Uti% Monté sur
+udev               379M       0  379M   0% /dev
+tmpfs               92M    2,4M   89M   3% /run
+/dev/mmcblk1p2     6,7G    3,6G  3,1G  55% /
+tmpfs              456M       0  456M   0% /dev/shm
+tmpfs              5,0M       0  5,0M   0% /run/lock
+tmpfs              456M     16K  456M   1% /tmp
+/dev/mmcblk1p1     256M     88M  169M  35% /boot
+/dev/zram1          47M    960K   43M   3% /var/log
+tmpfs               92M       0   92M   0% /run/user/1000
+```
 
-
-L'accès à l'imprimante via Fluidd et/ou Mainsail affiche des messages d'erreurs. Le firmware Klipper n'est pas à jour sur aucun des MCUs. Klipper est désomrais à jour en version 0.12.x alors que les MCUs sont encore en version 0.10.x.
+L'accès à l'imprimante via Fluidd et/ou Mainsail affiche des messages d'erreurs. Le firmware Klipper n'est à jour sur aucun des MCUs. Klipper est désomrais à jour en version 0.12.x alors que les MCUs sont encore en version 0.10.x.
 
 Dernière étape décrite [ici](./firmware-mcus.md).
 
