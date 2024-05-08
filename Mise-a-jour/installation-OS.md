@@ -1,9 +1,9 @@
 # Installation d'un système plus à jour
 
 ## IMPORTANT
-**
+
     En suivant ces instructions, vous perdez la garantie de Qidi Tech
-**
+
 Au moins deux éléments matériels ne seront plus directement utilisables :
 - l'actuel écran tactile,
 - l'accès réseau Wifi non plus à moins de remplacer la clé Wifi Tenda par une autre supportée par l'OS (Armbian).
