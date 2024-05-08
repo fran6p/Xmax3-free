@@ -1,6 +1,6 @@
 # KIAUH (Klipper Installation And Update Helper)
 
-Un ensemble de scripts permet une installation facilitée des éléments composants l'**«écosystème Klipper»**. Grâce à celui-ci, il est possible d'installer, mettre à jour, supprimer des éléments de la suite, juste en choisissant les *bonnes* options.
+Un ensemble de scripts permet une installation facilitée des éléments composants l'**«écosystème Klipper»**. Grâce à celui-ci, il est possible d'installer, de mettre à jour, de supprimer des éléments de la suite, juste en choisissant les *bonnes* options.
 
 On commence par récupérer le dépôt Github de cet outil puis on exécutera son script shell.
 
@@ -12,9 +12,10 @@ sudo apt update && sudo apt install git -y
 ```
 cd && git clone https://github.com/dw-0/kiauh.git
 ```
+
 <details>
  
- <summary>Détails de l'installation</summary>
+<summary>Installation de KIAUH</summary>
  
 ```
 mks@mkspi:~$ cd && git clone https://github.com/dw-0/kiauh.git
@@ -37,7 +38,7 @@ Résolution des deltas: 100% (4043/4043), fait.
 La première fenêtre donne accès au menu principal de KIAUH
 ![](../Images/kiauh-installation-vierge.jpg)
 
-Rien n'est encore installé. Choisir l'option 1 pour accéder au menu des installations
+Rien n'est encore installé. Choisir l'option (1) pour accéder au menu des installations
 ![](../Images/kiauh-installation-choix.jpg)
 
 Installer dans l'ordre :
@@ -56,7 +57,7 @@ Nombre d'instances de Klipper (plusieurs imprimantes)
 
 <details>
  
-  <summary>Détails de l'installation</summary>
+  <summary>Installation de Klipper</summary>
     
 ```
 ###### Installing single Klipper instance ...
@@ -459,7 +460,7 @@ Klipper est installé
 
 <details>
  
- <sumarry>Klipper</sumarry>
+ <sumarry>KIAUH Klipper installé</sumarry>
  
  ![](../Images/kiauh-klipper-installed.jpg)
  
@@ -473,7 +474,7 @@ Klipper est installé
 
 <details>
  
- <summary>Détails de l'installation</summary>
+ <summary>Installation de Moonraker</summary>
 
 ```
 /=======================================================\
@@ -799,7 +800,7 @@ Moonraker est installé
 
 <details>
  
-<sumarry>Moonraker</sumarry>
+<sumarry>KIAUH Moonraker installé</sumarry>
  
  ![](../Images/kiauh-moonraker-installed.jpg)
  
@@ -813,7 +814,7 @@ On peut n'en installer qu'une des deux, l'installation de la première, par déf
 
 <details>
  
-<sumarry>Détails de l'installation de Mainsail</sumarry>
+<sumarry>Installation de Mainsail</sumarry>
 
 ```
 /=======================================================\
@@ -963,7 +964,7 @@ Résolution des deltas: 100% (52/52), fait.
 
 <details>
  
-<sumarry>Détails de l'installation de Fluidd</sumarry>
+<sumarry>Installation de Fluidd</sumarry>
 
 ```
 /=======================================================\
@@ -1083,7 +1084,7 @@ Gestionnaire «moderne» de caméras
 
 <details>
  
-<sumarry>Détails de l'installation de Crowsnest</sumarry>
+<sumarry>Installation de Crowsnest</sumarry>
 
 ```
 /=======================================================\
@@ -1452,7 +1453,7 @@ L'accès à l'imprimante via Fluidd et/ou Mainsail affiche des messages d'erreur
 Le fichier de configuration, `printer.cfg` est minimaliste, Une fois remplacé par celui de Qiditech, les erreurs sont plus précises:
 ![Erreurs Mainsail](../Images/mainsail-error-versions-firmwares.jpg)
 
-![Erreurs Mainsail](../Images/fluidd-error-versions-firmwares.jpg)
+![Erreurs Mainsail](../Images/fluidd-error-klipper-versions-firmwares.jpg)
 
 
 Le firmware Klipper n'est à jour sur aucun des MCUs. Klipper est désomrais à jour en version 0.12.x alors que les MCUs sont encore en version 0.10.x.
