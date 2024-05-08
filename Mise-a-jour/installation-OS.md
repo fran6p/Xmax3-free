@@ -23,7 +23,7 @@ En gros, je n'assume aucune responsabilité en cas de mauvaises manipulations. C
 
 Matériel:
 
-- Lecteur eMMC (si achat de l'eMMC de 32Gio de Qidi, un adaptateur μSD est inclus). Je préfère (cet adaptateur là)[https://www.aliexpress.com/item/1005005614719377.html].
+- Lecteur eMMC (si achat de l'eMMC de 32Gio de Qidi, un adaptateur μSD est inclus). Je préfère [cet adaptateur là](https://www.aliexpress.com/item/1005005614719377.html).
 
 Logiciels (*à télécharger si nécessaire* (⬇️)) :
 - ⬇️ [Rufus](https://rufus.ie/fr/) ou ⬇️ [BalenaEtcher](https://etcher.balena.io/) ou encore ⬇️ [Raspberry Imager](https://www.raspberrypi.com/software/) (au choix)
