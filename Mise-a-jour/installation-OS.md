@@ -2,7 +2,6 @@
 
 ## IMPORTANT
 
-!!! Note
     **En suivant ces instructions, vous perdez la garantie de Qidi Tech**
 
 Au moins deux éléments matériels ne seront plus directement utilisables :
@@ -18,12 +17,12 @@ Matériel:
 
 - Lecteur eMMC (si achat de l'eMMC de 32Gio de Qidi, un adaptateur μSD est inclus). Je préfère ce lecteur là.
 
-Logiciels:
-- :material-download: [Rufus](https://rufus.ie/fr/) ou :material-download: [BalenaEtcher](https://etcher.balena.io/) ou encore :material-download: [Raspberry Imager](https://www.raspberrypi.com/software/) (au choix)
-- :material-download: [image récente du système Armbian](https://github.com/redrathnure/armbian-mkspi/releases/tag/mkspi%2F0.3.4-24.2.0-trunk) (au moment de la rédaction de  cette documentation (20240402), j'utilise cette version (Bookworm (24.2.0), noyau (6.6.17) )
-- accès SSH (:material-download: [Putty](https://putty.org/), :material-download: [MobaXterm](https://mobaxterm.mobatek.net/), …)
-- transfert de fichier (:material-download: [WinSCP](https://winscp.net/eng/index.php) )
-- archiveur de fichiers :material-download: [7zip](https://7-zip.org/) 
+Logiciels (à télécharger si nécessaire (⬇️) :
+- ⬇️ [Rufus](https://rufus.ie/fr/) ou ⬇️ [BalenaEtcher](https://etcher.balena.io/) ou encore ⬇️ [Raspberry Imager](https://www.raspberrypi.com/software/) (au choix)
+- ⬇️ [image récente du système Armbian](https://github.com/redrathnure/armbian-mkspi/releases/tag/mkspi%2F0.3.4-24.2.0-trunk) (au moment de la rédaction de  cette documentation (20240402), j'utilise cette version (Bookworm (24.2.0), noyau (6.6.17) )
+- accès SSH (⬇️ [Putty](https://putty.org/), ⬇️ [MobaXterm](https://mobaxterm.mobatek.net/), …)
+- transfert de fichier (⬇️ [WinSCP](https://winscp.net/eng/index.php) )
+- archiveur de fichiers ⬇️ [7zip](https://7-zip.org/) 
 
 ## Préalable
 
