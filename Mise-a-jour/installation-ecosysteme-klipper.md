@@ -56,8 +56,8 @@ Nombre d'instances de Klipper (plusieurs imprimantes)
 ![](../Images/kiauh-installation-klipper-python3-une-instance.jpg)
 
 <details>
- 
-  <summary>Installation de Klipper</summary>
+
+<summary>Installation de Klipper</summary>
     
 ```
 ###### Installing single Klipper instance ...
@@ -456,15 +456,15 @@ Created symlink /etc/systemd/system/multi-user.target.wants/klipper.service → 
 
 </details>
 
-Klipper est installé
+
 
 <details>
- 
- <sumarry>KIAUH Klipper installé</sumarry>
+
+<sumarry>Klipper installé</sumarry>
  
  ![](../Images/kiauh-klipper-installed.jpg)
  
- </details>
+</details>
 
  ### MOONRAKER
 
@@ -473,8 +473,8 @@ Klipper est installé
  Moonraker détecte combien d'instances Klipper ont été installées (ici, une seule) puis prépare son environnement.
 
 <details>
- 
- <summary>Installation de Moonraker</summary>
+
+<summary>Installation de Moonraker</summary>
 
 ```
 /=======================================================\
@@ -792,18 +792,17 @@ Created symlink /etc/systemd/system/multi-user.target.wants/moonraker.service �
 
    ● Instance 1: 192.168.1.126:7125
 ```
- 
- </details>
+
+</details>
 
 
-Moonraker est installé
 
 <details>
- 
-<sumarry>KIAUH Moonraker installé</sumarry>
- 
- ![](../Images/kiauh-moonraker-installed.jpg)
- 
+
+<sumarry>Moonraker installé</sumarry>
+
+![](../Images/kiauh-moonraker-installed.jpg)
+
 </details>
 
 ### MAINSAIL / FLUIDD
@@ -813,7 +812,7 @@ Interfaces Web permettant l'accès via un navigateur Internet à Klipper via les
 On peut n'en installer qu'une des deux, l'installation de la première, par défaut, communiquera avec le port HTTP standard (80). Pour la seconde, il faudra fournir un autre numéro de port, par exemple 10088, celui utilisé par Qidi et son trancheur Qidislicer.
 
 <details>
- 
+
 <sumarry>Installation de Mainsail</sumarry>
 
 ```
@@ -959,11 +958,11 @@ Résolution des deltas: 100% (52/52), fait.
  Mainsail has been set up!
 #=======================================================#
 ``` 
- 
+
 </details>
 
 <details>
- 
+
 <sumarry>Installation de Fluidd</sumarry>
 
 ```
@@ -1075,7 +1074,7 @@ fluidd.zip          100%[===================>]   3,51M  9,63MB/s    ds 0,4s
  Fluidd has been set up!
 #=======================================================#
 ``` 
- 
+
 </details>
 
 ### CROWSNEST
@@ -1083,7 +1082,7 @@ fluidd.zip          100%[===================>]   3,51M  9,63MB/s    ds 0,4s
 Gestionnaire «moderne» de caméras
 
 <details>
- 
+
 <sumarry>Installation de Crowsnest</sumarry>
 
 ```
@@ -1350,7 +1349,7 @@ Reboot as soon as possible!
 
 Goodbye ...
 ``` 
- 
+
 </details>
 
 ### Gcode Shell Command
@@ -1358,9 +1357,9 @@ Goodbye ...
 Permet d'étendre les macros G-code en utilisant des scripts shell
 
 <details>
- 
+
 <summary>Installation de Gcode shell command</summary>
- 
+
 ``` 
 /=======================================================\
 |     ~~~~~~~~~~~~~~~~~ [ KIAUH ] ~~~~~~~~~~~~~~~~~     |
@@ -1413,7 +1412,7 @@ Permet d'étendre les macros G-code en utilisant des scripts shell
  
 ![KIAUH Update Menu](../Images/kiauh-update-menu.jpg)
 
-A la fin de ces installations, l'écosystème Klipper est prêt. L'eMMC de 8Gio est occupée à plus de 50%, il reste encore plus de 3Gio disponibles (avec le système originel, on disposait de moins de 1Gio).
+A la fin de ces installations, l'écosystème Klipper est prêt. L'eMMC de 8Gio est occupée à plus de 50%, il reste encore plus de 3Gio disponibles (***avec le système originel, on disposait de moins de 1Gio***).
 
 Avant ces installations :
 ```
@@ -1450,7 +1449,7 @@ L'accès à l'imprimante via Fluidd et/ou Mainsail affiche des messages d'erreur
 
 ![Erreurs Fluidd](../Images/fluidd-error-no-printercfg.jpg)
 
-Le fichier de configuration, `printer.cfg` est minimaliste, Une fois remplacé par celui de Qiditech, les erreurs sont plus précises:
+Le fichier de configuration, `printer.cfg` installé par Klipper est minimaliste, une fois remplacé par celui de Qiditech, les erreurs sont plus précises:
 ![Erreurs Mainsail](../Images/mainsail-error-versions-firmwares.jpg)
 
 ![Erreurs Mainsail](../Images/fluidd-error-klipper-versions-firmwares.jpg)
