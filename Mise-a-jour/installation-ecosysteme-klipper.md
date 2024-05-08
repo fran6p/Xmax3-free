@@ -1,10 +1,10 @@
-# Installation de KIAUH (Klipper Installation And Update Helper)
+# KIAUH (Klipper Installation And Update Helper)
 
-Un ensemble de scripts permet une installation facilitée des éléments composants l'«écosysteme Klipper». Grâce à celui-ci, il est possible d'installer, mettre à jour, supprimer des éléments de la suite.
+Un ensemble de scripts permet une installation facilitée des éléments composants l'**«écosystème Klipper»**. Grâce à celui-ci, il est possible d'installer, mettre à jour, supprimer des éléments de la suite, juste en choisissant les *bonnes* options.
 
-Il suffit simplement de récupérer le dépôt Github de cet outil puis d'exécuter son script shell.
+On commence par récupérer le dépôt Github de cet outil puis on exécutera son script shell.
 
-1. installer le paquet "git"
+1. installer le paquet "git" (au cas où il serait absent)
 ```
 sudo apt update && sudo apt install git -y
 ```
@@ -45,7 +45,7 @@ Installer dans l'ordre :
 3. Mainsail
 4. Fluidd (port 10088)
 
-### Klipper
+### KLIPPER
 
 Aprés sélection (1), choisir la version de Python (v3 recommandée)
 ![](../Images/kiauh-installation-klipper-python3.jpg)
@@ -452,3 +452,15 @@ Created symlink /etc/systemd/system/multi-user.target.wants/klipper.service → 
 ```
 
 </details>
+
+Klipper est installé
+
+<details>
+ 
+ ![](../Images/kiauh-klipper-installed.jpg)
+ 
+ </details>
+
+ ### MOONRAKER
+
+ 
