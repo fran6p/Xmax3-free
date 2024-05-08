@@ -23,7 +23,7 @@ En gros, je n'assume aucune responsabilité en cas de mauvaises manipulations. C
 
 Matériel:
 
-- Lecteur eMMC (si achat de l'eMMC de 32Gio de Qidi, un adaptateur μSD est inclus). Je préfère ce lecteur là.
+- Lecteur eMMC (si achat de l'eMMC de 32Gio de Qidi, un adaptateur μSD est inclus). Je préfère (cet adaptateur là)[https://www.aliexpress.com/item/1005005614719377.html].
 
 Logiciels (*à télécharger si nécessaire* (⬇️)) :
 - ⬇️ [Rufus](https://rufus.ie/fr/) ou ⬇️ [BalenaEtcher](https://etcher.balena.io/) ou encore ⬇️ [Raspberry Imager](https://www.raspberrypi.com/software/) (au choix)
@@ -40,7 +40,7 @@ Avant toute chose, il est préférable d'avoir réalisé une sauvegarde de la to
 - ~/klipper_config (contient les fichiers de configuration)
 - ~/gcode_files (contient les G-codes).
 
-Une fois ces précuations prises :
+Une fois ces précautions prises :
 - éteindre l'imprimante et débrancher le câble d'alimentation
 - accéder à l'arrière pour démonter la plaque donnant accès à la partie électronique
 - dévisser les deux vis maintenant l'eMMC sur la carte et extraire celle-ci (on peut évidemment se mettre à la terre avant de faire  ces manipulations 😏 ). Qidi met à disposition [cette vidéo](https://drive.google.com/drive/folders/1EPYKbYz4ecUIf17z5wtP-jDAOPeDkXJP) montrant la procédure.
@@ -57,12 +57,13 @@ Une fois ces précuations prises :
   * indiquer l'emplacement du ficher .img (2)
   * (3) permet de vérifier l'intégrité du fichier téléchargé (le fichier .sha du dépôt Github contient l'empreinte)
   * lancer le processus de flashage
+
 Deux fenêtres d'alerte vont s'afficher, cliquer sur OK pour valider et poursuivre le flashage
 
 ![](../Images/rufus-2.jpg)
 ![](../Images/rufus-3.jpg)
 
-La procédure dure un certain temps (moins de cinq minutes), la progression de la tâche s'affiche
+La procédure dure un certain temps (moins de dix minutes), la progression de la tâche s'affiche au fur et à mesure
 
 ![](../Images/rufus-4.jpg)
 
