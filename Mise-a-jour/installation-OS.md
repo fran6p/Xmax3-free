@@ -17,7 +17,7 @@ Matériel:
 
 - Lecteur eMMC (si achat de l'eMMC de 32Gio de Qidi, un adaptateur μSD est inclus). Je préfère ce lecteur là.
 
-Logiciels (à télécharger si nécessaire (⬇️) :
+Logiciels (*à télécharger si nécessaire* (⬇️)) :
 - ⬇️ [Rufus](https://rufus.ie/fr/) ou ⬇️ [BalenaEtcher](https://etcher.balena.io/) ou encore ⬇️ [Raspberry Imager](https://www.raspberrypi.com/software/) (au choix)
 - ⬇️ [image récente du système Armbian](https://github.com/redrathnure/armbian-mkspi/releases/tag/mkspi%2F0.3.4-24.2.0-trunk) (au moment de la rédaction de  cette documentation (20240402), j'utilise cette version (Bookworm (24.2.0), noyau (6.6.17) )
 - accès SSH (⬇️ [Putty](https://putty.org/), ⬇️ [MobaXterm](https://mobaxterm.mobatek.net/), …)
@@ -26,11 +26,16 @@ Logiciels (à télécharger si nécessaire (⬇️) :
 
 ## Préalable
 
-**Le système d'exploitation sera complètement remplacé par un plus récent**, il est donc nécessaire de sauvegarder la totalité du dossier ~/klipper_config (contient les fichiers de configuration) et ~/gcode_files (contient les G-codes).
+    Le système d'exploitation sera complètement remplacé par un plus récent
+   
+Avant toute chose, il est préférable d'avoir réalisé une sauvegarde de la totalité des dossiers:
+- ~/klipper_config (contient les fichiers de configuration)
+- ~/gcode_files (contient les G-codes).
 
+Une fois ces précuations prises :
 - éteindre l'imprimante et débrancher le câble d'alimentation
 - accéder à l'arrière pour démonter la plaque donnant accès à la partie électronique
-- dévisser les deux vis maintenant l'eMMC sur la carte et extraire celle-ci (on peut évidemment se mettre à la terre avant de le faire :smiley: ). Qidi met à disposition [cette vidéo](https://drive.google.com/drive/folders/1EPYKbYz4ecUIf17z5wtP-jDAOPeDkXJP) montrant la procédure.
+- dévisser les deux vis maintenant l'eMMC sur la carte et extraire celle-ci (on peut évidemment se mettre à la terre avant de faire  ces manipulations 😏 ). Qidi met à disposition [cette vidéo](https://drive.google.com/drive/folders/1EPYKbYz4ecUIf17z5wtP-jDAOPeDkXJP) montrant la procédure.
 
 
 ## Installation Armbian Bookworm
@@ -85,4 +90,4 @@ sudo apt upgrade -y
 
 [La documentation suivante](./installation-ecosysteme-klipper.md) permet de poursuivre l'installation de l'écosystème Klipper
 
-:smiley:
+😃
