@@ -10,7 +10,7 @@ Le Klipper (klippy) proposé par Qidi Tech a été installé avec Python2. Klipp
 
 ## IMPORTANT
 
-    En suivant ces instructions, vous perdez la garantie de Qidi Tech
+    En suivant ces instructions, vous perdrez la garantie de Qidi Tech
 
 Au moins deux éléments matériels ne seront plus directement utilisables :
 - l'actuel écran tactile,
