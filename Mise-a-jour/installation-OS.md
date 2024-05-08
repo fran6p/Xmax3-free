@@ -99,6 +99,7 @@ sudo apt upgrade -y
 ```
 
 Le système de base est installé sur l'eMMC, il occupe moins de 2Gio sur la capacité totale de 8Gio
+
 ***df -H***
 
 [La documentation suivante](./installation-ecosysteme-klipper.md) permet de poursuivre l'installation de l'écosystème Klipper
