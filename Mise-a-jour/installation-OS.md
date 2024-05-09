@@ -2,7 +2,27 @@
 
 ## Pourquoi ?
 
-La distribution Linux installée d'origine est une Armbian en version Buster, version qui n'est plus supportée (la mise à jour du système remonte des erreurs, Armbian ayant supprimé depuis quleques mois ses dépôts, seuls restent disponibles les dépôts Debian).
+La distribution Linux installée d'origine est une Armbian en version Buster, version passée en fin de vie depuis quelques années déjà. Armbian (développeemnt bénévole) a supprimé depuis quelques mois les dépôts Buster (voir [ici](https://fi.mirror.armbian.de/apt/dists/)). La mise à jour du système remonte des erreurs au sujet de ces dépôts inaccessibles :
+```
+Ign:5 http://fi.mirror.armbian.de/apt buster InRelease
+Err:6 http://fi.mirror.armbian.de/apt buster Release
+  404  Not Found [IP: 65.21.120.247 80]
+```
+
+Les seules mises à jour disponibles du système ne concernent que les dépôts Debian.
+
+<details>
+
+   <summary>Solution provisoire</summary>
+
+```
+Commenter la igne faisant référence au dépôt Buster d'Armbian dans le fichier /etc/apt/sources.list.d/armbian.list
+
+#deb http://apt.armbian.com buster main buster-utils buster-desktop
+
+```
+   
+</details>
 
 Python cohabite en deux versions (v2 et v3), la v2 n'est plus supportée depuis quelques années, la v3 reste bloquée en version 3.7.
 
