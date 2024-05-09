@@ -67,7 +67,7 @@ Logiciels (*à télécharger si nécessaire* (⏬)) :
 ## Préalable
 
 > [!IMPORTANT]
-> Le système d'exploitation sera complètement remplacé par un plus récent
+> **Le système d'exploitation sera complètement remplacé par un plus récent**
    
 >[!TIP]
 > Avant toute chose, il est préférable d'avoir réalisé une sauvegarde de la totalité des dossiers:
