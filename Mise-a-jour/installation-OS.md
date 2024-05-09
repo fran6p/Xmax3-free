@@ -103,7 +103,7 @@ La procédure dure un certain temps (moins de dix minutes), la progression de la
 
 ![](../Images/rufus-4.jpg)
 
-et finalement, indique 100% :
+et finalement, cette barre de progression passe au vert:
 
 ![](../Images/rufus-5.jpg)
 
