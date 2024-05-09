@@ -1,5 +1,10 @@
 # Installation d'un système plus à jour
 
+> [!IMPORTANT]
+> Le choix de Qiditech en passant ses derniers modèles (Series 3 et Q1 Pro) sous le firmware Klipper est (*pour le moment* 🤔) de rester sur des versions anciennes, «identiques» pour tous leurs modèles afin de pouvoir apporter une maintenance plus aisée qui serait plus difficile si chacun possédait des versions des composants essentiels différentes.
+> 
+> C'est un point de vue commercial honorable et honnêtement depuis maintenant plus de neuf mois que j'utilise ma X-Max 3, je n'ai pas rencontré de problèmes majeurs à cause de ces choix originaux.
+
 ## Pourquoi ?
 
 La distribution Linux installée d'origine est une Armbian en version Buster, version passée en fin de vie depuis quelques années déjà. Armbian dont le développement est bénévole, a supprimé depuis quelques mois les dépôts Buster (voir [ici](https://fi.mirror.armbian.de/apt/dists/)). La mise à jour du système remonte des erreurs au sujet de ces dépôts inaccessibles :
