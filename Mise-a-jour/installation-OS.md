@@ -103,7 +103,11 @@ La procédure dure un certain temps (moins de dix minutes), la progression de la
 
 ![](../Images/rufus-4.jpg)
 
-Une fois terminé, retirer le lecteur contenant l'eMMC via la procédure standard pour l'éjecter proprement du PC 
+et finalement, indique 100% :
+
+![](../Images/rufus-5.jpg)
+
+retirer alors le lecteur contenant l'eMMC via la procédure standard pour l'éjecter proprement du PC 
 
 - réinsérer l'eMMC sur la carte contrôleur de l'imprimante (voir la vidéo citée plus haut)
 - brancher le câble d'alimentation et **le câble Ethernet** (rappel: la clé Wifi Tenda n'est plus fonctionnelle)
