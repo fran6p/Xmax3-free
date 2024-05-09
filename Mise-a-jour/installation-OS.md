@@ -1,7 +1,7 @@
 # Installation d'un système plus à jour
 
 > [!IMPORTANT]
-> Le choix de Qiditech en passant ses derniers modèles (Series 3 et Q1 Pro) sous le firmware Klipper est (*pour le moment* 🤔) de rester sur des versions anciennes, «identiques» pour tous leurs modèles afin de pouvoir apporter une maintenance plus aisée qui serait plus difficile si chacun possédait des versions des composants essentiels différentes.
+> Le choix de Qiditech en passant ses derniers modèles (Series 3 et Q1 Pro) sous le firmware Klipper est (*pour le moment* 🤔) de rester sur des versions anciennes, «identiques» pour tous leurs modèles permettant d'apporter une maintenance plus aisée qui sinon serait plus difficile à assurer avec des versions de composants essentiels (Klipper, Moonraker) différentes.
 > 
 > C'est un point de vue commercial honorable et honnêtement depuis maintenant plus de neuf mois que j'utilise ma X-Max 3, je n'ai pas rencontré de problèmes majeurs à cause de ces choix originaux.
 
