@@ -16,7 +16,7 @@ Les seules mises à jour disponibles du système ne concernent que les dépôts 
    <summary>Solution provisoire</summary>
 
 ```
-Commenter la igne faisant référence au dépôt Buster d'Armbian dans le fichier /etc/apt/sources.list.d/armbian.list
+Commenter la ligne faisant référence au dépôt Buster d'Armbian dans le fichier /etc/apt/sources.list.d/armbian.list
 
 #deb http://apt.armbian.com buster main buster-utils buster-desktop
 
