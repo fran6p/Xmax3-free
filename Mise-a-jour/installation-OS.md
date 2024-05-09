@@ -84,6 +84,8 @@ Une fois ces précautions prises :
 
 ## Installation Armbian Bookworm
 
+### Sur le «PC»
+
 - connecter l'eMMC à l'aide de son adaptateur sur le PC de travail
 - démarrer Rufus pour flasher l'image Armbian précédemment téléchargée (***au moment de la rédaction : Armbian-unofficial_24.2.0-trunk_Mkspi_bookworm_current_6.6.17.img.xz***) puis décompressée via 7zip pour obtenir le fichier d'extension .img (Armbian-unofficial_24.2.0-trunk_Mkspi_bookworm_current_6.6.17.img)
 
@@ -108,6 +110,8 @@ et finalement, cette barre de progression passe au vert:
 ![](../Images/rufus-5.jpg)
 
 retirer alors le lecteur contenant l'eMMC via la procédure standard pour l'éjecter proprement du PC 
+
+### Sur l'imprimante
 
 - réinsérer l'eMMC sur la carte contrôleur de l'imprimante (voir la vidéo citée plus haut)
 - brancher le câble d'alimentation et **le câble Ethernet** (rappel: la clé Wifi Tenda n'est plus fonctionnelle)
