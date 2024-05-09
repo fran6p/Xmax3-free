@@ -34,21 +34,23 @@ Python cohabite en deux versions (v2 et v3), la v2 n'est plus supportée depuis 
 Le Klipper (klippy) proposé par Qidi Tech a été installé avec Python2. Klipper préconise actuellement de construire l'environnement virtuel (klippy) en utilisant Python en version 3.
 
 > [!CAUTION]
-> En suivant ces instructions, vous perdrez la garantie de Qidi Tech
+> **En suivant ces instructions, vous perdrez la garantie de Qidi Tech**
 
 Au moins deux éléments matériels ne seront plus directement utilisables :
 - l'actuel écran tactile,
-- l'accès réseau Wifi non plus à moins de remplacer la clé Wifi Tenda par une autre supportée par l'OS (Armbian).
+- l'accès réseau Wifi avec la clé Wifi Tenda.
+
+> [!NOTE]
+> Moyennant des achats supplémentaires, on peut compenser la perte de l'écran originel et du Wifi :
+> 
+> - Klipperscreen avec un autre écran et un SBC (Small Board Computer) pour piloter l'imprimante
+> - Une clé USB Wifi gérée nativement par Armbian ([une bonne liste](https://teamgloomy.github.io/armbian_wifi.html)). Il faudra connaitre précisément le fabricant et la puce (chipset) utilisés.
+
 
 > [!WARNING]
 > Les manipulations décrites ne s'adressent pas à un débutant mais plutôt à un utilisateur ayant un peu d'expérience avec Linux et sa ligne de commandes.
 >
-> En gros, je n'assume aucune responsabilité en cas de mauvaises manipulations. Ce qui a fonctionné pour moi peut très bien s'avérer un cauchemar pour d'autres… comme disent les anglo-saxons YMMV.
-
-> [!NOTE]
-> Moyennant des achats supplémentaires, on peut compenser la perte de l'écran originel et du Wifi :
-> - Klipperscreen avec un autre écran et un SBC (Small Board Computer) pour piloter l'imprimante
-> - Une clé USB Wifi gérée nativement par Armbian ([une bonne liste](https://teamgloomy.github.io/armbian_wifi.html)). Il faudra connaitre précisément le fabricant et la puce (chipset) utilisés.
+> En gros, je n'assume aucune responsabilité en cas de mauvaises manipulations. Ce qui a fonctionné pour moi peut très bien s'avérer un cauchemar pour d'autres… comme disent les anglo-saxons ***YMMV***.
 
 
 ## Prérequis
