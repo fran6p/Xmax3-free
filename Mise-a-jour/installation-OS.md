@@ -141,7 +141,19 @@ sudo apt upgrade -y
 
 Le système de base est installé sur l'eMMC, il occupe moins de 2Gio sur la capacité totale de 8Gio
 
-***df -H***
+```
+mks@mkspi:~$ df -h
+Sys. de fichiers Taille Utilisé Dispo Uti% Monté sur
+udev               379M       0  379M   0% /dev
+tmpfs               92M    2,0M   90M   3% /run
+/dev/mmcblk1p2     6,7G    1,9G  4,8G  29% /
+tmpfs              456M       0  456M   0% /dev/shm
+tmpfs              5,0M       0  5,0M   0% /run/lock
+tmpfs              456M       0  456M   0% /tmp
+/dev/mmcblk1p1     256M     88M  169M  35% /boot
+/dev/zram1          47M    740K   43M   2% /var/log
+tmpfs               92M       0   92M   0% /run/user/1000
+```
 
 [La documentation suivante](./installation-ecosysteme-klipper.md) permet de poursuivre l'installation de l'écosystème Klipper
 
