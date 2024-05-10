@@ -1466,9 +1466,19 @@ Le fichier de configuration, `printer.cfg` installé par Klipper est minimaliste
 
 ![Erreurs Mainsail](../Images/fluidd-error-klipper-versions-firmwares.jpg)
 
+> [!TIP]
+> Mainsail (et Fluidd) possède une bonne documentation.
+> [Ce lien (Mainsail)](https://docs.mainsail.xyz/faq/klipper_errors/command-format-mismatch) explique la raison de ce message d'erreur «**MCU protocol error**»:
+>
+> ***De temps en temps, des changements sont réalisés dans la communication Klipper entre l'hôte et le MCU. Cela nécessite de mettre à jour tous vos MCU pour corriger l'erreur de communication.***
 
-**Le firmware Klipper n'est à jour sur aucun des MCUs**. L'environnement Klipper est à jour en version 0.12.x alors que les firmwares Klipper des MCUs sont encore en version 0.10.x (version utilisée par Qidi Tech).
+**Le firmware Klipper n'est à jour sur aucun des MCUs utilisés**. L'environnement Klipper est à jour en version 0.12.x alors que les firmwares Klipper des MCUs sont encore en version 0.10.x (version utilisée par Qidi Tech).
 
-Il reste à installer le firmware Klipper sur les MCU (**M**icro **C**ontroler **U**nit) de l'imprimante (carte contrôleur (STM32F402), la tête (RP1040) et le RPI (Linux)). C'est l'objet de cette dernière étape décrite [ici](./firmware-mcus.md).
+Il reste à installer le firmware Klipper sur les MCU (**M**icro **C**ontroler **U**nit) de l'imprimante :
+- carte contrôleur (STM32F402)
+- la tête (RP1040)
+- le Linux MCU (nommé fréquemment «rpi»)
+
+ C'est l'objet de cette dernière étape décrite [ici](./firmware-mcus.md).
 
 😃
