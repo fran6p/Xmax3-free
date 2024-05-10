@@ -794,14 +794,12 @@ Created symlink /etc/systemd/system/multi-user.target.wants/moonraker.service �
 
 ### MAINSAIL / FLUIDD
 
-Interfaces Web permettant l'accès via un navigateur Internet à Klipper via les APIs de Moonraker. 
+Interfaces Web permettant l'accès via un navigateur Internet à Klipper via les APIs de Moonraker choix (3) pour Mainsail et (4) pour Fluidd. 
 
 On peut n'en installer qu'une des deux, l'installation de la première, par défaut, communiquera avec le port HTTP standard (80). Pour la seconde, il faudra fournir un autre numéro de port, par exemple 10088, celui utilisé par Qidi et son trancheur Qidislicer.
 
 
-<details>
-
-<sumarry>Mainsail</sumarry>
+<details><sumarry>Mainsail</sumarry>
 
 ```
 /=======================================================\
@@ -949,11 +947,7 @@ Résolution des deltas: 100% (52/52), fait.
 
 </details>
 
----------------
-
-<details>
-
-<sumarry>Fluidd</sumarry>
+<details><sumarry>Fluidd</sumarry>
 
 ```
 /=======================================================\
