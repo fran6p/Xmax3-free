@@ -32,7 +32,7 @@ Le but de ce projet est de créer un environnement logiciel basé sur des compos
 
 Commencer en débutant par ce [premier guide](./Mise-a-jour/installation-OS.md).
 
-> [?NOTE]
+> [!NOTE]
 > Ce projet est toujours en phase de test, des bogues peuvent être présents 😏
 > Comme tout projet Github, vous êtes bienvenus pour rapport des «issues» et pourquoi pas proposer des «pull requests»
 
