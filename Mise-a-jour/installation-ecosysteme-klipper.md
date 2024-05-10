@@ -798,8 +798,9 @@ Interfaces Web permettant l'accès via un navigateur Internet à Klipper via les
 
 On peut n'en installer qu'une des deux, l'installation de la première, par défaut, communiquera avec le port HTTP standard (80). Pour la seconde, il faudra fournir un autre numéro de port, par exemple 10088, celui utilisé par Qidi et son trancheur Qidislicer.
 
+Lors de cette première installation, répondre Yes (Oui) à la demande d'installation des macros «client» (PAUSE, RESUME, …)
 
-<details><sumarry>Mainsail</sumarry>
+<details><sumarry>Mainsail détails</sumarry>
 
 ```
 /=======================================================\
@@ -947,7 +948,11 @@ Résolution des deltas: 100% (52/52), fait.
 
 </details>
 
-<details><sumarry>Fluidd</sumarry>
+Mainsail utilisant le port standard HTTP, il est nécessaire d'en indiquer un différent pour l'accès à Fluidd (Qidi Tech utilise le port 10088).
+
+Les macros (client.cfg) indispensables ayant déjà été installées avec Mainsail, inutile de les réinstaller pour Fluidd (répondre Non à la demande d'installation). Ces deux interfaces Web utilisent les mêmes macros (PAUSE, RESUME. …).
+
+<details><sumarry>Fluidd détails</sumarry>
 
 ```
 /=======================================================\
@@ -1336,6 +1341,10 @@ Goodbye ...
 
 </details>
 
+> [!NOTE]
+>
+> Un redémarrage du système sera nécessaire pour prendre en compte cette installation de Crowsnest
+
 ### Gcode Shell Command
 
 Permet d'étendre les macros G-code en utilisant des scripts shell
@@ -1392,11 +1401,12 @@ Permet d'étendre les macros G-code en utilisant des scripts shell
 </details>
 
 > [!NOTE]
-> Le menu Update de KIAUH affiche les versions installées et les dernières en date sur les dépôts respectifs. Si besoin, on peut réaliser les mises à jour.
+> 
+> Le menu Update de KIAUH affiche les versions actuellement installées et les dernières en date sur les dépôts respectifs. Si besoin, on peut réaliser les mises à jour.
  
 ![KIAUH Update Menu](../Images/kiauh-update-menu.jpg)
 
-A la fin de ces installations, l'écosystème Klipper est prêt. L'eMMC de 8Go est occupée à plus de 50%, il reste encore plus de 3Go disponibles (***avec le système originel, on disposait de moins de 1Gio***).
+A la fin de ces installations, l'écosystème Klipper est prêt. L'eMMC de 8Go est occupée à plus de 50%, il reste encore plus de 3Go disponibles (***avec le système originel, on disposait de moins de 1Go***).
 
 ***RAPPEL***
 
@@ -1445,6 +1455,6 @@ Le fichier de configuration, `printer.cfg` installé par Klipper est minimaliste
 
 **Le firmware Klipper n'est à jour sur aucun des MCUs**. Klipper est désomrais à jour en version 0.12.x alors que les MCUs sont encore en version 0.10.x.
 
-Dernière étape décrite [ici](./firmware-mcus.md).
+Il reste à installer le firmware Klipper sur les MCU (Micro Controler Unit) de l'imprimante (carte contrôleur (STM32F402), la tête (RP1040) et le RPI (Linux)). C'est l'objet de dette dernière étape décrite [ici](./firmware-mcus.md).
 
 😃
