@@ -1425,22 +1425,22 @@ A la fin de ces installations, l'écosystème Klipper est prêt. L'eMMC de 8Go e
 > /dev/zram1          47M    740K   43M   2% /var/log
 > tmpfs               92M       0   92M   0% /run/user/1000
 > ```
-
-**Après**:
-
-```
-mks@mkspi:~$ df -h
-Sys. de fichiers Taille Utilisé Dispo Uti% Monté sur
-udev               379M       0  379M   0% /dev
-tmpfs               92M    2,4M   89M   3% /run
-/dev/mmcblk1p2     6,7G    3,6G  3,1G  55% /
-tmpfs              456M       0  456M   0% /dev/shm
-tmpfs              5,0M       0  5,0M   0% /run/lock
-tmpfs              456M     16K  456M   1% /tmp
-/dev/mmcblk1p1     256M     88M  169M  35% /boot
-/dev/zram1          47M    960K   43M   3% /var/log
-tmpfs               92M       0   92M   0% /run/user/1000
-```
+>
+> **Après** :
+> 
+> ```
+> mks@mkspi:~$ df -h
+> Sys. de fichiers Taille Utilisé Dispo Uti% Monté sur
+> udev               379M       0  379M   0% /dev
+> tmpfs               92M    2,0M   90M   3% /run
+> /dev/mmcblk1p2     6,7G    3,6G  3,1G  55% /
+> tmpfs              456M       0  456M   0% /dev/shm
+> tmpfs              5,0M       0  5,0M   0% /run/lock
+> tmpfs              456M       0  456M   0% /tmp
+> /dev/mmcblk1p1     256M     88M  169M  35% /boot
+> /dev/zram1          47M    740K   43M   2% /var/log
+> tmpfs               92M       0   92M   0% /run/user/1000
+> ```
 
 L'accès à l'imprimante via Fluidd et/ou Mainsail affiche des messages d'erreurs.
 
@@ -1459,7 +1459,7 @@ Le fichier de configuration, `printer.cfg` installé par Klipper est minimaliste
 ![Erreurs Mainsail](../Images/fluidd-error-klipper-versions-firmwares.jpg)
 
 
-**Le firmware Klipper n'est à jour sur aucun des MCUs**. Klipper est désormais à jour en version 0.12.x alors que les MCUs sont encore en version 0.10.x.
+**Le firmware Klipper n'est à jour sur aucun des MCUs**. L'environnement Klipper est à jour en version 0.12.x alors que les firmwares Klipper des MCUs sont encore en version 0.10.x (version utilisée par Qidi Tech).
 
 Il reste à installer le firmware Klipper sur les MCU (**M**icro **C**ontroler **U**nit) de l'imprimante (carte contrôleur (STM32F402), la tête (RP1040) et le RPI (Linux)). C'est l'objet de dette dernière étape décrite [ici](./firmware-mcus.md).
 
