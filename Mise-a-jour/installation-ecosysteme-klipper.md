@@ -5,10 +5,12 @@ Un ensemble de scripts permet une installation facilitée des éléments composa
 On commence par récupérer le dépôt Github de cet outil puis on exécutera son script shell.
 
 1. installer le paquet "git" (au cas où il serait absent)
+
 ```
 sudo apt update && sudo apt install git -y
 ```
 2. cloner le dépôt
+
 ```
 cd && git clone https://github.com/dw-0/kiauh.git
 ```
@@ -31,6 +33,7 @@ Résolution des deltas: 100% (4043/4043), fait.
 </details>
 
 3. Exécuter le script
+
 ```
 ~/kiauh/kiauh.sh
 ```
@@ -41,7 +44,7 @@ La première fenêtre donne accès au menu principal de KIAUH
 Rien n'est encore installé. Choisir l'option (1) pour accéder au menu des installations
 ![](../Images/kiauh-installation-choix.jpg)
 
-Installer dans l'ordre :
+**Installer dans l'ordre** :
 1. Klipper
 2. Moonraker
 3. Mainsail
@@ -795,9 +798,10 @@ Interfaces Web permettant l'accès via un navigateur Internet à Klipper via les
 
 On peut n'en installer qu'une des deux, l'installation de la première, par défaut, communiquera avec le port HTTP standard (80). Pour la seconde, il faudra fournir un autre numéro de port, par exemple 10088, celui utilisé par Qidi et son trancheur Qidislicer.
 
+
 <details>
 
-<sumarry>Installation de Mainsail</sumarry>
+<sumarry>Mainsail</sumarry>
 
 ```
 /=======================================================\
@@ -945,11 +949,11 @@ Résolution des deltas: 100% (52/52), fait.
 
 </details>
 
-#### FLUIDD
+---------------
 
 <details>
 
-<sumarry>Installation de Fluidd</sumarry>
+<sumarry>Fluidd</sumarry>
 
 ```
 /=======================================================\
@@ -1344,7 +1348,7 @@ Permet d'étendre les macros G-code en utilisant des scripts shell
 
 <details>
 
-<summary>Installation de Gcode shell command</summary>
+<summary>Gcode shell command</summary>
 
 ``` 
 /=======================================================\
@@ -1398,9 +1402,12 @@ Permet d'étendre les macros G-code en utilisant des scripts shell
  
 ![KIAUH Update Menu](../Images/kiauh-update-menu.jpg)
 
-A la fin de ces installations, l'écosystème Klipper est prêt. L'eMMC de 8Gio est occupée à plus de 50%, il reste encore plus de 3Gio disponibles (***avec le système originel, on disposait de moins de 1Gio***).
+A la fin de ces installations, l'écosystème Klipper est prêt. L'eMMC de 8Go est occupée à plus de 50%, il reste encore plus de 3Go disponibles (***avec le système originel, on disposait de moins de 1Gio***).
 
-Avant ces installations :
+***RAPPEL***
+
+**Avant** ces installations :
+
 ```
 mks@mkspi:~$ df -h
 Sys. de fichiers Taille Utilisé Dispo Uti% Monté sur
@@ -1415,7 +1422,8 @@ tmpfs              456M       0  456M   0% /tmp
 tmpfs               92M       0   92M   0% /run/user/1000
 ```
 
-Après:
+**Après**:
+
 ```
 mks@mkspi:~$ df -h
 Sys. de fichiers Taille Utilisé Dispo Uti% Monté sur
@@ -1441,7 +1449,7 @@ Le fichier de configuration, `printer.cfg` installé par Klipper est minimaliste
 ![Erreurs Mainsail](../Images/fluidd-error-klipper-versions-firmwares.jpg)
 
 
-Le firmware Klipper n'est à jour sur aucun des MCUs. Klipper est désomrais à jour en version 0.12.x alors que les MCUs sont encore en version 0.10.x.
+**Le firmware Klipper n'est à jour sur aucun des MCUs**. Klipper est désomrais à jour en version 0.12.x alors que les MCUs sont encore en version 0.10.x.
 
 Dernière étape décrite [ici](./firmware-mcus.md).
 
