@@ -1355,7 +1355,7 @@ Goodbye ...
 
 ### Gcode Shell Command
 
-Permet d'étendre les macros G-code en utilisant des scripts shell
+Permet d'étendre les fonctionnalités des macros G-code en utilisant des scripts shell
 
 <details>
 
