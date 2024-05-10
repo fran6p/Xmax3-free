@@ -1,1 +1,3 @@
-à compléter
+# PRÉPARATION et INSTALLATION (flashage) du FIRMWARE KLIPPER
+
+
