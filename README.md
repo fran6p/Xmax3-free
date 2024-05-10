@@ -34,6 +34,8 @@ Commencer en débutant par ce [premier guide](./Mise-a-jour/installation-OS.md).
 
 > [!NOTE]
 > Ce projet est toujours en phase de test, des bogues peuvent être présents 😏
-> Comme tout projet Github, vous êtes bienvenus pour rapport des «issues» et pourquoi pas proposer des «pull requests»
+> 
+> Comme tout projet Github, vous êtes bienvenus pour remonter des «issues» et pourquoi pas proposer des «pull requests»
+> 
 
 
