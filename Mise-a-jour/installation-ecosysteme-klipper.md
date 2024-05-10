@@ -794,7 +794,7 @@ Created symlink /etc/systemd/system/multi-user.target.wants/moonraker.service �
 
 ### Interfaces d'accès Web
 
-Interfaces Web permettant l'accès via un navigateur Internet à Klipper via les APIs de Moonraker choix (3) pour Mainsail et (4) pour Fluidd. 
+Interfaces Web permettant l'accès à partir d'un navigateur Internet à Klipper via les APIs de Moonraker choix (3) pour Mainsail et (4) pour Fluidd. 
 
 On peut n'en installer qu'une des deux, l'installation de la première, par défaut, communiquera avec le port HTTP standard (80). Pour la seconde, il faudra fournir un autre numéro de port.
 
@@ -804,7 +804,7 @@ Lors de cette première installation, répondre Yes (Oui) à la demande d'instal
 
 
 <details>
- <sumarry>Interface Mainsail</sumarry>
+ <sumarry>Installation de Mainsail</sumarry>
 
 ```
 /=======================================================\
@@ -954,13 +954,13 @@ Résolution des deltas: 100% (52/52), fait.
 
 #### FLUIDD
 
-Mainsail utilisant le port standard HTTP, il est nécessaire d'en indiquer un différent pour l'accès à Fluidd (Qidi Tech utilise le port 10088).
+Mainsail (si installé en premier) utilise le port standard HTTP (80), il est nécessaire d'en indiquer un différent pour l'accès à Fluidd (Qidi Tech utilise le port 10088).
 
-Les macros (client.cfg) indispensables ayant déjà été installées avec Mainsail, inutile de les réinstaller pour Fluidd (répondre Non à la demande d'installation). Ces deux interfaces Web utilisent les mêmes macros (PAUSE, RESUME. …).
+Normalement, si Mainsail a déjà été installé, les macros (client.cfg) indispensables ont elles-aussi été ajoutées, inutile de les réinstaller pour Fluidd (répondre Non à la demande d'installation). Ces deux interfaces Web utilisent désormais les mêmes macros (PAUSE, RESUME. …).
 
 
 <details>
- <sumarry>Interface Fluidd</sumarry>
+ <sumarry>Installation de Fluidd</sumarry>
 
 ```
 /=======================================================\
@@ -1080,7 +1080,7 @@ Gestionnaire «moderne» de caméras
 
 <details>
 
-<sumarry>Installation de Crowsnest</sumarry>
+  <sumarry>Installation de Crowsnest</sumarry>
 
 ```
 /=======================================================\
