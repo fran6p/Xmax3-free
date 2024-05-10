@@ -1418,7 +1418,7 @@ A la fin de ces installations, l'écosystème Klipper est prêt. L'eMMC de 8Go e
 
 > [!IMPORTANT]
 >
-> **Avant** ces installations :
+> **Avant** le système occupe un peu moins de 30% :
 > 
 > ```
 > mks@mkspi:~$ df -h
@@ -1469,6 +1469,6 @@ Le fichier de configuration, `printer.cfg` installé par Klipper est minimaliste
 
 **Le firmware Klipper n'est à jour sur aucun des MCUs**. L'environnement Klipper est à jour en version 0.12.x alors que les firmwares Klipper des MCUs sont encore en version 0.10.x (version utilisée par Qidi Tech).
 
-Il reste à installer le firmware Klipper sur les MCU (**M**icro **C**ontroler **U**nit) de l'imprimante (carte contrôleur (STM32F402), la tête (RP1040) et le RPI (Linux)). C'est l'objet de dette dernière étape décrite [ici](./firmware-mcus.md).
+Il reste à installer le firmware Klipper sur les MCU (**M**icro **C**ontroler **U**nit) de l'imprimante (carte contrôleur (STM32F402), la tête (RP1040) et le RPI (Linux)). C'est l'objet de cette dernière étape décrite [ici](./firmware-mcus.md).
 
 😃
