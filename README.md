@@ -30,7 +30,7 @@ Le but de ce projet est de créer un environnement logiciel basé sur des compos
 
 ## COMMENT PROCÉDER
 
-Commencer en débuter par ce premier guide.
+Commencer en débutant par ce [premier guide](./Mise-a-jour/installation-OS.md).
 
 > [?NOTE]
 > Ce projet est toujours en phase de test, des bogues peuvent être présents 😏
