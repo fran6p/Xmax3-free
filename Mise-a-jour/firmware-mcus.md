@@ -12,15 +12,24 @@ Les sources m'ayant servi à écrire les différents tutoriels :
 
 Pour chacun des contrôleurs (principal (MCU), secondaire (la tête «MKS-THR») et le Linux MCU), les étapes à suivre sont indentiques:
 - se placer dans le répertoire Klipper du dossier personnel de l'utilisateur «mks»
+
 `cd ~/klipper` ou `cd /home/mks/klipper` ou si on est déjà dans le dossier perso `cd`
 - configurer le firmware
-  `make menuconfig`
+
+`make menuconfig`
 - dans la fenêtre de configuration, sélectionner les paramètres adéquats
 - préparer la compilation
+
  `make clean`
 - compiler
+
 `make` ou mieux puisque le microcontrôleur RK3328 possède plusieurs coeurs, utiliser une compilation parallèle `make -j4`
-- à l'issue de la compilation, récupérer le firmware dans le dossier **out** (~/klipper/out/): klipper.bin / klipper.uf2 / klipper.elf
-- flasher ce firmware sur le MCU (dépend du MCU: carte SD, copie du fichier …
-  - éteindre l'imprimante, attendre la décharge des Supercondensateurs installés sur la carte Qidi (au moins 30 secondes), allumer
-  - …
+- à l'issue de la compilation, récupérer le firmware dans le dossier **out** (~/klipper/out/):
+  - klipper.bin ou
+  - klipper.uf2 ou
+  - klipper.elf
+- flasher ce firmware sur le MCU ( la méthode dépend du MCU à flasher )
+  - MCU Principal (STM32F402)
+    - recopier le fichier out/klipper.bin à la racine d'une carte SD sous le nom **X_4.bin** (X majuscule, souligné, quatre, point, b, i, n)
+    - éteindre l'imprimante, attendre la décharge des Supercondensateurs installés sur la carte Qidi (au moins 30 secondes), insérer la carte SD contenant le fichier X_4.bin, allumer => le processus de flashage est très rapide (moins de trente secondes)
+  - MCU secondaire (tête MKS-THR, microcontrôleur RP2040)
