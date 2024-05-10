@@ -2,11 +2,11 @@
 
 > [!IMPORTANT]
 > 
-> Qidi Tech a choisi pour ses derniers modèles (Series 3 et Q1 Pro) d'utiliser le firmware Klipper. Lors des étapes de développement: ils ont choisi de figer les versions des briques de l'écosystème Klipper. En restant sur des versions anciennes mais «identiques» pour tous leurs modèles, cela leur permet d'apporter une maintenance plus aisée qui sinon serait plus difficile à assurer si chacun installait des versions des composants essentiels (Klipper, Moonraker) différentes.
+> Qidi Tech a choisi pour ses derniers modèles (Series 3 et Q1 Pro) d'utiliser le firmware Klipper. Lors des étapes de développement, leur choix a été de figer les versions des briques de l'écosystème Klipper. En restant sur des versions anciennes mais «identiques» pour tous leurs modèles, cela leur permet d'apporter une maintenance plus aisée qui sinon serait plus difficile à assurer si chacun installait des versions des composants essentiels (Klipper, Moonraker) différentes.
 > 
 > C'est un point de vue commercial honorable, d'autant plus qu'ầ ce jour, leur SAV est irréprochable.
 >
-> Honnêtement depuis maintenant plus de neuf mois que j'utilise ma X-Max 3 (reçu en août 2023), je n'ai pas rencontré de problèmes majeurs à cause de ces choix logiciels originaux.
+> Honnêtement depuis maintenant plus de neuf mois que j'utilise ma X-Max 3 (*reçue en août 2023*), je n'ai pas rencontré de problèmes majeurs à cause de ces choix logiciels originaux.
 
 ## Pourquoi ?
 
