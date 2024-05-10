@@ -1,9 +1,12 @@
 # Installation d'un système plus à jour
 
 > [!IMPORTANT]
-> Le choix de Qiditech en passant ses derniers modèles (Series 3 et Q1 Pro) sous le firmware Klipper est (*pour le moment* 🤔) de rester sur des versions anciennes, «identiques» pour tous leurs modèles permettant d'apporter une maintenance plus aisée qui sinon serait plus difficile à assurer avec des versions de composants essentiels (Klipper, Moonraker) différentes.
 > 
-> C'est un point de vue commercial honorable et honnêtement depuis maintenant plus de neuf mois que j'utilise ma X-Max 3, je n'ai pas rencontré de problèmes majeurs à cause de ces choix originaux.
+> Qidi Tech a choisi pour ses derniers modèles (Series 3 et Q1 Pro) d'utiliser le firmware Klipper. Lors des étapes de développement: ils ont choisi de figer les versions des briques de l'écosystème Klipper. En restant sur des versions anciennes mais «identiques» pour tous leurs modèles, cela leur permet d'apporter une maintenance plus aisée qui sinon serait plus difficile à assurer si chacun installait des versions des composants essentiels (Klipper, Moonraker) différentes.
+> 
+> C'est un point de vue commercial honorable, d'autant plus qu'ầ ce jour, leur SAV est irréprochable.
+>
+> Honnêtement depuis maintenant plus de neuf mois que j'utilise ma X-Max 3 (reçu en août 2023), je n'ai pas rencontré de problèmes majeurs à cause de ces choix logiciels originaux.
 
 ## Pourquoi ?
 
@@ -14,7 +17,7 @@ Err:6 http://fi.mirror.armbian.de/apt buster Release
   404  Not Found [IP: 65.21.120.247 80]
 ```
 
-Les seules mises à jour disponibles du système ne concernent que les dépôts Debian.
+Les seules mises à jour disponibles du système ne concernent que celles des dépôts Debian (Armbian est basée sur cette distribution).
 
 <details>
 
@@ -29,7 +32,7 @@ Commenter la ligne faisant référence au dépôt Buster d'Armbian dans le fichi
    
 </details>
 
-Python cohabite en deux versions (v2 et v3), la v2 n'est plus supportée depuis quelques années, la v3 reste bloquée en version 3.7.
+Python cohabite en deux versions (v2 et v3), la v2, passée en fin de vie, il y a plusieurs années désormais, n'est plus supportée. La v3 reste bloquée en version 3.7.
 
 Le Klipper (klippy) proposé par Qidi Tech a été installé avec Python2. Klipper préconise actuellement de construire l'environnement virtuel (klippy) en utilisant Python en version 3.
 
@@ -41,7 +44,7 @@ Au moins deux éléments matériels ne seront plus directement utilisables :
 - l'accès réseau Wifi avec la clé Wifi Tenda.
 
 > [!NOTE]
-> Moyennant des achats supplémentaires, on peut compenser la perte de l'écran originel et du Wifi :
+> Moyennant des achats supplémentaires, on pourra compenser la perte de l'écran originel et du Wifi :
 > 
 > - Klipperscreen avec un autre écran et un SBC (Small Board Computer) pour piloter l'imprimante
 > - Une clé USB Wifi gérée nativement par Armbian ([une bonne liste](https://teamgloomy.github.io/armbian_wifi.html)). Il faudra connaitre précisément le fabricant et la puce (chipset) utilisés.
@@ -51,6 +54,12 @@ Au moins deux éléments matériels ne seront plus directement utilisables :
 > Les manipulations décrites ne s'adressent pas à un débutant mais plutôt à un utilisateur ayant un peu d'expérience avec Linux et sa ligne de commandes.
 >
 > En gros, je n'assume aucune responsabilité en cas de mauvaises manipulations. Ce qui a fonctionné pour moi peut très bien s'avérer un cauchemar pour d'autres… comme disent les anglo-saxons ***YMMV***.
+> 
+> J'insiste encore:
+> Les manipulations décrites sont faites à vos risques et périls. Vous ne devez pas contacter l'assistance QIDI en cas de problème. En effectuant ces modifications, vous perdrez votre garantie à cet égard.
+>
+> Qidi cependant fournit une image de "récupération" qui permettra de restaurer le système dans l'état où QIDI livre ses imprimantes. Vous n'aurez alors qu'à "rétrograder" (flasher à nouveau le firmware Klipper) sur la tête «THR», le MCU de la carte contrôleur et celui du Linux MCU.
+> Vous serez pratiquement revenu au point de départ et vous devriez pouvoir retrouver votre garantie 😃
 
 
 ## Prérequis
@@ -62,6 +71,7 @@ Matériel:
 Logiciels (*à télécharger si nécessaire* (⏬)) :
 - ⏬ [Rufus](https://rufus.ie/fr/) ou ⏬ [BalenaEtcher](https://etcher.balena.io/) ou encore ⏬ [Raspberry Imager](https://www.raspberrypi.com/software/) (au choix)
 - ⏬ [image récente du système Armbian](https://github.com/redrathnure/armbian-mkspi/releases/tag/mkspi%2F0.3.4-24.2.0-trunk) (*au moment de la rédaction de  cette documentation (20240402), j'utilise cette version (Bookworm (24.2.0), noyau (6.6.17)* )
+  - Merci à [@redrathnure](https://github.com/redrathnure/armbian-mkspi) qui a réalisé l'image du système Armbian récent
 - accès SSH (⏬ [Putty](https://putty.org/), ⏬ [MobaXterm](https://mobaxterm.mobatek.net/), …)
 - transfert de fichier (⏬ [WinSCP](https://winscp.net/eng/index.php) )
 - archiveur de fichiers ⏬ [7zip](https://7-zip.org/) 
@@ -69,9 +79,11 @@ Logiciels (*à télécharger si nécessaire* (⏬)) :
 ## Préalable
 
 > [!IMPORTANT]
+> 
 > **Le système d'exploitation sera complètement remplacé par un plus récent**
    
 >[!TIP]
+>
 > Avant toute chose, il est préférable d'avoir réalisé une sauvegarde de la totalité des dossiers:
 > - ~/klipper_config (contient les fichiers de configuration)
 > - ~/gcode_files (contient les G-codes).
