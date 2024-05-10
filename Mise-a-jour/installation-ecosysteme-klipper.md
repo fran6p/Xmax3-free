@@ -1408,11 +1408,11 @@ Permet d'étendre les macros G-code en utilisant des scripts shell
 
 A la fin de ces installations, l'écosystème Klipper est prêt. L'eMMC de 8Go est occupée à plus de 50%, il reste encore plus de 3Go disponibles (***avec le système originel, on disposait de moins de 1Go***).
 
-***RAPPEL***
-
-**Avant** ces installations :
-
-```
+> [!IMPORTANT]
+>
+> **Avant** ces installations :
+> 
+> ```
 mks@mkspi:~$ df -h
 Sys. de fichiers Taille Utilisé Dispo Uti% Monté sur
 udev               379M       0  379M   0% /dev
@@ -1424,7 +1424,7 @@ tmpfs              456M       0  456M   0% /tmp
 /dev/mmcblk1p1     256M     88M  169M  35% /boot
 /dev/zram1          47M    740K   43M   2% /var/log
 tmpfs               92M       0   92M   0% /run/user/1000
-```
+> ```
 
 **Après**:
 
@@ -1442,19 +1442,25 @@ tmpfs              456M     16K  456M   1% /tmp
 tmpfs               92M       0   92M   0% /run/user/1000
 ```
 
-L'accès à l'imprimante via Fluidd et/ou Mainsail affiche des messages d'erreurs. 
+L'accès à l'imprimante via Fluidd et/ou Mainsail affiche des messages d'erreurs.
+
+*Mainsail*
+
 ![Erreurs Mainsail](../Images/mainsail-error-no-printercfg.jpg)
+
+*Fluidd*
 
 ![Erreurs Fluidd](../Images/fluidd-error-no-printercfg.jpg)
 
 Le fichier de configuration, `printer.cfg` installé par Klipper est minimaliste, une fois remplacé par celui de Qiditech, les erreurs sont plus précises:
+
 ![Erreurs Mainsail](../Images/mainsail-error-versions-firmwares.jpg)
 
 ![Erreurs Mainsail](../Images/fluidd-error-klipper-versions-firmwares.jpg)
 
 
-**Le firmware Klipper n'est à jour sur aucun des MCUs**. Klipper est désomrais à jour en version 0.12.x alors que les MCUs sont encore en version 0.10.x.
+**Le firmware Klipper n'est à jour sur aucun des MCUs**. Klipper est désormais à jour en version 0.12.x alors que les MCUs sont encore en version 0.10.x.
 
-Il reste à installer le firmware Klipper sur les MCU (Micro Controler Unit) de l'imprimante (carte contrôleur (STM32F402), la tête (RP1040) et le RPI (Linux)). C'est l'objet de dette dernière étape décrite [ici](./firmware-mcus.md).
+Il reste à installer le firmware Klipper sur les MCU (**M**icro **C**ontroler **U**nit) de l'imprimante (carte contrôleur (STM32F402), la tête (RP1040) et le RPI (Linux)). C'est l'objet de dette dernière étape décrite [ici](./firmware-mcus.md).
 
 😃
