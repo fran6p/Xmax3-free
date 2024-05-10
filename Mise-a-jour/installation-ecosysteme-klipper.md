@@ -455,16 +455,8 @@ Created symlink /etc/systemd/system/multi-user.target.wants/klipper.service → 
 ```
 
 </details>
-
-
-
-<details>
-
-<sumarry>Klipper installé</sumarry>
  
  ![](../Images/kiauh-klipper-installed.jpg)
- 
-</details>
 
  ### MOONRAKER
 
@@ -795,15 +787,7 @@ Created symlink /etc/systemd/system/multi-user.target.wants/moonraker.service �
 
 </details>
 
-
-
-<details>
-
-<sumarry>Moonraker installé</sumarry>
-
 ![](../Images/kiauh-moonraker-installed.jpg)
-
-</details>
 
 ### MAINSAIL / FLUIDD
 
@@ -960,6 +944,8 @@ Résolution des deltas: 100% (52/52), fait.
 ``` 
 
 </details>
+
+#### FLUIDD
 
 <details>
 
