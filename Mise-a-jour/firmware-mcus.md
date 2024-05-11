@@ -24,10 +24,7 @@ Pour chacun des contrôleurs (principal (MCU), secondaire (la tête «MKS-THR»)
 - compiler
 
 `make` ou mieux puisque le microcontrôleur RK3328 possède plusieurs coeurs, utiliser une compilation parallèle `make -j4`
-- à l'issue de la compilation, récupérer le firmware dans le dossier **out** (~/klipper/out/):
-  - klipper.bin ou
-  - klipper.uf2 ou
-  - klipper.elf
+- à l'issue de la compilation, récupérer le firmware dans le dossier **out** (~/klipper/out/). Le nom du fichier compilé dépend des directives de compilation ( klipper.bin / klipper.uf2 / klipper.elf )
 - flasher ce firmware sur le MCU ( la méthode dépend du MCU à flasher )
 
 Connaissant le principe, on va pouvoir entrer dans les détails.
@@ -45,7 +42,7 @@ Quelques outils sont nécessaires:
 
 > [!NOTE]
 >
-> Imprimante éteinte
+> Imprimante **éteinte**
 > 
 
 - accéder à l'arrière de l'imprimante pour retirer les vis du capot renfermant l'électronique à l'aide de la clé Allen de 2.0 mm
@@ -60,7 +57,11 @@ Quelques outils sont nécessaires:
 - accéder via un client SSH à l'imprimante via son adresse IP
 - se connecter en utilisateur **mks** (mot de passe par défaut si inchangé: ***makerbase***)
 - se déplacer dans le dossier klipper
+
   `cd klipper`
 - vérifier que l'on est dans le dossier correct
+
   `pwd`
   
+## MCU PRINCIPAL
+
