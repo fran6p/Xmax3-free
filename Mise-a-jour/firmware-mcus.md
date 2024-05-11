@@ -8,7 +8,7 @@ Les sources m'ayant servi à écrire les différents tutoriels :
 - @leadustin a ensuite fourni une documentation plus étoffée d'abord en langue allemande puis [en anglais](https://github.com/leadustin/QIDI-up2date-english)
 - un des développeurs chargé chez Qidi de l'écosystème Klipper ( @cchen616 ) a décrit les étapes essentielles dans [cette issue Github](https://github.com/QIDITECH/QIDI_PLUS3/issues/27#issuecomment-2073932891)
 
-## FIRMWARE
+## FIRMWARE GÉNÉRALITÉS
 
 Pour chacun des contrôleurs (principal (MCU), secondaire (la tête «MKS-THR») et le Linux MCU), les étapes à suivre sont indentiques:
 - se placer dans le répertoire Klipper du dossier personnel de l'utilisateur «mks»
@@ -29,7 +29,38 @@ Pour chacun des contrôleurs (principal (MCU), secondaire (la tête «MKS-THR»)
   - klipper.uf2 ou
   - klipper.elf
 - flasher ce firmware sur le MCU ( la méthode dépend du MCU à flasher )
-  - MCU Principal (STM32F402)
-    - recopier le fichier out/klipper.bin à la racine d'une carte SD sous le nom **X_4.bin** (X majuscule, souligné, quatre, point, b, i, n)
-    - éteindre l'imprimante, attendre la décharge des Supercondensateurs installés sur la carte Qidi (au moins 30 secondes), insérer la carte SD contenant le fichier X_4.bin, allumer => le processus de flashage est très rapide (moins de trente secondes)
-  - MCU secondaire (tête MKS-THR, microcontrôleur RP2040)
+
+Connaissant le principe, on va pouvoir entrer dans les détails.
+
+## PRÉREQUIS
+
+Quelques outils sont nécessaires:
+- clé Allen (Hexagonale) 2.0 mm
+- carte μSD, clé USB ou adaptateur USB/μSD
+- logiciels:
+  - accès distant (SSH)
+  - permettant le transfert de fichiers entre matériels en réseau
+ 
+## PRÉPARATION MATÉRIELLE
+
+> [!NOTE]
+>
+> Imprimante éteinte
+> 
+
+- accéder à l'arrière de l'imprimante pour retirer les vis du capot renfermant l'électronique à l'aide de la clé Allen de 2.0 mm
+- retirer ce capot (le ventilateur de refroidissement de la carte y est fixé)
+- toujours à l'aide de la clé Allen de 2.0mm, retirer les quatre vis de fication du capot arrière de la tête
+
+> [!NOTE]
+>
+> Mettre sous tension l'imprimante
+>
+
+- accéder via un client SSH à l'imprimante via son adresse IP
+- se connecter en utilisateur **mks** (mot de passe par défaut si inchangé: ***makerbase***)
+- se déplacer dans le dossier klipper
+  `cd klipper`
+- vérifier que l'on est dans le dossier correct
+  `pwd`
+  
