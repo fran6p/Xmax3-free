@@ -176,6 +176,8 @@ tmpfs               92M       0   92M   0% /run/user/1000
 > - l'utilisateur **mks** ne peut accéder aux GPIO
 > - pas de synchronisation régulière du système de fichiers (/bin/sync)
 > - quelques paquets doivent encore être installés (python3-numpy python3-matplotlib libatlas-base-dev libopenblas-dev python3-serial)
+
+
 [La documentation suivante](./installation-ecosysteme-klipper.md) permet de poursuivre l'installation de l'écosystème Klipper
 
 😃
