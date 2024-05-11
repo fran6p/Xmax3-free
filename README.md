@@ -33,7 +33,7 @@ Les imprimantes Qidi Series 3 utilisent une base matérielle solide offrant de b
 Débutez par ce [premier guide](./Mise-a-jour/installation-OS.md).
 
 > [!NOTE]
-> Ce projet est toujours en corus d'améliorations, des «bogues« pourraient être présents 😏
+> Ce projet est toujours en cours d'améliorations, présence de «bogues« possibles 😏
 > 
 > Comme tout projet Github, vous êtes bienvenus pour remonter des «issues» et pourquoi pas proposer des «pull requests»
 > 
