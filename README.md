@@ -15,10 +15,11 @@ Les imprimantes Qidi Series 3 utilisent une base matérielle solide offrant de b
   - Fluidd (port 10088)
   - Mainsail (port http standard (80))
   - Crowsnest (gestionnaire de caméras)
-  - Timelapses
-  - KAMP (uniquement pour lignes de purge, Klipper 0.12.x le gérant désormais nativement)
-  - Shake&Tune
-  - …
+  - Optionnels mais forts pratiques:
+    - Timelapses
+    - KAMP (uniquement pour lignes de purge, Klipper 0.12.x le gérant désormais nativement)
+    - Shake&Tune
+    - …
 - fichier de configuration (printer.cfg) «amélioré» (réparti sur plusieurs fichiers via des inclusions)
 - macros supplémentaires
 
