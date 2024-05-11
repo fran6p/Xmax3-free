@@ -151,7 +151,7 @@ Confirmer la mise à jour (manuellement) ou ajouter le paramètre "-y" à la sui
 sudo apt upgrade -y
 ```
 
-Le système de base est installé sur l'eMMC, il occupe moins de 2Gio sur la capacité totale de 8Gio
+Le système de base est installé sur l'eMMC, il occupe moins de 2Go sur la capacité totale de 8Go
 
 ```
 mks@mkspi:~$ df -h
@@ -167,6 +167,15 @@ tmpfs              456M       0  456M   0% /tmp
 tmpfs               92M       0   92M   0% /run/user/1000
 ```
 
+### «Améliorer» l'OS
+
+> [!TIP]
+> Tel quel le système d'exploitation est pleinement fonctionnel
+> Certaines fonctionnalités de l'ancien OS de Makerbase ne sont plus disponibles, par exemple:
+> - plus d'automontage d'une clé USB
+> - l'utilisateur **mks** ne peut accéder aux GPIO
+> - pas de synchronisation régulière du système de fichiers (/bin/sync)
+> - quelques paquets doivent encore être installés (python3-numpy python3-matplotlib libatlas-base-dev libopenblas-dev python3-serial)
 [La documentation suivante](./installation-ecosysteme-klipper.md) permet de poursuivre l'installation de l'écosystème Klipper
 
 😃
