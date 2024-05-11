@@ -2,7 +2,7 @@
 
 ## SOURCES
 
-Les sources m'ayant servi à écrire les différents tutoriels :
+Les sources m'ayant servi à la rédaction des tutoriels :
 - Mark Ewert (@melvenx), a réalisé [ce document PDF](https://github.com/melvenx/QIDI/blob/main/How%20to%20Update%20Klipper%20for%20the%20QIDI%20Tech%20XMAX3%20XPLUS3%20XSMART3%20Printers%20v2.pdf) relatant les étapes pour flasher les firmwares. Il est le premier, à ma connaissance, à avoir révéler le nom à utiliser pour flasher Klipper sur le micro-contrôleur STM32F401 ( **X_4.bin** ), étape primordiale pour réussir les flashages divers.
 - Un site [OpenQIDI](https://openqidi.com) avait mis à disposition une documentation (livre) supprimée depuis par l'utilisateur @phill1988 qui a remis cette documentation sur [ce dépôt FreeQidi](https://github.com/Phil1988/FreeQIDI)
 - @leadustin a ensuite fourni une documentation plus étoffée d'abord en langue allemande puis [en anglais](https://github.com/leadustin/QIDI-up2date-english)
