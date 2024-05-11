@@ -110,8 +110,8 @@ Une fois ces précautions prises :
 
 Deux fenêtres d'alerte vont s'afficher, cliquer sur OK pour valider et poursuivre le flashage
 
-![](../Images/rufus-2.jpg)
 ![](../Images/rufus-3.jpg)
+![](../Images/rufus-2.jpg)
 
 La procédure dure un certain temps (moins de dix minutes), la progression de la tâche s'affiche au fur et à mesure
 
