@@ -171,6 +171,7 @@ tmpfs               92M       0   92M   0% /run/user/1000
 
 > [!TIP]
 > Tel quel le système d'exploitation est pleinement fonctionnel
+> 
 > Certaines fonctionnalités de l'ancien OS de Makerbase ne sont plus disponibles, par exemple:
 > - plus d'automontage d'une clé USB
 > - l'utilisateur **mks** ne peut accéder aux GPIO
