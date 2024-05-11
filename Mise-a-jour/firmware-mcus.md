@@ -3,27 +3,31 @@
 ## SOURCES
 
 Les sources m'ayant servi à la rédaction des tutoriels :
-- Mark Ewert (@melvenx), a réalisé [ce document PDF](https://github.com/melvenx/QIDI/blob/main/How%20to%20Update%20Klipper%20for%20the%20QIDI%20Tech%20XMAX3%20XPLUS3%20XSMART3%20Printers%20v2.pdf) relatant les étapes pour flasher les firmwares. Il est le premier, à ma connaissance, à avoir révéler le nom à utiliser pour flasher Klipper sur le micro-contrôleur STM32F401 ( **X_4.bin** ), étape primordiale pour réussir les flashages divers.
-- Un site [OpenQIDI](https://openqidi.com) avait mis à disposition une documentation (livre) supprimée depuis par l'utilisateur @phill1988 qui a remis cette documentation sur [ce dépôt FreeQidi](https://github.com/Phil1988/FreeQIDI)
+- Mark Ewert, @melvenx, a réalisé [ce document PDF](https://github.com/melvenx/QIDI/blob/main/How%20to%20Update%20Klipper%20for%20the%20QIDI%20Tech%20XMAX3%20XPLUS3%20XSMART3%20Printers%20v2.pdf) relatant les étapes pour flasher les firmwares (garde l'OS originel (Armbian buster)). Il est le premier, à ma connaissance, à avoir révéler le nom du fichier à utiliser pour flasher Klipper sur le micro-contrôleur STM32F401 ( **X_4.bin** ), étape primordiale pour réussir les flashages divers.
+- Un site [OpenQIDI](https://openqidi.com) avait, dans un premier temps, mis à disposition une documentation (livre) supprimée depuis par l'utilisateur @phill1988 qui a remis à disposition cette documentation sur [ce dépôt FreeQidi](https://github.com/Phil1988/FreeQIDI)
 - @leadustin a ensuite fourni une documentation plus étoffée d'abord en langue allemande puis [en anglais](https://github.com/leadustin/QIDI-up2date-english)
-- un des développeurs chargé chez Qidi de l'écosystème Klipper ( @cchen616 ) a décrit les étapes essentielles dans [cette issue Github](https://github.com/QIDITECH/QIDI_PLUS3/issues/27#issuecomment-2073932891)
+- un des développeurs chargé chez Qidi de l'écosystème Klipper ( @cchen616 ) décrit les étapes essentielles dans [cette issue Github](https://github.com/QIDITECH/QIDI_PLUS3/issues/27#issuecomment-2073932891) (garde l'OS originel (Armbian buster)).
 
 ## FIRMWARE GÉNÉRALITÉS
 
-Pour chacun des contrôleurs (principal (MCU), secondaire (la tête «MKS-THR») et le Linux MCU), les étapes à suivre sont indentiques:
+Pour chacun des contrôleurs (principal (MCU), secondaire (la tête «MKS-THR») et le Linux MCU), les étapes à suivre sont quasi identiques:
 - se placer dans le répertoire Klipper du dossier personnel de l'utilisateur «mks»
 
-`cd ~/klipper` ou `cd /home/mks/klipper` ou si on est déjà dans le dossier perso `cd`
+`cd ~/klipper` ou `cd /home/mks/klipper` ou si on est déjà dans le dossier perso `cd ./klipper`
 - configurer le firmware
 
 `make menuconfig`
-- dans la fenêtre de configuration, sélectionner les paramètres adéquats
+- dans la fenêtre de configuration, sélectionner les paramètres adéquats (dépend de chaque MCU)
 - préparer la compilation
 
  `make clean`
 - compiler
 
-`make` ou mieux puisque le microcontrôleur RK3328 possède plusieurs coeurs, utiliser une compilation parallèle `make -j4`
+`make`
+
+ou encore, le microcontrôleur RK3328 possèdant plusieurs coeurs, utiliser une compilation parallèle
+
+`make -j4`
 - à l'issue de la compilation, récupérer le firmware dans le dossier **out** (~/klipper/out/). Le nom du fichier compilé dépend des directives de compilation ( klipper.bin / klipper.uf2 / klipper.elf )
 - flasher ce firmware sur le MCU ( la méthode dépend du MCU à flasher )
 
@@ -35,8 +39,8 @@ Quelques outils sont nécessaires:
 - clé Allen (Hexagonale) 2.0 mm
 - carte μSD, clé USB ou adaptateur USB/μSD
 - logiciels:
-  - accès distant (SSH)
-  - permettant le transfert de fichiers entre matériels en réseau
+  - pour l'accès distant (SSH)
+  - pour le transfert de fichiers entre matériels en réseau
  
 ## PRÉPARATION MATÉRIELLE
 
