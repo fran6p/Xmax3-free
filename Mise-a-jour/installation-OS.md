@@ -71,7 +71,8 @@ Au moins deux éléments matériels ne seront plus directement utilisables :
 >
 > En gros, je n'assume aucune responsabilité en cas de mauvaises manipulations. Ce qui a fonctionné pour moi peut très bien s'avérer un cauchemar pour d'autres… comme disent les anglo-saxons ***YMMV***.
 > 
-> J'insiste encore:
+> J'insiste à nouveau:
+> 
 > **Les manipulations décrites sont faites à vos risques et périls. Vous ne devez pas contacter l'assistance QIDI en cas de problème. En effectuant ces modifications, vous perdrez votre garantie à cet égard.**
 >
 > Qidi cependant fournit une image de "récupération" qui permettra de restaurer le système dans l'état où QIDI livre ses imprimantes. Vous n'aurez alors qu'à "rétrograder" (flasher à nouveau le firmware Klipper) sur la tête «THR», le MCU de la carte contrôleur et celui du Linux MCU.
