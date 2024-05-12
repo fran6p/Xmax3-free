@@ -1,7 +1,7 @@
 En vrac
 
 Empêcher la mise à jour de certains paquets :
-- via l'utilitaire «armban-config»
+- via l'utilitaire «**armbian-config**»
 
 `sudo armbian-config`
 - via une ligne de commandes :
