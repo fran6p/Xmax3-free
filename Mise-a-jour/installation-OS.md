@@ -2,7 +2,11 @@
 
 > [!IMPORTANT]
 > 
-> Qidi Tech a choisi pour ses derniers modèles (Series 3 et Q1 Pro) d'utiliser le firmware Klipper. Lors des étapes de développement, leur choix a été de figer les versions des briques de l'écosystème Klipper. En restant sur des versions anciennes mais «identiques» pour tous leurs modèles, cela leur permet d'apporter une maintenance plus aisée qui sinon serait plus difficile à assurer si chacun installait des versions des composants essentiels (Klipper, Moonraker) différentes.
+> Qidi Tech a choisi pour ses derniers modèles (Series 3 et Q1 Pro) d'utiliser le firmware Klipper.
+>
+> Lors des étapes de développement, leur choix a été de figer les versions des briques de l'écosystème Klipper.
+>
+> En restant sur des versions anciennes mais «identiques» pour tous leurs modèles, cela leur permet d'apporter une maintenance plus aisée plus difficile à assurer si chaque utilisateur installait des versions des composants essentiels (Klipper, Moonraker) différentes.
 > 
 > C'est un point de vue commercial honorable, d'autant plus qu'ầ ce jour, leur SAV est irréprochable.
 >
@@ -37,11 +41,12 @@ Commenter la ligne faisant référence au dépôt Buster d'Armbian dans le fichi
    
 </details>
 
-Avec Armbian/DEbian Buster, Python cohabite en deux versions (v2 et v3), la v2, passée en fin de vie, il y a plusieurs années désormais, n'est plus supportée. La v3 reste bloquée en version 3.7.
+Avec Armbian/Debian Buster, **Python cohabite en deux versions** (v2 et v3), la v2, passée en fin de vie, il y a plusieurs années désormais, n'est plus supportée. La v3 reste bloquée en version 3.7.
 
-Le Klipper (klippy) proposé par Qidi Tech a été installé avec Python2. Klipper préconise actuellement de construire l'environnement virtuel (klippy) en utilisant Python en version 3.
+Le Klipper (klippy) proposé par Qidi Tech a été installé avec l'environnement Python2. Klipper préconise actuellement de construire cet environnement virtuel (klippy) en utilisant Python en version 3.
 
 > [!CAUTION]
+> 
 > **En suivant ces instructions, vous perdrez la garantie de Qidi Tech**
 
 Au moins deux éléments matériels ne seront plus directement utilisables :
@@ -52,6 +57,7 @@ Au moins deux éléments matériels ne seront plus directement utilisables :
   <summary>On peut y remédier</summary>
   
 > [!NOTE]
+> 
 > Moyennant des achats supplémentaires, on pourra compenser la perte de l'écran originel et du Wifi :
 > 
 > - Klipperscreen avec un autre écran et un SBC (Small Board Computer) pour piloter l'imprimante
@@ -60,12 +66,13 @@ Au moins deux éléments matériels ne seront plus directement utilisables :
 </details>
 
 > [!WARNING]
+> 
 > Les manipulations décrites ne s'adressent pas à un débutant mais plutôt à un utilisateur ayant un peu d'expérience avec Linux et sa ligne de commandes.
 >
 > En gros, je n'assume aucune responsabilité en cas de mauvaises manipulations. Ce qui a fonctionné pour moi peut très bien s'avérer un cauchemar pour d'autres… comme disent les anglo-saxons ***YMMV***.
 > 
 > J'insiste encore:
-> Les manipulations décrites sont faites à vos risques et périls. Vous ne devez pas contacter l'assistance QIDI en cas de problème. En effectuant ces modifications, vous perdrez votre garantie à cet égard.
+> **Les manipulations décrites sont faites à vos risques et périls. Vous ne devez pas contacter l'assistance QIDI en cas de problème. En effectuant ces modifications, vous perdrez votre garantie à cet égard.**
 >
 > Qidi cependant fournit une image de "récupération" qui permettra de restaurer le système dans l'état où QIDI livre ses imprimantes. Vous n'aurez alors qu'à "rétrograder" (flasher à nouveau le firmware Klipper) sur la tête «THR», le MCU de la carte contrôleur et celui du Linux MCU.
 > Vous serez pratiquement revenu au point de départ et vous devriez pouvoir retrouver votre garantie 😃
