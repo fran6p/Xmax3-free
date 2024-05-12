@@ -52,6 +52,25 @@ else
 fi
 ```
 
+Sans ce parmètre, l'interface **eth0** serait nommée **end1** (altname)
+
+```
+mks@mkspi:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 76:09:8f:72:f7:44 brd ff:ff:ff:ff:ff:ff
+    altname end1
+    inet 192.168.1.126/24 brd 192.168.1.255 scope global dynamic noprefixroute eth0
+       valid_lft 4958sec preferred_lft 4958sec
+    inet6 fe80::62b:66de:8f1:6305/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+```
+
 Paquets à ajouter si absents :
 PAQUETS_PYTHON="python3-numpy python3-matplotlib libatlas-base-dev libopenblas-dev python3-serial"
 PAQUET_INDISPENSABLE="git"
