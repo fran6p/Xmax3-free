@@ -467,7 +467,7 @@ tmpfs               92M       0   92M   0% /run/user/1000
 > Certaines fonctionnalités de l'ancien OS de Makerbase ne sont plus disponibles, par exemple:
 > - plus d'automontage d'une clé USB
 > - le nom des interfaces réseau adopte celui «imposé» par systemd (je préfére l'ancien (ethX, wlanX)
-> - l'utilisateur **mks** ne peut accéder aux GPIO
+> - l'utilisateur **mks** ne peut accéder aux GPIO, le groupe gpio n'existe pas, on ne peut accéder aux GPIO que via sudo
 > - pas de synchronisation régulière du système de fichiers (/bin/sync)
 > - quelques paquets doivent encore être installés (python3-numpy python3-matplotlib libatlas-base-dev libopenblas-dev python3-serial)
 > - …
