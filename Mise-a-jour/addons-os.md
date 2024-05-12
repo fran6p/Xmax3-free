@@ -11,7 +11,9 @@ Empêcher la mise à jour de certains paquets :
 sudo apt-mark hold base-files linux-dtb-current-rockchip64 linux-image-current-rockchip64 linux-headers-current-rockchip64 armbian-config armbian-firmware armbian-plymouth-theme armbian-zsh
 ```
 
-Ajouter l'utilisateur mks au groupe gpio pour lui mpermettre d'y accéder
+Ajouter l'utilisateur mks au groupe gpio pour lui permettre d'y accéder
+
+**Le groupe gpio n'existe pas** mais en accès sudo on peut utiliser les outils ( gpioinfo, gpiodetect, gpiomon, gpioset, gpioget )
 
 ```
 # Add user 'mks' to 'gpio' group for GPIO access
