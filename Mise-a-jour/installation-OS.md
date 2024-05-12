@@ -174,11 +174,20 @@ tmpfs               92M       0   92M   0% /run/user/1000
 > 
 > Certaines fonctionnalités de l'ancien OS de Makerbase ne sont plus disponibles, par exemple:
 > - plus d'automontage d'une clé USB
+> - le nom des interfaces réseau adopte celui «imposé» par systemd (je préfére l'ancien (ethX, wlanX)
 > - l'utilisateur **mks** ne peut accéder aux GPIO
 > - pas de synchronisation régulière du système de fichiers (/bin/sync)
 > - quelques paquets doivent encore être installés (python3-numpy python3-matplotlib libatlas-base-dev libopenblas-dev python3-serial)
+> - …
 
+<details>
+  
+<summary>Y accéder</summary>
 
-[La documentation suivante](./installation-ecosysteme-klipper.md) permet de poursuivre l'installation de l'écosystème Klipper
+Ce ne sont que des améliorations cosmétiques 😏, pour les ajouter [voir ici](./addons-os.md)
+
+</details>
+
+[La documentation suivante](./installation-ecosysteme-klipper.md) permet de poursuivre l'installation avec l'écosystème Klipper
 
 😃
