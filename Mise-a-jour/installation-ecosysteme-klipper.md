@@ -4,7 +4,7 @@ Un ensemble de scripts permet une installation facilitée des éléments composa
 
 On commence par récupérer le dépôt Github de cet outil puis on exécutera son script shell.
 
-1. installer le paquet "git" (au cas où il serait absent)
+1. installer le paquet "git" (au cas où il serait absent (*ce qui ne devrait pas être le cas avec l'installation de la distribution Armbian Bookworm* 🤔))
 
 ```
 sudo apt update && sudo apt install git -y
@@ -1076,7 +1076,7 @@ fluidd.zip          100%[===================>]   3,51M  9,63MB/s    ds 0,4s
 
 ### CROWSNEST
 
-Gestionnaire «moderne» de caméras
+Crowsnest est responsable de la configuration et du contrôle des webcams (même en l'absence de caméra, autant l'installer de suite).
 
 <details>
 
