@@ -130,11 +130,10 @@ Des fenêtres d'alerte peuvent s'afficher, cliquer sur OK pour valider et poursu
 ![](../Images/rufus-3.jpg)
 ![](../Images/rufus-2.jpg)
 
-La procédure dure un certain temps (moins de dix minutes), la progression de la tâche s'affiche au fur et à mesure
-
+La procédure dure un certain temps (moins de dix minutes), la progression de la tâche s'affiche au fur et à mesure dans la zone STATUS
 ![](../Images/rufus-4.jpg)
 
-et finalement, arrivée à 100%, cette barre de progression passe au vert:
+et finalement, arrivée à 100%, le statut passe au vert et inqiue que c'est prêt:
 
 ![](../Images/rufus-5.jpg)
 
