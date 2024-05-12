@@ -217,7 +217,32 @@ Please enter your choice:4
 
 Generating locales: fr_FR.UTF-8
 
----------------------------
+root@mkspi:~# exit
+…
+=> reconnexion en utilisateur «mks»
+login as: mks
+mks@192.168.1.126's password:
+           _              _
+ _ __ ___ | | _____ _ __ (_)
+| '_ ` _ \| |/ / __| '_ \| |
+| | | | | |   <\__ \ |_) | |
+|_| |_| |_|_|\_\___/ .__/|_|
+                   |_|
+Welcome to Armbian-unofficial 24.2.0-trunk Bookworm with Linux 6.6.17-current-rockchip64
+
+No end-user support: built from trunk
+
+System load:   3%               Up time:       3:21
+Memory usage:  20% of 911M      IP:            192.168.1.126
+CPU temp:      40°C             Usage of /:    56% of 6.7G
+
+[ Kernel and firmware upgrades disabled: armbian-config ]
+Last check: 2024-05-12 11:10
+
+[ General system configuration (beta): armbian-config ]
+
+Last login: Sun May 12 13:38:15 2024 from 192.168.1.101
+mks@mkspi:~$
 mks@mkspi:~$ sudo apt update
 Réception de :1 http://security.debian.org bookworm-security InRelease [48,0 kB]
 Atteint :2 http://deb.debian.org/debian bookworm InRelease
