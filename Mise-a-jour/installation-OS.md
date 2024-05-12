@@ -130,7 +130,7 @@ Des fenêtres d'alerte peuvent s'afficher, cliquer sur OK pour valider et poursu
 ![](../Images/rufus-3.jpg)
 ![](../Images/rufus-2.jpg)
 
-La procédure dure un certain temps (moins de dix minutes), la progression de la tâche s'affiche au fur et à mesure dans la zone STATUS
+La procédure dure un certain temps (moins de dix minutes), la progression de la tâche s'affiche au fur et à mesure en bas de la fenêtre dans la zone STATUT
 
 ![](../Images/rufus-4.jpg)
 
