@@ -67,7 +67,7 @@ Au moins deux éléments matériels ne seront plus directement utilisables :
 
 > [!WARNING]
 > 
-> Les manipulations décrites ne s'adressent pas à un débutant mais plutôt à un utilisateur ayant un peu d'expérience avec Linux et sa ligne de commandes.
+> Les manipulations décrites s'adressent à un utilisateur ayant un peu d'expérience avec Linux et sa ligne de commandes ou un débutant bien motivé acceptant de franchir la courbe d'apprentissage afin de progresser.
 >
 > En gros, je n'assume aucune responsabilité en cas de mauvaises manipulations. Ce qui a fonctionné pour moi peut très bien s'avérer un cauchemar pour d'autres… comme disent les anglo-saxons ***YMMV***.
 > 
