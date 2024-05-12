@@ -123,9 +123,9 @@ Une fois ces précautions prises :
   * sélectionner le périphérique contenant l'eMMC (1)
   * indiquer l'emplacement du ficher .img (2)
   * (3) permet de vérifier l'intégrité du fichier téléchargé (le fichier .sha du dépôt Github contient l'empreinte)
-  * lancer le processus de flashage
+  * lancer le processus de flashage (4)
 
-Deux fenêtres d'alerte vont s'afficher, cliquer sur OK pour valider et poursuivre le flashage
+Des fenêtres d'alerte peuvent s'afficher, cliquer sur OK pour valider et poursuivre le flashage
 
 ![](../Images/rufus-3.jpg)
 ![](../Images/rufus-2.jpg)
@@ -134,7 +134,7 @@ La procédure dure un certain temps (moins de dix minutes), la progression de la
 
 ![](../Images/rufus-4.jpg)
 
-et finalement, cette barre de progression passe au vert:
+et finalement, arrivée à 100%, cette barre de progression passe au vert:
 
 ![](../Images/rufus-5.jpg)
 
