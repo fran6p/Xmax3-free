@@ -10,10 +10,14 @@ Les sources m'ayant servi à la rédaction des tutoriels :
 
 ## FIRMWARE GÉNÉRALITÉS
 
-Pour chacun des contrôleurs (principal (MCU), secondaire (la tête «MKS-THR») et le Linux MCU), les étapes à suivre sont quasi identiques:
+Pour chacun des contrôleurs :
+- principal (MCU),
+- secondaire (la tête «MKS-THR»)
+- le Linux MCU), les étapes à suivre sont quasi identiques:
+
 - se placer dans le répertoire Klipper du dossier personnel de l'utilisateur «mks»
 
-`cd ~/klipper` ou `cd /home/mks/klipper` ou si on est déjà dans le dossier perso `cd ./klipper`
+`cd ~/klipper` ou `cd /home/mks/klipper` ou si on est déjà dans le dossier perso `cd klipper` ou `cd ./klipper`
 - configurer le firmware
 
 `make menuconfig`
@@ -51,7 +55,7 @@ Quelques outils sont nécessaires:
 
 - accéder à l'arrière de l'imprimante pour retirer les vis du capot renfermant l'électronique à l'aide de la clé Allen de 2.0 mm
 - retirer ce capot (le ventilateur de refroidissement de la carte y est fixé)
-- toujours à l'aide de la clé Allen de 2.0mm, retirer les quatre vis de fication du capot arrière de la tête
+- toujours à l'aide de la clé Allen de 2.0mm, retirer les quatre vis de fixation du capot arrière de la tête pour pouvoir accéder à la carte fille «MKS-THR»
 
 > [!NOTE]
 >
