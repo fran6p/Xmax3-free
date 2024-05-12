@@ -26,6 +26,8 @@ fi
 Accès au réglages réseaux :
 
 ```
+# Start Network Manager Text User Interface
+# Activate Wifi if supported (not natively with Tenda Wifi key used by QidiTech on Series3 printers !)
 sudo nmtui
 ```
 
