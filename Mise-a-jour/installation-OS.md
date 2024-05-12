@@ -56,9 +56,9 @@ Au moins deux éléments matériels ne seront plus directement utilisables :
 <details>
   <summary>On peut y remédier</summary>
   
-> [!NOTE]
+> [CONSEIL]
 > 
-> Moyennant des achats supplémentaires, on pourra compenser la perte de l'écran originel et du Wifi :
+> Moyennant achats supplémentaires, on peut compenser la perte de l'écran originel et du Wifi :
 > 
 > - Klipperscreen avec un autre écran et un SBC (Small Board Computer) pour piloter l'imprimante
 > - Une clé USB Wifi gérée nativement par Armbian ([une bonne liste](https://teamgloomy.github.io/armbian_wifi.html)). Il faudra connaitre précisément le fabricant et la puce (chipset) utilisés.
