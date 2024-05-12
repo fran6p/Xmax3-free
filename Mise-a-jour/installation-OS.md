@@ -10,14 +10,19 @@
 
 ## Pourquoi ?
 
-La distribution Linux installée d'origine est une Armbian en version Buster, version passée en fin de vie depuis quelques années déjà. Armbian dont le développement est bénévole, a supprimé depuis quelques mois les dépôts Buster de ses serveurs (voir [ici](https://fi.mirror.armbian.de/apt/dists/)). La mise à jour du système remonte des erreurs au sujet de ces dépôts dorénavant inaccessibles :
+La distribution Linux installée d'origine est une Armbian en version Buster, version passée en fin de vie depuis quelques années déjà.
+
+Armbian dont le développement est bénévole, a supprimé depuis quelques mois les dépôts Buster de ses serveurs (voir [ici](https://fi.mirror.armbian.de/apt/dists/)). 
+
+En conséquences, la mise à jour du système remonte des erreurs au sujet de ces dépôts dorénavant inaccessibles :
+
 ```
 Ign:5 http://fi.mirror.armbian.de/apt buster InRelease
 Err:6 http://fi.mirror.armbian.de/apt buster Release
   404  Not Found [IP: 65.21.120.247 80]
 ```
 
-Les seules mises à jour disponibles du système ne concernent que celles des dépôts Debian (Armbian est basée sur cette distribution).
+**Les seules mises à jour disponibles du système ne concernent plus que celles des dépôts Debian** (Armbian est basée sur cette distribution).
 
 <details>
 
@@ -32,7 +37,7 @@ Commenter la ligne faisant référence au dépôt Buster d'Armbian dans le fichi
    
 </details>
 
-Python cohabite en deux versions (v2 et v3), la v2, passée en fin de vie, il y a plusieurs années désormais, n'est plus supportée. La v3 reste bloquée en version 3.7.
+Avec Armbian/DEbian Buster, Python cohabite en deux versions (v2 et v3), la v2, passée en fin de vie, il y a plusieurs années désormais, n'est plus supportée. La v3 reste bloquée en version 3.7.
 
 Le Klipper (klippy) proposé par Qidi Tech a été installé avec Python2. Klipper préconise actuellement de construire l'environnement virtuel (klippy) en utilisant Python en version 3.
 
@@ -43,12 +48,16 @@ Au moins deux éléments matériels ne seront plus directement utilisables :
 - l'actuel écran tactile,
 - l'accès réseau Wifi avec la clé Wifi Tenda.
 
+<details>
+  <summary>On peut y remédier</summary>
+  
 > [!NOTE]
 > Moyennant des achats supplémentaires, on pourra compenser la perte de l'écran originel et du Wifi :
 > 
 > - Klipperscreen avec un autre écran et un SBC (Small Board Computer) pour piloter l'imprimante
 > - Une clé USB Wifi gérée nativement par Armbian ([une bonne liste](https://teamgloomy.github.io/armbian_wifi.html)). Il faudra connaitre précisément le fabricant et la puce (chipset) utilisés.
 
+</details>
 
 > [!WARNING]
 > Les manipulations décrites ne s'adressent pas à un débutant mais plutôt à un utilisateur ayant un peu d'expérience avec Linux et sa ligne de commandes.
