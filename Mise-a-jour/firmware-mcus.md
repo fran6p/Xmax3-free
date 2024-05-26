@@ -149,17 +149,21 @@ Connecté en ssh, lancer la suite de commandes:
 #### Installation de KATAPULT (ex CANBOOT)
 
 - `git clone https://github.com/Arksine/katapult`
-- ```
+- 
+```
 cd ~/katapult
 make menuconfig
-  ```
+```
 - choisir les options
   - Raspberry Pi RP2040
   - build Katapult deployment application (16 KiB booloader
   - communication interface (USB)
-- comme la copie écran :
+<details>
+<summary>comme la copie écran</summary>
+ 
 ![katapult](../Images/katapult-menuconfig.jpg)
 
+</details>
 
 ```
 cd ~/klipper
