@@ -83,7 +83,7 @@ Ici, le firmware Klipper peut être installé de deux façons:
 
 ### Méthode 1
 
-Connecté en ssh:
+Connecté en ssh, lancer la suite de commadnes:
 ```
 cd ~/klipper
 make clean
