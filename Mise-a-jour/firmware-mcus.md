@@ -55,7 +55,7 @@ Quelques outils sont nécessaires:
 
 - accéder à l'arrière de l'imprimante pour retirer les vis du capot renfermant l'électronique à l'aide de la clé Allen de 2.0 mm
 - retirer ce capot (le ventilateur de refroidissement de la carte y est fixé)
-- toujours à l'aide de la clé Allen de 2.0mm, retirer les quatre vis de fixation du capot arrière de la tête pour pouvoir accéder à la carte fille «MKS-THR»
+- toujours à l'aide de la clé Allen de 2.0mm, retirer les quatre vis de fixation du capot arrière de la tête pour pouvoir accéder à la carte fille «MKS-THR», sérigraphiée A-4
 
 > [!NOTE]
 >
@@ -72,4 +72,12 @@ Quelques outils sont nécessaires:
   `pwd`
   
 ## MCU PRINCIPAL
+
+## MCU Linux (controleur de la carte X-4 / X-6, Rockchip RK3328)
+
+## MCU tête (carte A-4. controleur RP2040)
+
+Le firmware Klipper peut être installé de deux façons:
+- la première nécessitera à chaque flashage / reflashage le démontage du capot arrière de la tête pour accéder au bouton poussoir «BOOTSEL» permettant de passer le controleur RP2040 en mode émulation de stockage
+- la seconde ne demandera l'étape ci-dessus qu'une seule fois pour l'installation d'un chargeur de démarrage permettant ensuite le flashage du controleur RP2040 via USB. Elle nécessite par contre l'installation supplémentaire du logiciel KATAPULT (ex CANBOOT) de @arksine
 
