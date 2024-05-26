@@ -92,9 +92,12 @@ make menuconfig
 Le menu de configuration du firmware apparait, choisir les options :
 - cocher «Enable extra low-level»
 - RP2040 comme contrôleur
+
 ![Raspberry Pi RP2040](../Images/klipper-menuconfig-choix-rp2040.jpg)
 - Pas de chargeur de démarrage
 - USB comme interface de communication
+
+Les options doivent correspondre à :
 
 ![Config A-4](../Images/klipper-menuconfig-rp2040.jpg)
 
