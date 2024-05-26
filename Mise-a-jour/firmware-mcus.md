@@ -119,19 +119,19 @@ Le firmware a été compilé dans le dossier ~/klipper/out et porte le nom **kli
 #### Flasher le firmware klipper.uf2
 
 Pour flasher ce firmware, le contrôleur RP2040 doit passer en mode émulation du stockage.
-1. éteindre l'imprimante et patienter au moins 30 secondes le temps que le supercondensateur se décharge complètement.
-2. le capot arrière de la tête étant démonté, presser et maintenir enfoncé le bouton au bas de la carte nommé **BOOT** et allumer l'imprimante.
+- éteindre l'imprimante et patienter au moins 30 secondes le temps que le supercondensateur se décharge complètement.
+- le capot arrière de la tête étant démonté, presser et maintenir enfoncé le bouton au bas de la carte nommé **BOOT** et allumer l'imprimante.
 **Ne pas relâcher la pression sur ce bouton  tant que l'imprimante n'a pas complètement démarré. 
 
 ![bootsel](../Images/toolhead.jpg)
-3. Relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage car le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte et l'écran et donc le firmware de l'écran considère qu'il y a un problème 😏
-4. Se (re)connecter en ssh en utilisateur ***mks***
-5. Vérifier que le RP2040 est bien en mode émulation de stockage `lsblk` doit afficher un périphérique sda (partition sda1), évcentuellement ce pourrait être sdb (sdb1)
-6. Si aucun périphérique sda1 (sdb1) n'apaarait à la suite de la commande `lsblk`, presser en maintenant enfoncé lez bouton BOOT, presser et rel'acher le bouton RESET, relâcher le bouton BOOT. Vérifier à nouveau avec un `lsblk`
-7. Si l'automontage de clé USB a été ajouté au système, copier le firmware sur l'emplacement émulant le stockage du RP2040:
+- Relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage car le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte et l'écran et donc le firmware de l'écran considère qu'il y a un problème 😏
+- Se (re)connecter en ssh en utilisateur ***mks***
+- Vérifier que le RP2040 est bien en mode émulation de stockage `lsblk` doit afficher un périphérique sda (partition sda1), évcentuellement ce pourrait être sdb (sdb1)
+- Si aucun périphérique sda1 (sdb1) n'apaarait à la suite de la commande `lsblk`, presser en maintenant enfoncé lez bouton BOOT, presser et rel'acher le bouton RESET, relâcher le bouton BOOT. Vérifier à nouveau avec un `lsblk`
+- Si l'automontage de clé USB a été ajouté au système, copier le firmware sur l'emplacement émulant le stockage du RP2040:
   - `cp ~/klipper/out/klipper.uf2 ~/printer_data/gcodes/USB`
 
-7. Sinon, il faudra d'abord monter le stockage :
+- Sinon, il faudra d'abord monter le stockage :
 ```
 sudo mount /dev/sda1 /mnt
 sudo systemctl daemon-relaod
@@ -142,4 +142,80 @@ sudo cp /home/mks/klipper/out/*klipper.uf2 /mnt
 sudo umount /mnt
 ```
 
+### Méthode 2
+
+Connecté en ssh, lancer la suite de commandes:
+
+#### Installation de KATAPULT (ex CANBOOT)
+
+- `git clone https://github.com/Arksine/katapult`
+- ```
+cd ~/katapult
+make menuconfig
+  ```
+- choisir les options
+  - Raspberry Pi RP2040
+  - build Katapult deployment application (16 KiB booloader
+  - communication interface (USB)
+- comme la copie écran :
+![katapult](../Images/katapult-menuconfig.jpg)
+
+
+```
+cd ~/klipper
+make clean
+make menuconfig
+```
+Le menu de configuration du firmware apparait, choisir les options :
+- cocher «Enable extra low-level»
+- RP2040 comme contrôleur
+
+![Raspberry Pi RP2040](../Images/klipper-menuconfig-choix-rp2040.jpg)
+- Pas de chargeur de démarrage
+- USB comme interface de communication
+
+Les options doivent correspondre à :
+
+![Config A-4](../Images/klipper-menuconfig-rp2040.jpg)
+
+- une fois ces options sélectionnées, presser Q pour sortir de ce menu, valider par Y pour sauvegarder la configuration
+
+![sauvegarder-configuration](../Images/make-menuconfig-save.jpg)
+
+- compiler le firmware `make` ou en profitant de plusieurs coeurs du contrôleur RK3328 `make -j4`
+- attendre que le proccesus se termine
+<details>
+<summary>Extrait de la compilation</summary>
+
+ ![extrait](../Images/klipper-compil-rp2040-uf2.jpg)
+
+</details>  
+
+Le firmware a été compilé dans le dossier ~/klipper/out et porte le nom **klipper.uf2**
+
+#### Flasher le firmware klipper.uf2
+
+Pour flasher ce firmware, le contrôleur RP2040 doit passer en mode émulation du stockage.
+- éteindre l'imprimante et patienter au moins 30 secondes le temps que le supercondensateur se décharge complètement.
+- le capot arrière de la tête étant démonté, presser et maintenir enfoncé le bouton au bas de la carte nommé **BOOT** et allumer l'imprimante.
+**Ne pas relâcher la pression sur ce bouton  tant que l'imprimante n'a pas complètement démarré. 
+
+![bootsel](../Images/toolhead.jpg)
+- Relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage car le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte et l'écran et donc le firmware de l'écran considère qu'il y a un problème 😏
+- Se (re)connecter en ssh en utilisateur ***mks***
+- Vérifier que le RP2040 est bien en mode émulation de stockage `lsblk` doit afficher un périphérique sda (partition sda1), évcentuellement ce pourrait être sdb (sdb1)
+- Si aucun périphérique sda1 (sdb1) n'apaarait à la suite de la commande `lsblk`, presser en maintenant enfoncé lez bouton BOOT, presser et rel'acher le bouton RESET, relâcher le bouton BOOT. Vérifier à nouveau avec un `lsblk`
+- Si l'automontage de clé USB a été ajouté au système, copier le firmware sur l'emplacement émulant le stockage du RP2040:
+  - `cp ~/klipper/out/klipper.uf2 ~/printer_data/gcodes/USB`
+
+- Sinon, il faudra d'abord monter le stockage :
+```
+sudo mount /dev/sda1 /mnt
+sudo systemctl daemon-relaod
+```
+Puis procéder au «flashage» via copie du firmware
+```
+sudo cp /home/mks/klipper/out/*klipper.uf2 /mnt
+sudo umount /mnt
+```
 
