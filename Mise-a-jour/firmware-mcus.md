@@ -156,35 +156,45 @@ Connecté en ssh, lancer la suite de commandes:
 
 #### Installation de KATAPULT (ex CANBOOT)
 
-- `git clone https://github.com/Arksine/katapult`
-- 
+- Cloner le dépôt :
+
+`git clone https://github.com/Arksine/katapult`
+- préparer la configuration
+
 ```
 cd ~/katapult
 make menuconfig
 ```
+
 - choisir les options
   - Raspberry Pi RP2040
-  - build Katapult deployment application (16 KiB booloader
+  - build Katapult deployment application (16 KiB booloader)
   - communication interface (USB)
+
 <details>
-<summary>comme la copie écran</summary>
+<summary>choix à réaliser</summary>
  
+![katapult](../Images/katapult-rp2040.jpg)
+![katapult](../Images/katapult-16k-bootloaderg.jpg)
 ![katapult](../Images/katapult-menuconfig.jpg)
 
 </details>
+
 - Presser Q puis Yes pour sauvegarder la configuration
 - compiler le firmware Klipper
+
 ```
 make clean
 make -j4
 ```
+
 - A l'issue de la compilation, le firmware katapult est prêt à être installé
 
-
 - une fois katapult installé comme chargeur de démarrage, reste à compiler le firmware Klipper et à l'installer
-- la préparation (make menuconfig) est similaire à la méthode 1, la seule différence étant d'indiquer que Klipper doit s'installer avec un décalage en mémoire prenant en compte le chargeur de démarrage (bootloader) de Katapult
+- la préparation `make menuconfig` est similaire à la méthode 1, **la seule différence étant d'indiquer que Klipper doit s'installer avec un décalage en mémoire prenant en compte le chargeur de démarrage (bootloader) de Katapult**
+
 <details>
-<summary>bootloader de 16 Kio</summary>
+<summary>RP2040, bootloader de 16 Kio</summary>
 
 ![bootloader](../Images/klipper-menuconfig-16k-bootloader-rp2040.jpg)
 
