@@ -92,14 +92,22 @@ make menuconfig
 Le menu de configuration du firmware apparait, choisir les options :
 - cocher «Enable extra low-level»
 - RP2040 comme contrôleur
-
+<details>
+<summary>choix RP2040</summary>
+ 
 ![Raspberry Pi RP2040](../Images/klipper-menuconfig-choix-rp2040.jpg)
+
+</details>
+
 - Pas de chargeur de démarrage
 - USB comme interface de communication
 
-Les options doivent correspondre à :
+<details>
+<summary>Au final</summary>
 
-![Config A-4](../Images/klipper-menuconfig-rp2040.jpg)
+![Raspberry Pi RP2040](../Images/klipper-menuconfig-rp2040.jpg)
+ 
+</details>
 
 - une fois ces options sélectionnées, presser Q pour sortir de ce menu, valider par Y pour sauvegarder la configuration
 
@@ -164,6 +172,27 @@ make menuconfig
 ![katapult](../Images/katapult-menuconfig.jpg)
 
 </details>
+- Presser Q puis Yes pour sauvegarder la configuration
+- compiler le firmware Klipper
+```
+make clean
+make -j4
+```
+- A l'issue de la compilation, le firmware katapult est prêt à être installé
+
+
+- une fois katapult installé comme chargeur de démarrage, reste à compiler le firmware Klipper et à l'installer
+- la préparation (make menuconfig) est similaire à la méthode 1, la seule différence étant d'indiquer que Klipper doit s'installer avec un décalage en mémoire prenant en compte le chargeur de démarrage (bootloader) de Katapult
+<details>
+<summary>bootloader de 16 Kio</summary>
+
+![bootloader](../Images/klipper-menuconfig-16k-bootloader-rp2040.jpg)
+
+pour obtenir au final
+
+![config](../Images/klipper-menuconfig-rp2040-katapult.jpg)
+ 
+</details>  
 
 ```
 cd ~/klipper
