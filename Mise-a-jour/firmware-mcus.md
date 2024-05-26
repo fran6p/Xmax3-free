@@ -134,8 +134,8 @@ Pour flasher ce firmware, le contrôleur RP2040 doit passer en mode émulation d
 ![bootsel](../Images/toolhead.jpg)
 - Relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage car le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte et l'écran et donc le firmware de l'écran considère qu'il y a un problème 😏
 - Se (re)connecter en ssh en utilisateur ***mks***
-- Vérifier que le RP2040 est bien en mode émulation de stockage `lsblk` doit afficher un périphérique sda (partition sda1), évcentuellement ce pourrait être sdb (sdb1)
-- Si aucun périphérique sda1 (sdb1) n'apaarait à la suite de la commande `lsblk`, presser en maintenant enfoncé lez bouton BOOT, presser et rel'acher le bouton RESET, relâcher le bouton BOOT. Vérifier à nouveau avec un `lsblk`
+- Vérifier que le RP2040 est bien en mode émulation de stockage `lsblk` doit afficher un périphérique sda (partition sda1), éventuellement ce pourrait être sdb (sdb1)
+- Si aucun périphérique sda1 (sdb1) n'apparait à la suite de la commande `lsblk`, presser en maintenant enfoncé le bouton BOOT, presser et relâcher le bouton RESET, relâcher alors le bouton BOOT. Vérifier à nouveau avec un `lsblk`
 - Si l'automontage de clé USB a été ajouté au système, copier le firmware sur l'emplacement émulant le stockage du RP2040:
   - `cp ~/klipper/out/klipper.uf2 ~/printer_data/gcodes/USB`
 
@@ -176,6 +176,9 @@ make menuconfig
  
 ![katapult](../Images/katapult-rp2040.jpg)
 ![katapult](../Images/katapult-16k-bootloader.jpg)
+
+Au final
+
 ![katapult](../Images/katapult-menuconfig.jpg)
 
 </details>
@@ -188,10 +191,46 @@ make clean
 make -j4
 ```
 
-- A l'issue de la compilation, le firmware katapult est prêt à être installé
+- A l'issue de la compilation, le firmware katapult est prêt à être installé, il se trouve dans le dossier ~/katapult/out et porte le nom **katapult.uf2**
+<details>
+<summary>résultat de la compilation</summary>
+ 
+![katapult](../Images/katapult-compil-rp2040.jpg)
+
+</details>
+
+- l'installation du firmware katapult.uf2 est similaire à l'installation de klipper.uf2 de la méthode 1
+<details>
+<summary>Flasher katapult.uf2</summary>
+
+Pour flasher ce firmware, le contrôleur RP2040 doit passer en mode émulation du stockage.
+- éteindre l'imprimante et patienter au moins 30 secondes le temps que le supercondensateur se décharge complètement.
+- le capot arrière de la tête étant démonté, presser et maintenir enfoncé le bouton au bas de la carte nommé **BOOT** et allumer l'imprimante.
+**Ne pas relâcher la pression sur ce bouton  tant que l'imprimante n'a pas complètement démarré. 
+
+![bootsel](../Images/toolhead.jpg)
+- Relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage car le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte et l'écran et donc le firmware de l'écran considère qu'il y a un problème 😏
+- Se (re)connecter en ssh en utilisateur ***mks***
+- Vérifier que le RP2040 est bien en mode émulation de stockage `lsblk` doit afficher un périphérique sda (partition sda1), évcentuellement ce pourrait être sdb (sdb1)
+- Si aucun périphérique sda1 (sdb1) n'apparait à la suite de la commande `lsblk`, presser en maintenant enfoncé le bouton BOOT, presser et relâcher le bouton RESET, relâcher alors le bouton BOOT. Vérifier à nouveau avec un `lsblk`
+- Si l'automontage de clé USB a été ajouté au système, copier le firmware sur l'emplacement émulant le stockage du RP2040:
+  - `cp ~/katapult/out/katapult.uf2 ~/printer_data/gcodes/USB`
+
+- Sinon, il faudra d'abord monter le stockage :
+```
+sudo mount /dev/sda1 /mnt
+sudo systemctl daemon-relaod
+```
+Puis procéder au «flashage» via copie du firmware
+```
+sudo cp /home/mks/katapult/out/katapult.uf2 /mnt
+sudo umount /mnt
+```
+
+</details>
 
 - une fois katapult installé comme chargeur de démarrage, reste à compiler le firmware Klipper et à l'installer
-- la préparation `make menuconfig` est similaire à la méthode 1, **la seule différence étant d'indiquer que Klipper doit s'installer avec un décalage en mémoire prenant en compte le chargeur de démarrage (bootloader) de Katapult**
+- la préparation du firmware Klipper via `make menuconfig` est similaire à la méthode 1, **la seule différence étant d'indiquer que Klipper doit s'installer avec un décalage en mémoire prenant en compte le chargeur de démarrage (bootloader) de Katapult**
 
 <details>
 <summary>RP2040, bootloader de 16 Kio</summary>
@@ -209,6 +248,7 @@ cd ~/klipper
 make clean
 make menuconfig
 ```
+
 Le menu de configuration du firmware apparait, choisir les options :
 - cocher «Enable extra low-level»
 - RP2040 comme contrôleur
