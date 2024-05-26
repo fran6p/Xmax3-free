@@ -294,9 +294,9 @@ Le flashage va être effectué via USB en utilisant le périphérique série ind
 
 Remplacer évidemment les «xxxxxxxxxxx» par le nombre retourné sur votre système.
 
-[!NOTE]
-Les firmwares Klipper sont maintenant tous installés sur les différents contrôleurs dans des versions identiques.
-Ni Fluidd ni Mainsail n'indiquent plus d'erreurs
+> [!NOTE]
+> Les firmwares Klipper sont maintenant tous installés sur les différents contrôleurs dans des versions identiques.
+> Ni Fluidd ni Mainsail n'indiquent plus d'erreurs
 
 copies écrans
 
