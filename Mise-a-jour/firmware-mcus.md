@@ -77,7 +77,29 @@ Quelques outils sont nécessaires:
 
 ## MCU tête (carte A-4. controleur RP2040)
 
-Le firmware Klipper peut être installé de deux façons:
-- la première nécessitera à chaque flashage / reflashage le démontage du capot arrière de la tête pour accéder au bouton poussoir «BOOTSEL» permettant de passer le controleur RP2040 en mode émulation de stockage
-- la seconde ne demandera l'étape ci-dessus qu'une seule fois pour l'installation d'un chargeur de démarrage permettant ensuite le flashage du controleur RP2040 via USB. Elle nécessite par contre l'installation supplémentaire du logiciel KATAPULT (ex CANBOOT) de @arksine
+Ici, le firmware Klipper peut être installé de deux façons:
+1. la première nécessitera à chaque flashage / reflashage le démontage du capot arrière de la tête pour accéder au bouton poussoir «BOOTSEL» permettant de passer le controleur RP2040 en mode émulation de stockage
+2. la seconde ne demandera l'étape ci-dessus qu'une seule fois pour l'installation d'un chargeur de démarrage permettant ensuite le flashage du controleur RP2040 via USB. Elle nécessite par contre l'installation supplémentaire du logiciel KATAPULT (ex CANBOOT) de @arksine
 
+### Méthode 1
+
+Connecté en ssh:
+```
+cd ~/klipper
+make clean
+make menuconfig
+```
+Le menu de configuration du firmware apparait, choisir les options :
+- cocher «Enable extra low-level»
+- RP2040 comme contrôleur
+![Raspberry Pi RP2040](../Images/klipper-menuconfig-choix-rp2040.jpg)
+- Pas de chargeur de démarrage
+- USB comme interface de communication
+
+![Config A-4](../Images/klipper-menuconfig-rp2040.jpg)
+
+- une fois ces options sélectionnées, presser Q pour sortir de ce menu, valider par Y pour sauvegarder la configuration
+
+![sauvegarder-configuration](../Images/make-menuconfig-save.jpg)
+
+- 
