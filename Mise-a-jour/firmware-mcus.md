@@ -108,8 +108,10 @@ Les options doivent correspondre à :
 - compiler le firmware `make` ou en profitant de plusieurs coeurs du contrôleur RK3328 `make -j4`
 - attendre que le proccesus se termine
 <details>
- <summary>Extrait de la compilation</summary>
-![extrait](../Images/klipper-compil-rp2040-uf2.jpg)
+<summary>Extrait de la compilation</summary>
+
+ ![extrait](../Images/klipper-compil-rp2040-uf2.jpg)
+
 </details>  
 
 
