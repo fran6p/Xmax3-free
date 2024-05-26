@@ -292,6 +292,14 @@ Le flashage va être effectué via USB en utilisant le périphérique série ind
 
 `python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-katapult_rp2040_xxxxxxxxxxxxxx`
 
-Remplacer évidemment les «xxxxxxxxxxx» par le nombre retourné. 
+Remplacer évidemment les «xxxxxxxxxxx» par le nombre retourné sur votre système.
+
+[!NOTE]
+Les firmwares Klipper sont maintenant tous installés sur les différents contrôleurs dans des versions identiques.
+Ni Fluidd ni Mainsail n'indiquent plus d'erreurs
+
+copies écrans
+
+Dernière étape, le fichier de configuration **printer.cfg**, voir [ici](./printer-cfg.md)
 
 
