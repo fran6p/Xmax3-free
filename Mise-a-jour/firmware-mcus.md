@@ -191,7 +191,7 @@ make clean
 make -j4
 ```
 
-- A l'issue de la compilation, le firmware katapult est prêt à être installé, il se trouve dans le dossier ~/katapult/out et porte le nom **katapult.uf2**
+- A l'issue de la compilation, le firmware Katapult est prêt à être installé, il se trouve dans le dossier ~/katapult/out et porte le nom **katapult.uf2**
 <details>
 <summary>résultat de la compilation</summary>
  
@@ -199,24 +199,29 @@ make -j4
 
 </details>
 
-- l'installation du firmware katapult.uf2 est similaire à l'installation de klipper.uf2 de la méthode 1
+- l'installation du firmware katapult.uf2 est similaire à l'installation de klipper.uf2 de la **méthode 1**
 <details>
 <summary>Flasher katapult.uf2</summary>
 
-Pour flasher ce firmware, le contrôleur RP2040 doit passer en mode émulation du stockage.
+Pour flasher ce firmware, le contrôleur RP2040 doit passer en mode émulation du stockage (DFU mode).
 - éteindre l'imprimante et patienter au moins 30 secondes le temps que le supercondensateur se décharge complètement.
-- le capot arrière de la tête étant démonté, presser et maintenir enfoncé le bouton au bas de la carte nommé **BOOT** et allumer l'imprimante.
-**Ne pas relâcher la pression sur ce bouton  tant que l'imprimante n'a pas complètement démarré. 
+- le capot arrière de la tête étant démonté, presser et maintenir enfoncé le bouton au bas de la carte nommé **BOOT** puis allumer l'imprimante.
+**Ne pas relâcher la pression sur ce bouton  tant que l'imprimante n'a pas complètement démarré.** 
 
 ![bootsel](../Images/toolhead.jpg)
-- Relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage car le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte et l'écran et donc le firmware de l'écran considère qu'il y a un problème 😏
+- Relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage (le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte et l'écran et donc le firmware de l'écran considère qu'il y a un problème 😏)
 - Se (re)connecter en ssh en utilisateur ***mks***
-- Vérifier que le RP2040 est bien en mode émulation de stockage `lsblk` doit afficher un périphérique sda (partition sda1), évcentuellement ce pourrait être sdb (sdb1)
-- Si aucun périphérique sda1 (sdb1) n'apparait à la suite de la commande `lsblk`, presser en maintenant enfoncé le bouton BOOT, presser et relâcher le bouton RESET, relâcher alors le bouton BOOT. Vérifier à nouveau avec un `lsblk`
+- Vérifier que le RP2040 est bien en mode émulation de stockage `lsblk` doit afficher un périphérique sda (partition sda1), éventuellement sdb (sdb1)
+- Si aucun périphérique sda1 (sdb1) n'apparait à la suite de la commande `lsblk`, c'est que le RP2040 n'est pas passé en mode DFU:
+  - presser en maintenant enfoncé le bouton BOOT,
+  - presser et relâcher le bouton RESET,
+  - relâcher alors le bouton BOOT.
+  - vérifier à nouveau avec un `lsblk` le passage en mode DFU
 - Si l'automontage de clé USB a été ajouté au système, copier le firmware sur l'emplacement émulant le stockage du RP2040:
-  - `cp ~/katapult/out/katapult.uf2 ~/printer_data/gcodes/USB`
 
-- Sinon, il faudra d'abord monter le stockage :
+`cp ~/katapult/out/katapult.uf2 ~/printer_data/gcodes/USB`
+
+- Sinon, il faudra procéder au montage manuel du stockage :
 ```
 sudo mount /dev/sda1 /mnt
 sudo systemctl daemon-relaod
@@ -230,7 +235,23 @@ sudo umount /mnt
 </details>
 
 - une fois katapult installé comme chargeur de démarrage, reste à compiler le firmware Klipper et à l'installer
-- la préparation du firmware Klipper via `make menuconfig` est similaire à la méthode 1, **la seule différence étant d'indiquer que Klipper doit s'installer avec un décalage en mémoire prenant en compte le chargeur de démarrage (bootloader) de Katapult**
+
+> Katapult installé comme chargeur de démarrage permet désormais de ne plus avoir à ouvrir le capot arrière pour pouvoir déclencher le mode DFU du Raspberry Pi RP2040
+
+#### Installer Klipper sur la carte A-4 via l'aide de Katapult
+
+- la préparation du firmware Klipper est similaire à la méthode 1, **la seule différence étant d'indiquer que Klipper doit s'installer avec un décalage en mémoire prenant en compte le chargeur de démarrage (bootloader) de Katapult**
+
+```
+cd ~/klipper
+make menuconfig
+``` 
+
+- Le menu de configuration du firmware apparait, choisir les options :
+  - cocher «Enable extra low-level»
+  - RP2040 comme contrôleur
+  - **chargeur de démarrage 16 Kio**
+  - USB comme interface de communication
 
 <details>
 <summary>RP2040, bootloader de 16 Kio</summary>
@@ -243,62 +264,34 @@ pour obtenir au final
  
 </details>  
 
-```
-cd ~/klipper
-make clean
-make menuconfig
-```
-
-Le menu de configuration du firmware apparait, choisir les options :
-- cocher «Enable extra low-level»
-- RP2040 comme contrôleur
-
-![Raspberry Pi RP2040](../Images/klipper-menuconfig-choix-rp2040.jpg)
-- Pas de chargeur de démarrage
-- USB comme interface de communication
-
-Les options doivent correspondre à :
-
-![Config A-4](../Images/klipper-menuconfig-rp2040.jpg)
-
 - une fois ces options sélectionnées, presser Q pour sortir de ce menu, valider par Y pour sauvegarder la configuration
+- compiler Klipper
 
-![sauvegarder-configuration](../Images/make-menuconfig-save.jpg)
+```
+make clean
+make -j4
+```
 
-- compiler le firmware `make` ou en profitant de plusieurs coeurs du contrôleur RK3328 `make -j4`
 - attendre que le proccesus se termine
 <details>
 <summary>Extrait de la compilation</summary>
 
- ![extrait](../Images/klipper-compil-rp2040-uf2.jpg)
+ ![extrait](../Images/klipper-compil-rp2040.jpg)
 
 </details>  
 
-Le firmware a été compilé dans le dossier ~/klipper/out et porte le nom **klipper.uf2**
+Le firmware a été compilé dans le dossier ~/klipper/out et porte cette fois le nom **klipper.bin**
 
-#### Flasher le firmware klipper.uf2
+##### Flasher le firmware klipper.bin
 
-Pour flasher ce firmware, le contrôleur RP2040 doit passer en mode émulation du stockage.
-- éteindre l'imprimante et patienter au moins 30 secondes le temps que le supercondensateur se décharge complètement.
-- le capot arrière de la tête étant démonté, presser et maintenir enfoncé le bouton au bas de la carte nommé **BOOT** et allumer l'imprimante.
-**Ne pas relâcher la pression sur ce bouton  tant que l'imprimante n'a pas complètement démarré. 
+Pour permettre le flashage via Katapult, un paquet Python doit être installé :
 
-![bootsel](../Images/toolhead.jpg)
-- Relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage car le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte et l'écran et donc le firmware de l'écran considère qu'il y a un problème 😏
-- Se (re)connecter en ssh en utilisateur ***mks***
-- Vérifier que le RP2040 est bien en mode émulation de stockage `lsblk` doit afficher un périphérique sda (partition sda1), évcentuellement ce pourrait être sdb (sdb1)
-- Si aucun périphérique sda1 (sdb1) n'apaarait à la suite de la commande `lsblk`, presser en maintenant enfoncé lez bouton BOOT, presser et rel'acher le bouton RESET, relâcher le bouton BOOT. Vérifier à nouveau avec un `lsblk`
-- Si l'automontage de clé USB a été ajouté au système, copier le firmware sur l'emplacement émulant le stockage du RP2040:
-  - `cp ~/klipper/out/klipper.uf2 ~/printer_data/gcodes/USB`
+`sudo apt install python3-serial`
 
-- Sinon, il faudra d'abord monter le stockage :
-```
-sudo mount /dev/sda1 /mnt
-sudo systemctl daemon-relaod
-```
-Puis procéder au «flashage» via copie du firmware
-```
-sudo cp /home/mks/klipper/out/*klipper.uf2 /mnt
-sudo umount /mnt
-```
+Le flashage va être effectué via USB en utilisant le périphérique série indiqué par `ls /dev/serial/by-id` avec la commande :
+
+`python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-katapult_rp2040_xxxxxxxxxxxxxx`
+
+Remplacer évidemment les «xxxxxxxxxxx» par le nombre retourné. 
+
 
