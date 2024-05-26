@@ -83,7 +83,7 @@ Ici, le firmware Klipper peut être installé de deux façons:
 
 ### Méthode 1
 
-Connecté en ssh, lancer la suite de commadnes:
+Connecté en ssh, lancer la suite de commandes:
 ```
 cd ~/klipper
 make clean
@@ -105,4 +105,12 @@ Les options doivent correspondre à :
 
 ![sauvegarder-configuration](../Images/make-menuconfig-save.jpg)
 
-- 
+- compiler le firmware `make` ou en profitant de plusieurs coeurs du contrôleur RK3328 `make -j4`
+- attendre que le proccesus se termine
+<details>
+ <summary>Extrait de la compilation</summary>
+![extrait](../Images/klipper-compil-rp2040-uf2.jpg)
+</details>  
+
+
+
