@@ -175,7 +175,7 @@ make menuconfig
 <summary>choix à réaliser</summary>
  
 ![katapult](../Images/katapult-rp2040.jpg)
-![katapult](../Images/katapult-16k-bootloaderg.jpg)
+![katapult](../Images/katapult-16k-bootloader.jpg)
 ![katapult](../Images/katapult-menuconfig.jpg)
 
 </details>
