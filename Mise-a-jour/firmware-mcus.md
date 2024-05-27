@@ -226,7 +226,7 @@ make menuconfig
 
 </details>
 
-- Presser <kbd>Q</kbd> puis <kbd>Y</kbd>es pour sauvegarder cette configuration
+- Presser <kbd>Q</kbd> puis <kbd>Y</kbd>(es) pour sauvegarder cette configuration
 - compiler le firmware Katapult
 
 ```
