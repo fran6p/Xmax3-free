@@ -137,7 +137,8 @@ Le firmware a été compilé dans le dossier ~/klipper/out et porte le nom **kli
 - relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage (le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte, le firmware de l'écran considère qu'il y a un problème 😏)
 - se (re)connecter en ssh en utilisateur ***mks***
 - vérifier que le RP2040 est bien en mode émulation de stockage `lsblk` doit afficher un périphérique sda (partition sda1), un `lsusb` permet également de vérifier que le RP2040 est passé dans le «bon» mode (**ID 2a8a:0003 Raspberry Pi RP2 Boot**):
-![lsusb](./Images/rp2040-lsusb-boot.jpg)
+
+![lsusb](../Images/rp2040-lsusb-boot.jpg)
 - Si aucun périphérique sda1 n'apparait à la suite de la commande `lsblk` ou que le périphérique USB n'est pas `ID 2a8a:0003 Raspberry Pi RP2 Boot`:
   - presser et maintenir enfoncé le bouton BOOT,
   - presser et relâcher le bouton RESET,
@@ -164,7 +165,8 @@ sudo umount /mnt
 > Par précaution, on démonte tout de même manuellement.
 >
 > Un `lsusb` permet de vérifier que le RP2040 n'est plus en mode émulation de stockage
-> ![](./images/lsusb-rp2040-openmoko.jpg)
+> 
+> ![openmoko](../Images/lsusb-rp2040-openmoko.jpg)
 
 ### Méthode 2
 
