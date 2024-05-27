@@ -362,8 +362,11 @@ Remplacer ci-dessus dans `/dev/serial/by-id/by-id/usb-katapult_rp2040_xxxxxxxxxx
 > 
 > Les firmwares Klipper sont maintenant tous installés sur les différents contrôleurs dans des versions identiques.
 > 
-> <p align="center"><img src="/Images/fluidd-mcus-v0.12.jpg"><img src="Images/mainsail-mcus-v0.12.jpg></p>
-> 
+> <p align="center">
+  <img src="/Images/fluidd-mcus-v0.12.jpg">
+  <img src="/Images/mainsail-mcus-v0.12.jpg>
+  </p>
+    
 > Ni Fluidd ni Mainsail n'indiquent plus d'erreurs
 
 ---
