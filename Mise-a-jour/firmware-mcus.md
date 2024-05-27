@@ -73,9 +73,9 @@ Quelques outils sont nécessaires:
   
 ## MCU PRINCIPAL
 
-## MCU Linux (controleur de la carte X-4 / X-6, Rockchip RK3328)
+## MCU Linux (contrôleur de la carte X-4 / X-6, Rockchip RK3328)
 
-## MCU tête (carte A-4. controleur RP2040)
+## MCU tête (carte A-4. contrôleur RP2040)
 
 Ici, le firmware Klipper peut être installé de deux façons:
 1. la première nécessitera **à chaque flashage / reflashage le démontage du capot arrière de la tête** pour accéder au bouton poussoir «BOOTSEL» permettant de passer le controleur RP2040 en mode émulation de stockage
@@ -131,7 +131,7 @@ Le firmware a été compilé dans le dossier ~/klipper/out et porte le nom **kli
 - le capot arrière de la tête étant démonté:
   - presser et maintenir enfoncé le bouton au bas de la carte nommé **BOOT**
   - allumer l'imprimante
-  - **ne relâcher la pression sur ce bouton qu'une fois l'imprimante complètement démarrée. 
+  - **ne relâcher la pression sur ce bouton qu'une fois l'imprimante complètement démarrée**. 
 
 ![bootsel](../Images/toolhead.jpg)
 - relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage (le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte, le firmware de l'écran considère qu'il y a un problème 😏)
