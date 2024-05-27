@@ -87,7 +87,7 @@ Le menu de configuration du firmware apparait, choisir les options :
 - cocher «Enable extra low-level»
 - RP2040 comme contrôleur
 <details>
-<summary>choix RP2040</summary>
+<summary>contrôleur RP2040</summary>
  
 <p align="center">
 <img src="/Images/klipper-menuconfig-choix-rp2040.jpg">
@@ -99,7 +99,7 @@ Le menu de configuration du firmware apparait, choisir les options :
 - USB comme interface de communication
 
 <details>
-<summary>Au final</summary>
+<summary>Configuration complète</summary>
 
 <p align="center">
 <img src="/Images/klipper-menuconfig-rp2040.jpg">
@@ -110,7 +110,7 @@ Le menu de configuration du firmware apparait, choisir les options :
 - une fois ces options sélectionnées, presser <kbd>Q</kbd> pour sortir de ce menu, valider par <kbd>Y</kbd> pour sauvegarder la configuration
 
 <details>
-<summary>Quitter en validant</summary>
+<summary>Quitter et valider</summary>
  
 <p align="center">
 <img src="/Images/make-menuconfig-save.jpg"
@@ -121,7 +121,7 @@ Le menu de configuration du firmware apparait, choisir les options :
 - compiler le firmware `make`. On peut profiter d'une compilation parallèle en utilisant plusieurs coeurs du contrôleur RK3328 avec un `make -j4`
 - attendre que le processus se termine
 <details>
-<summary>Extrait de la compilation</summary>
+<summary>Fin de la compilation</summary>
 
 <p align="center">
 <img src="/Images/klipper-compil-rp2040-uf2.jpg"
@@ -241,7 +241,7 @@ make -j4
 
 - A l'issue de la compilation, le firmware Katapult est prêt à être installé, il se trouve dans le dossier ~/katapult/out et porte le nom **katapult.uf2**
 <details>
-<summary>Résultat de la compilation</summary>
+<summary>Fin de la compilation</summary>
  
 <p align="center">
 <img src="/Images/katapult-compil-rp2040.jp">
@@ -259,7 +259,6 @@ Pour flasher ce firmware, le contrôleur RP2040 doit passer en mode émulation d
   - presser et maintenir enfoncé le bouton au bas de la carte nommé **BOOT**
   - allumer l'imprimante
   - **Ne pas relâcher la pression sur ce bouton  tant que l'imprimante n'a pas complètement démarré.** 
-
 <p align="center">
 <img src="/Images/toolhead.jpg">
 </p>
@@ -339,7 +338,7 @@ make -j4
 
 - attendre que le processus se termine
 <details>
-<summary>Extrait de la compilation</summary>
+<summary>Fin de la compilation</summary>
 
 <p align="center">
 <img src="/Images/klipper-compil-rp2040.jpg">
