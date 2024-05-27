@@ -64,6 +64,86 @@ Quelques outils sont nécessaires:
   
 # MCU PRINCIPAL
 
+## Préparer le firmware
+
+Connecté en ssh, lancer la suite de commandes:
+```
+cd ~/klipper
+make clean
+make menuconfig
+```
+Le menu de configuration du firmware apparait, choisir les options :
+- [X] cocher «Enable extra low-level»
+- [X] STMicroelectronic STM32 comme famille de contrôleur
+<details>
+<summary>contrôleur STM32</summary>
+ 
+<p align="center">
+<img src="/Images/klipper-menuconfig-choix-stm32.jpg">
+</p>
+
+</details>
+
+- [X] Processor model (STM32F401) (le STM32F402 de la carte en est un 😏)
+<details>
+<summary>modèle STM32F401</summary>
+ 
+<p align="center">
+<img src="/Images/klipper-menuconfig-choix-stm32-modele.jpg">
+</p>
+
+</details>
+
+- [X] Bootloader offset (32 Kio bootloader)
+<details>
+<summary>modèle STM32F401</summary>
+ 
+<p align="center">
+<img src="/Images/klipper-menuconfig-choix-stm32-bootloader.jpg">
+</p>
+
+</details>
+
+- [X] Communication interface (Serial (on USART1 PA10/PA9)
+
+<details>
+<summary>Configuration complète</summary>
+
+<p align="center">
+<img src="/Images/klipper-menuconfig-choix-stm32-com.jpg">
+</p>
+ 
+</details>
+Le contrôleur RK3328 est câblé directement au STM32F402 comme indiqué sur ce schéma (extrait)
+
+<details>
+<summary>RK3328<->STM32</summary>
+
+<p align="center">
+<img src="/Images/RK3328-STM32-CNX.jpg">
+</p>
+ 
+</details>
+
+Au final, la configuration complète doit être comme ci-dessous :
+<p align="center">
+<img src="/Images/klipper-menuconfig-stm32f402.jpg">
+</p>
+
+- une fois ces options sélectionnées, presser <kbd>Q</kbd> pour sortir de ce menu, valider par <kbd>Y</kbd> pour sauvegarder la configuration
+
+<details>
+<summary>Quitter et valider</summary>
+ 
+<p align="center">
+<img src="/Images/make-menuconfig-save.jpg"
+</p>
+
+</details>
+
+## Compiler
+
+
 # MCU Linux (contrôleur de la carte X-4 / X-6, Rockchip RK3328)
 
 [Source](https://www.klipper3d.org/fr/RPi_microcontroller.html#microcontroleur-rpi)
