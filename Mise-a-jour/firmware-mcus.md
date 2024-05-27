@@ -66,6 +66,7 @@ Quelques outils sont nécessaires:
 
 # MCU Linux (contrôleur de la carte X-4 / X-6, Rockchip RK3328)
 
+
 # MCU tête (carte A-4. contrôleur RP2040)
 
 Ici, le firmware Klipper peut être installé de deux façons:
@@ -88,7 +89,9 @@ Le menu de configuration du firmware apparait, choisir les options :
 <details>
 <summary>choix RP2040</summary>
  
-![Raspberry Pi RP2040](../Images/klipper-menuconfig-choix-rp2040.jpg)
+<p align="center">
+<img src="/Images/klipper-menuconfig-choix-rp2040.jpg"
+</p>
 
 </details>
 
