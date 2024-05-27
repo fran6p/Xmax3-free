@@ -1,6 +1,6 @@
-En vrac
+# En vrac
 
-Empêcher la mise à jour de certains paquets :
+## Empêcher la mise à jour de certains paquets :
 - via l'utilitaire «**armbian-config**»
 
 `sudo armbian-config`
@@ -11,7 +11,7 @@ Empêcher la mise à jour de certains paquets :
 sudo apt-mark hold base-files linux-dtb-current-rockchip64 linux-image-current-rockchip64 linux-headers-current-rockchip64 armbian-config armbian-firmware armbian-plymouth-theme armbian-zsh
 ```
 
-Ajouter l'utilisateur mks au groupe gpio pour lui permettre d'y accéder
+## Ajouter l'utilisateur mks au groupe gpio pour lui permettre d'y accéder
 
 **Le groupe gpio n'existe pas** mais en accès sudo on peut utiliser les outils ( gpioinfo, gpiodetect, gpiomon, gpioset, gpioget )
 
@@ -22,7 +22,7 @@ if ! sudo usermod -aG gpio mks &>/dev/null; then
 fi
 ```
 
-Synchronisation auto du système de fichiers
+## Synchronisation automatique du système de fichiers
 
 ```
 CRON_ENTRY="*/10 * * * * /bin/sync"
@@ -34,15 +34,15 @@ else
 fi
 ```
 
-Accès aux réglages réseaux (Wifi):
+## Accès aux réglages réseaux (Wifi):
 
 ```
-# Start Network Manager Text User Interface
-# Activate Wifi if supported (not natively with Tenda Wifi key used by QidiTech on Series3 printers !)
+# Start Network Manager Text User Interface to activate Wifi if supported
+# (not natively with Tenda Wifi key used by QidiTech on Series3 printers !)
 sudo nmtui
 ```
 
-Libérer un peu de place :
+## Libérer un peu de place :
 
 ```
 sudo apt clean -y
@@ -50,7 +50,7 @@ sudo apt autoclean -y
 sudo apt autoremove -y
 ```
 
-Modifier la manière de gérer les noms d'interfaces réseaux pour revenir à l'ancien système (ethX, wlanX) :
+## Modifier la manière de gérer les noms d'interfaces réseaux pour revenir à l'ancien système (ethX, wlanX) :
 
 ```
 # Add extraargs to armbianEnv.txt if not exists
@@ -65,7 +65,7 @@ else
 fi
 ```
 
-Sans ce parmètre, l'interface **eth0** serait nommée **end1** (altname)
+Sans ce paramètre, l'interface **eth0** serait nommée **end1** (altname)
 
 ```
 mks@mkspi:~$ ip addr
@@ -84,7 +84,7 @@ mks@mkspi:~$ ip addr
        valid_lft forever preferred_lft forever
 ```
 
-Paquets à ajouter si absents :
+## Paquets à ajouter si absents :
 
 PAQUETS_PYTHON="python3-numpy python3-matplotlib libatlas-base-dev libopenblas-dev python3-serial"
 PAQUET_INDISPENSABLE="git"
@@ -94,7 +94,7 @@ sudo apt update
 sudo apt install ${PAQUET_INDISPENSABLE} ${PAQUETS_PYTHON} -y
 ```
 
-Automontage des clés USB :
+## Automontage des clés USB :
 
 ```
 #!/bin/bash
@@ -150,4 +150,4 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 
 ```
 
-…
+## …
