@@ -181,6 +181,7 @@ Plusieurs méthodes permettent de le faire :
 cp ~/klipper/out/klipper.bin ~/priner_data/config/X_4.bin
 ```
 Le récupérer en utilisant Fluidd (clic droit sur le fichier, télécharger)
+
 2. mettre à disposition le firmware sur le réseau local via le serveur web Python
 ```
 exec sh -c 'python3 -m http.server -d "/home/mks/klipper/out" 8888' &
@@ -190,6 +191,7 @@ Une fois le serveur lancé (en tâche de fond) sur le port 8888:
 - récupérer le fichier klipper.bin
 - le renommer en X_4.bin
 - le copier sur la carte μSD 
+
 3. Si Samba a été ajouté au système, on peut accéder à son répertoire personnel
 ecran samba
 4. Si l'automontage de périphériques de stockage a été installé sur le système, utiliser une clé USB adaptateur SD :
