@@ -10,30 +10,20 @@ Les sources m'ayant servi à la rédaction des tutoriels :
 
 ## FIRMWARE GÉNÉRALITÉS
 
-Pour chacun des contrôleurs :
-- principal (MCU),
+Pour chacun des contrôleurs (MCU):
+- principal
 - secondaire (la tête «MKS-THR»)
-- le Linux MCU), les étapes à suivre sont quasi identiques:
+- Linux
+les étapes à suivre sont quasi identiques:
 
-- se placer dans le répertoire Klipper du dossier personnel de l'utilisateur «mks»
-
-`cd ~/klipper` ou `cd /home/mks/klipper` ou si on est déjà dans le dossier perso `cd klipper` ou `cd ./klipper`
-- configurer le firmware
-
-`make menuconfig`
-- dans la fenêtre de configuration, sélectionner les paramètres adéquats (dépend de chaque MCU)
-- préparer la compilation
-
- `make clean`
-- compiler
-
-`make`
-
-ou encore, le microcontrôleur RK3328 possèdant plusieurs coeurs, utiliser une compilation parallèle
-
-`make -j4`
-- à l'issue de la compilation, récupérer le firmware dans le dossier **out** (~/klipper/out/). Le nom du fichier compilé dépend des directives de compilation ( klipper.bin / klipper.uf2 / klipper.elf )
-- flasher ce firmware sur le MCU ( la méthode dépend du MCU à flasher )
+1. se placer dans le répertoire Klipper du dossier personnel de l'utilisateur «mks»: `cd ~/klipper` ou `cd /home/mks/klipper` ou si on est déjà dans le dossier perso `cd klipper` ou `cd ./klipper`
+2. configurer le firmware: `make menuconfig`
+  3. dans la fenêtre de configuration, sélectionner les paramètres adéquats (dépend de chaque MCU)
+  4. sauvegarder cette configuration
+3. préparer la compilation: `make clean`
+4. compiler: `make` (le microcontrôleur RK3328 possèdant plusieurs coeurs, utiliser une compilation parallèle à l'aide de `make -j4`)
+5. à l'issue de la compilation, récupérer le firmware dans le dossier **out** (~/klipper/out/). Le nom du fichier compilé dépend des directives de compilation ( klipper.bin / klipper.uf2 / klipper.elf )
+6. flasher ce firmware sur le MCU ( la méthode dépend du MCU à flasher )
 
 Connaissant le principe, on va pouvoir entrer dans les détails.
 
