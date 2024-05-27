@@ -285,7 +285,7 @@ sudo umount /mnt
 > [!IMPORTANT]
 > Katapult installé comme chargeur de démarrage permet désormais de ne plus avoir à ouvrir le capot arrière pour pouvoir déclencher le mode émulation de stockage de masse (BOOTSEL mode) du Raspberry Pi RP2040
 
-### Installer Klipper sur la carte A-4 via l'aide de Katapult
+### 2 - Firmware Klipper via Katapult (préparer, flasher)
 
 - la préparation du firmware Klipper est similaire à la méthode 1, **la seule différence étant d'indiquer que Klipper doit s'installer avec un décalage en mémoire prenant en compte le chargeur de démarrage (bootloader) de Katapult**
 
@@ -329,8 +329,6 @@ make -j4
 
 Le firmware a été compilé dans le dossier ~/klipper/out et porte cette fois le nom **klipper.bin**
 
-### Flasher le firmware klipper.bin
-
 Pour permettre le flashage via Katapult, un paquet Python doit être installé :
 
 `sudo apt install python3-serial`
@@ -346,12 +344,17 @@ Remplacer ci-dessus dans `/dev/serial/by-id/by-id/usb-katapult_rp2040_xxxxxxxxxx
 > [!NOTE]
 > 
 > Les firmwares Klipper sont maintenant tous installés sur les différents contrôleurs dans des versions identiques.
-> Ni Fluidd ni Mainsail n'indiquent plus d'erreurs
+> 
 > ![fluidd-ok](../Images/fluidd-mcus-v0.12.jpg)
 > ![mainsail-ok](../Images/mainsail-mcus-v0.12.jpg)
+> Ni Fluidd ni Mainsail n'indiquent plus d'erreurs
 
-copies écrans
 
-Dernière étape, le fichier de configuration **printer.cfg**, voir [ici](./printer-cfg.md)
+Dernière étape, le fichier de configuration **printer.cfg**, voir [ici](../Configurations/printer-cfg.md)
+
+> [!TIP]
+>
+> Pour palier au non fonctionnement de l'écran tactile, on peut y palier de plusieurs manières.
+> Pour en savoir plus, consulter [ce document](../Hardware/ecran-tactile.md)
 
 
