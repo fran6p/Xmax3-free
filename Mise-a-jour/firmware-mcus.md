@@ -66,6 +66,69 @@ Quelques outils sont nécessaires:
 
 # MCU Linux (contrôleur de la carte X-4 / X-6, Rockchip RK3328)
 
+[Source](https://www.klipper3d.org/fr/RPi_microcontroller.html#microcontroleur-rpi)
+
+> [!NOTE]
+>
+> Les microcontrôleurs dédiés au contrôle des imprimantes 3D disposent d'un nombre limité et pré-configuré de broches exposées pour gérer les principales fonctions d'impression (résistances thermiques, extrudeuses, steppers...). L'utilisation du contrôleur, ici le Rockchip RK3328 où Klipper est installé en tant que MCU secondaire donne la possibilité d'utiliser directement les GPIO et les bus (i2c, spi) du contrôleur à l'intérieur de klipper
+
+## Firmware Klipper (installer script RC, configurer, flasher)
+
+### Installer le script RC
+
+Une étape préliminaire est nécessaire: pour utiliser l'hôte comme MCU secondaire, un daemon système (**klipper_mcu**) doit être installé. Son démarrage devra se faire avant celui de Klipper
+```
+cd ~/klipper/
+sudo cp ./scripts/klipper-mcu.service /etc/systemd/system/
+sudo systemctl enable klipper-mcu.service
+```
+
+### Configurer Klipper
+
+```
+cd ~/klipper/
+make menuconfig
+```
+Le menu de configuration du firmware apparait, choisir les options :
+- [X] cocher «Enable extra low-level»
+- [X] Linux process comme contrôleur
+<details>
+<summary>Linux process</summary>
+ 
+<p align="center">
+<img src="/Images/klipper-menuconfig-choix-linux.jpg">
+  <img src="/Images/klipper-menuconfig-linux-process.jpg">
+</p>
+
+</details>
+
+- une fois ces options sélectionnées, presser <kbd>Q</kbd> pour sortir de ce menu, valider par <kbd>Y</kbd> pour sauvegarder la configuration
+
+<details>
+<summary>Quitter et valider</summary>
+ 
+<p align="center">
+<img src="/Images/make-menuconfig-save.jpg"
+</p>
+
+</details>
+ 
+### Flasher
+
+- compiler et installer le nouveau code du microcontrôleur
+
+```
+sudo systemctl stop klipper
+make flash
+sudo systemctl start klipper
+```
+
+Pour utiliser ce «MCU», il faut ajouter au fichier printer.cfg la section suivante :
+
+```
+[mcu host]
+serial: /tmp/klipper_host_mcu
+```
 
 # MCU tête (carte A-4. contrôleur RP2040)
 
@@ -84,8 +147,8 @@ make clean
 make menuconfig
 ```
 Le menu de configuration du firmware apparait, choisir les options :
-- cocher «Enable extra low-level»
-- RP2040 comme contrôleur
+- [X] cocher «Enable extra low-level»
+- [X] RP2040 comme contrôleur
 <details>
 <summary>contrôleur RP2040</summary>
  
