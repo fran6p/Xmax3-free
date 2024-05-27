@@ -168,6 +168,41 @@ Le processus de flashage utilise un carte μSD (formatée FAT32 d'une capacité 
 
 </details>
 
+Pour que le flashage réussisse, le fichier klipper.bin doit porter un nom précis : **X_4.bin** (x majuscule, souligné, chiffre 4).
+
+Reste à récupérer ce fichier, le renommer puis le copier à la racine de la carte μSD
+
+### Récupérer (télécharger) le firmware
+
+Plusieurs méthodes permettent de le faire :
+
+1. copier dans le répertoire de configuration de Klipper (~/printer_data/config)
+```
+cp ~/klipper/out/klipper.bin ~/priner_data/config/X_4.bin
+```
+Le récupérer en utilisant Fluidd (clic droit sur le fichier, télécharger)
+2. mettre à disposition le firmware sur le réseau local via le serveur web Python
+```
+exec sh -c 'python3 -m http.server -d "/home/mks/klipper/out" 8888' &
+```
+Une fois le serveur lancé (en tâche de fond) sur le port 8888:
+- via un navigateur, accéder à l'adresse http://adresse-ip-imprimante:8888
+- récupérer le fichier klipper.bin
+- le renommer en X_4.bin
+- le copier sur la carte μSD 
+3. Si Samba a été ajouté au système, on peut accéder à son répertoire personnel
+ecran samba
+4. Si l'automontage de périphériques de stockage a été installé sur le système, utiliser une clé USB adaptateur SD :
+```
+cp ~/klipper/out/klipper.bin ~/priner_data/gcodes/USB/X_4.bin
+```   
+
+- une fois le fichier X_4.bin recopié à la racine de la carte μSD:
+  - introduire cette carte dans le lecteur
+  - allumer l'imprimante
+  - patienter (très peu de temps), le temps que le processus de flashage se termine
+ 
+ 
 # MCU Linux (contrôleur de la carte X-4 / X-6, Rockchip RK3328)
 
 [Source](https://www.klipper3d.org/fr/RPi_microcontroller.html#microcontroleur-rpi)
