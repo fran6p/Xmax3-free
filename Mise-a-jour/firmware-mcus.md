@@ -79,7 +79,7 @@ Quelques outils sont nécessaires:
 
 Ici, le firmware Klipper peut être installé de deux façons:
 1. la première nécessitera **à chaque flashage / reflashage le démontage du capot arrière de la tête** pour accéder au bouton poussoir «BOOTSEL» permettant de passer le controleur RP2040 en mode émulation de stockage
-2. la seconde ne demandera l'étape ci-dessus qu'**une seule fois** pour l'installation d'un chargeur de démarrage permettant ensuite le flashage du controleur RP2040 via USB. Elle nécessite par contre l'installation supplémentaire du logiciel KATAPULT (ex CANBOOT) de @arksine
+2. la seconde ne demandera l'étape ci-dessus qu'**une seule fois** pour l'installation d'un chargeur de démarrage permettant ensuite le flashage du controleur RP2040 via USB. Elle nécessite par contre l'installation supplémentaire du logiciel [KATAPULT (ex CANBOOT)](https://github.com/Arksine/katapult) de @arksine
 
 ## Méthode 1
 
@@ -111,7 +111,7 @@ Le menu de configuration du firmware apparait, choisir les options :
  
 </details>
 
-- une fois ces options sélectionnées, presser Q pour sortir de ce menu, valider par Y pour sauvegarder la configuration
+- une fois ces options sélectionnées, presser <kbd>Q</kbd> pour sortir de ce menu, valider par <kbd>Y</kbd> pour sauvegarder la configuration
 
 <details>
 <summary>Quitter en validant</summary>
@@ -155,7 +155,7 @@ Le firmware a été compilé dans le dossier ~/klipper/out et porte le nom **kli
   - relâcher alors le bouton BOOT.
   - vérifier à nouveau avec un `lsblk` et/ou un `lsusb`
 
-> [!TIPS]
+> [!TIP]
 > Si l'automontage de clé USB a été ajouté au système lors de la préparation de l'image système, copier le firmware sur l'emplacement émulant le stockage du RP2040:
 >
 > ```
