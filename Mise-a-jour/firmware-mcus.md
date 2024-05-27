@@ -358,6 +358,7 @@ Utiliser la commande suivante :
 
 Remplacer ci-dessus dans `/dev/serial/by-id/by-id/usb-katapult_rp2040_xxxxxxxxxxxxxx`, les ***xxxxxxxxxxx*** par le nombre retourné sur votre système (ou effacer ce /dev/serial/by-id/by-id/usb-katapult_rp2040_xxxxxxxxxxxxxx et coller celui obtenu avec ls /dev/serial/by-id).
 
+---
 > [!NOTE]
 > 
 > Les firmwares Klipper sont maintenant tous installés sur les différents contrôleurs dans des versions identiques.
