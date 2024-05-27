@@ -193,11 +193,14 @@ Une fois le serveur lancé (en tâche de fond) sur le port 8888:
 - le copier sur la carte μSD 
 
 3. Si Samba a été ajouté au système, on peut accéder à son répertoire personnel
+
 ecran samba
 4. Si l'automontage de périphériques de stockage a été installé sur le système, utiliser une clé USB adaptateur SD :
 ```
 cp ~/klipper/out/klipper.bin ~/priner_data/gcodes/USB/X_4.bin
 ```   
+
+### Procéder au flashage
 
 - une fois le fichier X_4.bin recopié à la racine de la carte μSD:
   - introduire cette carte dans le lecteur
