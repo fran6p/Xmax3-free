@@ -64,7 +64,7 @@ Quelques outils sont nécessaires:
   
 # MCU PRINCIPAL
 
-## Préparer le firmware
+## Configurer le firmware Klipper
 
 Connecté en ssh, lancer la suite de commandes:
 ```
@@ -114,7 +114,7 @@ Le menu de configuration du firmware apparait, choisir les options :
 </p>
  
 </details>
-Pour la communication on utilise le mode UART; lLe contrôleur RK3328 est câblé directement au STM32F402 comme indiqué sur ce schéma (extrait)
+Pour la communication on utilise le mode UART; le contrôleur RK3328 est câblé directement au STM32F402 comme indiqué sur ce schéma (extrait)
 
 <details>
 <summary>RK3328<->STM32</summary>
@@ -143,6 +143,30 @@ Au final, la configuration complète doit être comme ci-dessous :
 
 ## Compiler
 
+- compiler le firmware `make -j4` (utiliser une compilation parallèle à l'aide de plusieurs coeurs du contrôleur RK3328)
+- attendre que le processus se termine
+<details>
+<summary>Fin de la compilation</summary>
+
+<p align="center">
+<img src="/Images/klipper-compil-stm32f401.jpg"
+</p>
+
+</details>  
+
+Le firmware a été compilé dans le dossier ~/klipper/out et porte le nom **klipper.bin**
+
+## Flasher le firmware
+
+Le processus de flashage utilise un carte μSD (formatée FAT32 d'une capacité de moins de 32 Go) introduite dans le lecteur de carte μSD situé sur la carte X-4 (X-6 pour les machines plus récentes)
+<details>
+<summary>Motherboard</summary>
+ 
+<p align="center">
+<img src="/Images/xmax3-mb.jpg"
+</p>
+
+</details>
 
 # MCU Linux (contrôleur de la carte X-4 / X-6, Rockchip RK3328)
 
