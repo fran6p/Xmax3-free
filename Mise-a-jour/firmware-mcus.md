@@ -180,7 +180,7 @@ Plusieurs méthodes permettent de le faire :
 
 1. copier dans le répertoire de configuration de Klipper (~/printer_data/config)
 ```
-cp ~/klipper/out/klipper.bin ~/priner_data/config/X_4.bin
+cp ~/klipper/out/klipper.bin ~/printer_data/config/X_4.bin
 ```
 Le récupérer en utilisant Fluidd (clic droit sur le fichier, télécharger)
 
@@ -199,15 +199,15 @@ Une fois le serveur lancé (en tâche de fond) sur le port 8888:
 ecran samba
 4. Si l'automontage de périphériques de stockage a été installé sur le système, utiliser une clé USB adaptateur SD :
 ```
-cp ~/klipper/out/klipper.bin ~/priner_data/gcodes/USB/X_4.bin
+cp ~/klipper/out/klipper.bin ~/printer_data/gcodes/USB/X_4.bin
 ```   
 
 ### Procéder au flashage
 
 - une fois le fichier X_4.bin recopié à la racine de la carte μSD:
-  - introduire cette carte dans le lecteur
-  - allumer l'imprimante
-  - patienter (très peu de temps), le temps que le processus de flashage se termine
+  - introduire celle-ci dans le lecteur de carte
+  - allumer l'imprimante (si elle était allumée, l'éteindre et patienter au moins 30 secondes, le temps que le supercondensateur se décharge, allumer alors) 
+  - patienter (***très peu de temps***), le temps que le processus de flashage se termine
  
  
 # MCU Linux (contrôleur de la carte X-4 / X-6, Rockchip RK3328)
