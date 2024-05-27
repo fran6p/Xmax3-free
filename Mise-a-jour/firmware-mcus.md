@@ -168,7 +168,9 @@ Le processus de flashage utilise un carte μSD (formatée FAT32 d'une capacité 
 
 </details>
 
-Pour que le flashage réussisse, le fichier klipper.bin doit porter un nom précis : **X_4.bin** (x majuscule, souligné, chiffre 4).
+> [!IMPORTANT]
+>
+> Pour que le flashage réussisse, le fichier klipper.bin doit porter un nom précis : **X_4.bin** (x majuscule, souligné, chiffre 4).
 
 Reste à récupérer ce fichier, le renommer puis le copier à la racine de la carte μSD
 
