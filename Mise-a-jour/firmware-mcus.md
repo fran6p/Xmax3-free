@@ -90,7 +90,7 @@ Le menu de configuration du firmware apparait, choisir les options :
 <summary>choix RP2040</summary>
  
 <p align="center">
-<img src="/Images/klipper-menuconfig-choix-rp2040.jpg"
+<img src="/Images/klipper-menuconfig-choix-rp2040.jpg">
 </p>
 
 </details>
@@ -101,7 +101,9 @@ Le menu de configuration du firmware apparait, choisir les options :
 <details>
 <summary>Au final</summary>
 
-![Raspberry Pi RP2040](../Images/klipper-menuconfig-rp2040.jpg)
+<p align="center">
+<img src="/Images/klipper-menuconfig-rp2040.jpg">
+</p>
  
 </details>
 
@@ -110,7 +112,9 @@ Le menu de configuration du firmware apparait, choisir les options :
 <details>
 <summary>Quitter en validant</summary>
  
-![sauvegarder-configuration](../Images/make-menuconfig-save.jpg)
+<p align="center">
+<img src="/Images/make-menuconfig-save.jpg"
+</p>
 
 </details>
 
@@ -119,7 +123,9 @@ Le menu de configuration du firmware apparait, choisir les options :
 <details>
 <summary>Extrait de la compilation</summary>
 
- ![extrait](../Images/klipper-compil-rp2040-uf2.jpg)
+<p align="center">
+<img src="/Images/klipper-compil-rp2040-uf2.jpg"
+</p>
 
 </details>  
 
@@ -134,15 +140,21 @@ Le firmware a été compilé dans le dossier ~/klipper/out et porte le nom **kli
   - allumer l'imprimante
   - **ne relâcher la pression sur ce bouton qu'une fois l'imprimante complètement démarrée**. 
 
-![bootsel](../Images/toolhead.jpg)
+<p align="center">
+<img src="/Images/toolhead.jpg">
+</p>
+
 - relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage (le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte => le firmware de l'écran considère qu'il y a un problème 😏)
 - se (re)connecter en ssh en utilisateur ***mks***
 - vérifier que le RP2040 est bien en mode émulation de stockage:
   - `lsblk` doit afficher un périphérique sda (partition sda1), et/ou
   - `lsusb` permet également de vérifier que le RP2040 est passé dans le «bon» mode (**ID 2a8a:0003 Raspberry Pi RP2 Boot**):
 
-![lsblk](../Images/lsblk-sda1-automount.jpg)
-![lsusb](../Images/rp2040-lsusb-boot.jpg)
+<p align="center">
+<img src="/Images/lsblk-sda1-automount.jpg">
+<img src="/Images/rp2040-lsusb-boot.jpg>
+</p>
+
 - Si aucun périphérique sda1 n'apparait à la suite de la commande `lsblk` ou que le périphérique USB n'est pas `ID 2a8a:0003 Raspberry Pi RP2 Boot`:
   - presser et maintenir enfoncé le bouton BOOT,
   - presser et relâcher le bouton RESET,
@@ -180,7 +192,7 @@ sudo umount /mnt
 >
 > Un `lsusb` permet de vérifier que le RP2040 n'est plus en mode émulation de stockage
 > 
-> ![openmoko](../Images/lsusb-rp2040-openmoko.jpg)
+> <p align="center"><img src="/Images/lsusb-rp2040-openmoko.jpg"></p>
 
 ## Méthode 2
 
@@ -206,12 +218,16 @@ make menuconfig
 <details>
 <summary>Choix à réaliser</summary>
  
-![katapult](../Images/katapult-rp2040.jpg)
-![katapult](../Images/katapult-16k-bootloader.jpg)
+<p align="center">
+<img src="/Images/katapult-rp2040.jpg">
+<img src="/Images/katapult-16k-bootloader.jpg">
+</p>
 
 Au final
 
-![katapult](../Images/katapult-menuconfig.jpg)
+<p align="center">
+<img src="/Images/katapult-menuconfig.jpg)">
+</p>
 
 </details>
 
@@ -227,7 +243,9 @@ make -j4
 <details>
 <summary>Résultat de la compilation</summary>
  
-![katapult](../Images/katapult-compil-rp2040.jpg)
+<p align="center">
+<img src="/Images/katapult-compil-rp2040.jp">
+</p>
 
 </details>
 
@@ -242,7 +260,9 @@ Pour flasher ce firmware, le contrôleur RP2040 doit passer en mode émulation d
   - allumer l'imprimante
   - **Ne pas relâcher la pression sur ce bouton  tant que l'imprimante n'a pas complètement démarré.** 
 
-![bootsel](../Images/toolhead.jpg)
+<p align="center">
+<img src="/Images/toolhead.jpg">
+</p>
 - relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage (le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte et l'écran => le firmware de l'écran considère qu'il y a un problème 😏)
 - se (re)connecter en ssh en utilisateur ***mks***
 - vérifier que le RP2040 est bien en mode émulation de stockage :
@@ -297,11 +317,15 @@ make menuconfig
 <details>
 <summary>RP2040, bootloader de 16 Kio</summary>
 
-![bootloader](../Images/klipper-menuconfig-16k-bootloader-rp2040.jpg)
+<p align="center">
+<img src="/Images/klipper-menuconfig-16k-bootloader-rp2040.jpg">
+</p>
 
 pour obtenir au final
 
-![config](../Images/klipper-menuconfig-rp2040-katapult.jpg)
+<p align="center">
+<img src="/Images/klipper-menuconfig-rp2040-katapult.jpg">
+</p>
  
 </details>  
 
@@ -317,7 +341,9 @@ make -j4
 <details>
 <summary>Extrait de la compilation</summary>
 
- ![extrait](../Images/klipper-compil-rp2040.jpg)
+<p align="center">
+<img src="/Images/klipper-compil-rp2040.jpg">
+</p>
 
 </details>  
 
@@ -339,8 +365,8 @@ Remplacer ci-dessus dans `/dev/serial/by-id/by-id/usb-katapult_rp2040_xxxxxxxxxx
 > 
 > Les firmwares Klipper sont maintenant tous installés sur les différents contrôleurs dans des versions identiques.
 > 
-> ![fluidd-ok](../Images/fluidd-mcus-v0.12.jpg)
-> ![mainsail-ok](../Images/mainsail-mcus-v0.12.jpg)
+> <p align="center"><img src="/Images/fluidd-mcus-v0.12.jpg"><img src="Images/mainsail-mcus-v0.12.jpg></p>
+> 
 > Ni Fluidd ni Mainsail n'indiquent plus d'erreurs
 
 
