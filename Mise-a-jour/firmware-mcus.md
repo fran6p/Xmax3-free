@@ -168,20 +168,20 @@ Le firmware a été compilé dans le dossier ~/klipper/out et porte le nom **kli
 > sync
 > ```
 
-- Sinon, il faudra d'abord monter le stockage (nécessite les droits root):
+- Au cas où l'automontage n'a pas été installé, il faudra d'abord monter le stockage (*nécessite les droits root*):
 ```
 sudo mount /dev/sda1 /mnt
-sudo systemctl daemon-relaod
+sudo systemctl daemon-reload
 ```
 Puis procéder au «flashage» via copie du firmware
 ```
-sudo cp /home/mks/klipper/out/*klipper.uf2 /mnt
+sudo cp /home/mks/klipper/out/klipper.uf2 /mnt
 sync
 sudo umount /mnt
 ```
 
 > [!NOTE]
-> Une fois le fichier .uf2 copié, le RP2040 se déconnecte automatiquement en tant que périphérique de stockage de masse USB et exécute le code.
+> Une fois le fichier .uf2 copié, le RP2040 se déconnectera automatiquement en tant que périphérique de stockage de masse USB.
 > Par précaution, on démonte tout de même manuellement.
 >
 > Un `lsusb` permet de vérifier que le RP2040 n'est plus en mode émulation de stockage
@@ -205,12 +205,12 @@ make menuconfig
 ```
 
 - choisir les options
-  - Raspberry Pi RP2040
-  - build Katapult deployment application (16 KiB booloader)
-  - communication interface (USB)
+  - [X] Raspberry Pi RP2040
+  - [X] build Katapult deployment application (16 KiB booloader)
+  - [X] communication interface (USB)
 
 <details>
-<summary>choix à réaliser</summary>
+<summary>Choix à réaliser</summary>
  
 ![katapult](../Images/katapult-rp2040.jpg)
 ![katapult](../Images/katapult-16k-bootloader.jpg)
@@ -221,8 +221,8 @@ Au final
 
 </details>
 
-- Presser Q puis Yes pour sauvegarder la configuration
-- compiler le firmware Klipper
+- Presser <kbd>Q</kbd> puis <kbd>Y</kbd>es pour sauvegarder cette configuration
+- compiler le firmware Katapult
 
 ```
 make clean
@@ -231,7 +231,7 @@ make -j4
 
 - A l'issue de la compilation, le firmware Katapult est prêt à être installé, il se trouve dans le dossier ~/katapult/out et porte le nom **katapult.uf2**
 <details>
-<summary>résultat de la compilation</summary>
+<summary>Résultat de la compilation</summary>
  
 ![katapult](../Images/katapult-compil-rp2040.jpg)
 
@@ -249,11 +249,11 @@ Pour flasher ce firmware, le contrôleur RP2040 doit passer en mode émulation d
   - **Ne pas relâcher la pression sur ce bouton  tant que l'imprimante n'a pas complètement démarré.** 
 
 ![bootsel](../Images/toolhead.jpg)
-- relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage (le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte et l'écran et donc le firmware de l'écran considère qu'il y a un problème 😏)
+- relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage (le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte et l'écran => le firmware de l'écran considère qu'il y a un problème 😏)
 - se (re)connecter en ssh en utilisateur ***mks***
 - vérifier que le RP2040 est bien en mode émulation de stockage :
   - `lsblk` doit afficher un périphérique sda (partition sda1)
-  - et/ou vérifier avec un `lsusb` que le RP2040 est passé dans le «bon» mode (**ID 2a8a:0003 Raspberry Pi RP2 Boot**) 
+  - et/ou avec `lsusb` indiquant que le RP2040 est passé dans le «bon» mode (**ID 2a8a:0003 Raspberry Pi RP2 Boot**) 
 - Si aucun périphérique sda1 n'apparait à la suite de la commande `lsblk` (et/ou `lsusb`), c'est que le RP2040 n'est pas passé en mode émulation de stockage de masse (BOOTSEL mode):
   - presser en maintenant enfoncé le bouton BOOT,
   - presser et relâcher le bouton RESET,
@@ -261,16 +261,20 @@ Pour flasher ce firmware, le contrôleur RP2040 doit passer en mode émulation d
   - vérifier à nouveau avec un `lsblk` (et/ou via `lsusb`) le passage en mode BOOTSEL
 - Si l'automontage de clé USB a été ajouté au système, copier le firmware sur l'emplacement émulant le stockage du RP2040:
 
-`cp ~/katapult/out/katapult.uf2 ~/printer_data/gcodes/USB`
+```
+cp ~/katapult/out/katapult.uf2 ~/printer_data/gcodes/USB
+sync
+```
 
 - Sinon, il faudra procéder au montage manuel du stockage :
 ```
 sudo mount /dev/sda1 /mnt
-sudo systemctl daemon-relaod
+sudo systemctl daemon-reload
 ```
 Puis procéder au «flashage» via copie du firmware
 ```
 sudo cp /home/mks/katapult/out/katapult.uf2 /mnt
+sync
 sudo umount /mnt
 ```
 
@@ -278,7 +282,8 @@ sudo umount /mnt
 
 - une fois katapult installé comme chargeur de démarrage, reste à compiler le firmware Klipper et à l'installer
 
-> Katapult installé comme chargeur de démarrage permet désormais de ne plus avoir à ouvrir le capot arrière pour pouvoir déclencher le mode DFU du Raspberry Pi RP2040
+> [!IMPORTANT]
+> Katapult installé comme chargeur de démarrage permet désormais de ne plus avoir à ouvrir le capot arrière pour pouvoir déclencher le mode émulation de stockage de masse (BOOTSEL mode) du Raspberry Pi RP2040
 
 ### Installer Klipper sur la carte A-4 via l'aide de Katapult
 
@@ -290,10 +295,10 @@ make menuconfig
 ``` 
 
 - Le menu de configuration du firmware apparait, choisir les options :
-  - cocher «Enable extra low-level»
-  - RP2040 comme contrôleur
-  - **chargeur de démarrage 16 Kio**
-  - USB comme interface de communication
+  - [X] cocher «Enable extra low-level»
+  - [X] RP2040 comme contrôleur
+  - [X] **chargeur de démarrage 16 Kio**
+  - [X] USB comme interface de communication
 
 <details>
 <summary>RP2040, bootloader de 16 Kio</summary>
@@ -306,7 +311,7 @@ pour obtenir au final
  
 </details>  
 
-- une fois ces options sélectionnées, presser Q pour sortir de ce menu, valider par Y pour sauvegarder la configuration
+- une fois ces options sélectionnées, presser <kbd>Q</kbd> pour sortir de ce menu, valider par <kbd>Y</kbd> pour sauvegarder la configuration
 - compiler Klipper
 
 ```
@@ -330,7 +335,7 @@ Pour permettre le flashage via Katapult, un paquet Python doit être installé :
 
 `sudo apt install python3-serial`
 
-Le flashage va être effectué via USB en utilisant le script `flashtool.py` fourni par Katapult. Il nécessite en paramètre le périphérique série indiqué par `ls /dev/serial/by-id` (penser à le copier pour ensuite le coller après l'option (-d).
+Le flashage est effectué via USB en utilisant le script `flashtool.py` fourni par Katapult. Il nécessite en paramètre le périphérique série indiqué par `ls /dev/serial/by-id` (penser à le copier pour ensuite le coller après l'option (-d)).
 
 Utiliser la commande suivante :
 
@@ -339,8 +344,11 @@ Utiliser la commande suivante :
 Remplacer ci-dessus dans `/dev/serial/by-id/by-id/usb-katapult_rp2040_xxxxxxxxxxxxxx`, les ***xxxxxxxxxxx*** par le nombre retourné sur votre système (ou effacer ce /dev/serial/by-id/by-id/usb-katapult_rp2040_xxxxxxxxxxxxxx et coller celui obtenu avec ls /dev/serial/by-id).
 
 > [!NOTE]
+> 
 > Les firmwares Klipper sont maintenant tous installés sur les différents contrôleurs dans des versions identiques.
 > Ni Fluidd ni Mainsail n'indiquent plus d'erreurs
+> ![fluidd-ok](../Images/fluidd-mcus-v0.12.jpg)
+> ![mainsail-ok](../Images/mainsail-mcus-v0.12.jpg)
 
 copies écrans
 
