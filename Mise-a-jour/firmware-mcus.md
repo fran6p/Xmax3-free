@@ -221,12 +221,7 @@ make menuconfig
 <p align="center">
 <img src="/Images/katapult-rp2040.jpg">
 <img src="/Images/katapult-16k-bootloader.jpg">
-</p>
-
-Au final
-
-<p align="center">
-<img src="/Images/katapult-menuconfig.jpg)">
+<img src="/Images/katapult-menuconfig.jpg">
 </p>
 
 </details>
@@ -244,7 +239,7 @@ make -j4
 <summary>Fin de la compilation</summary>
  
 <p align="center">
-<img src="/Images/katapult-compil-rp2040.jp">
+<img src="/Images/katapult-compil-rp2040.jpg">
 </p>
 
 </details>
