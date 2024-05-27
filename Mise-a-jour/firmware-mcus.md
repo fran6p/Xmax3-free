@@ -245,10 +245,12 @@ make -j4
 </details>
 
 - l'installation du firmware katapult.uf2 est similaire à l'installation de klipper.uf2 utilisé avec la **méthode 1**
+
 <details>
 <summary>Flasher katapult.uf2</summary>
 
 Pour flasher ce firmware, le contrôleur RP2040 doit passer en mode émulation du stockage (BOOTSEL mode).
+
 - éteindre l'imprimante et patienter au moins 30 secondes le temps que le supercondensateur se décharge complètement.
 - le capot arrière de la tête étant démonté:
   - presser et maintenir enfoncé le bouton au bas de la carte nommé **BOOT**
@@ -257,6 +259,7 @@ Pour flasher ce firmware, le contrôleur RP2040 doit passer en mode émulation d
 <p align="center">
 <img src="/Images/toolhead.jpg">
 </p>
+
 - relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage (le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte et l'écran => le firmware de l'écran considère qu'il y a un problème 😏)
 - se (re)connecter en ssh en utilisateur ***mks***
 - vérifier que le RP2040 est bien en mode émulation de stockage :
