@@ -71,17 +71,19 @@ Quelques outils sont nécessaires:
 
   `pwd`
   
-## MCU PRINCIPAL
+# MCU PRINCIPAL
 
-## MCU Linux (contrôleur de la carte X-4 / X-6, Rockchip RK3328)
+# MCU Linux (contrôleur de la carte X-4 / X-6, Rockchip RK3328)
 
-## MCU tête (carte A-4. contrôleur RP2040)
+# MCU tête (carte A-4. contrôleur RP2040)
 
 Ici, le firmware Klipper peut être installé de deux façons:
 1. la première nécessitera **à chaque flashage / reflashage le démontage du capot arrière de la tête** pour accéder au bouton poussoir «BOOTSEL» permettant de passer le controleur RP2040 en mode émulation de stockage
 2. la seconde ne demandera l'étape ci-dessus qu'**une seule fois** pour l'installation d'un chargeur de démarrage permettant ensuite le flashage du controleur RP2040 via USB. Elle nécessite par contre l'installation supplémentaire du logiciel KATAPULT (ex CANBOOT) de @arksine
 
-### Méthode 1
+## Méthode 1
+
+### Préparer le firmware
 
 Connecté en ssh, lancer la suite de commandes:
 ```
@@ -124,7 +126,7 @@ Le menu de configuration du firmware apparait, choisir les options :
 
 Le firmware a été compilé dans le dossier ~/klipper/out et porte le nom **klipper.uf2**
 
-### Flasher le firmware klipper.uf2
+### Flasher le firmware
 
 **Pour flasher ce firmware, le contrôleur RP2040 doit passer en mode émulation du stockage (BOOTSEL mode)**.
 - éteindre l'imprimante et patienter au moins 30 secondes le temps que le supercondensateur se décharge complètement.
@@ -168,11 +170,11 @@ sudo umount /mnt
 > 
 > ![openmoko](../Images/lsusb-rp2040-openmoko.jpg)
 
-### Méthode 2
+## Méthode 2
+
+### Firmware Katapult (installer, préparer, flasher)
 
 Connecté en ssh, lancer la suite de commandes:
-
-#### Installation de KATAPULT (ex CANBOOT)
 
 - Cloner le dépôt :
 
@@ -256,7 +258,7 @@ sudo umount /mnt
 
 > Katapult installé comme chargeur de démarrage permet désormais de ne plus avoir à ouvrir le capot arrière pour pouvoir déclencher le mode DFU du Raspberry Pi RP2040
 
-#### Installer Klipper sur la carte A-4 via l'aide de Katapult
+### Installer Klipper sur la carte A-4 via l'aide de Katapult
 
 - la préparation du firmware Klipper est similaire à la méthode 1, **la seule différence étant d'indiquer que Klipper doit s'installer avec un décalage en mémoire prenant en compte le chargeur de démarrage (bootloader) de Katapult**
 
@@ -290,7 +292,7 @@ make clean
 make -j4
 ```
 
-- attendre que le proccesus se termine
+- attendre que le processus se termine
 <details>
 <summary>Extrait de la compilation</summary>
 
@@ -300,17 +302,19 @@ make -j4
 
 Le firmware a été compilé dans le dossier ~/klipper/out et porte cette fois le nom **klipper.bin**
 
-##### Flasher le firmware klipper.bin
+### Flasher le firmware klipper.bin
 
 Pour permettre le flashage via Katapult, un paquet Python doit être installé :
 
 `sudo apt install python3-serial`
 
-Le flashage va être effectué via USB en utilisant le périphérique série indiqué par `ls /dev/serial/by-id` avec la commande :
+Le flashage va être effectué via USB en utilisant le script `flashtool.py` fourni par Katapult. Il nécessite en paramètre le périphérique série indiqué par `ls /dev/serial/by-id` (penser à le copier pour ensuite le coller après l'option (-d).
+
+Utiliser la commande suivante :
 
 `python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-katapult_rp2040_xxxxxxxxxxxxxx`
 
-Remplacer évidemment les «xxxxxxxxxxx» par le nombre retourné sur votre système.
+Remplacer ci-dessus dans `/dev/serial/by-id/by-id/usb-katapult_rp2040_xxxxxxxxxxxxxx`, les ***xxxxxxxxxxx*** par le nombre retourné sur votre système (ou effacer ce /dev/serial/by-id/by-id/usb-katapult_rp2040_xxxxxxxxxxxxxx et coller celui obtenu avec ls /dev/serial/by-id).
 
 > [!NOTE]
 > Les firmwares Klipper sont maintenant tous installés sur les différents contrôleurs dans des versions identiques.
