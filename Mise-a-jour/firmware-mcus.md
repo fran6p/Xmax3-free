@@ -97,7 +97,7 @@ Le menu de configuration du firmware apparait, choisir les options :
  
 <p align="center">
 <img src="/Images/klipper-menuconfig-choix-linux.jpg">
-  <img src="/Images/klipper-menuconfig-linux-process.jpg">
+<img src="/Images/klipper-menuconfig-linux-process.jpg">
 </p>
 
 </details>
