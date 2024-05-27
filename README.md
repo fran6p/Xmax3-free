@@ -27,7 +27,7 @@ Les imprimantes Qidi Series 3 utilisent une base matérielle solide offrant de b
 >
 > Toutes les fonctionnalités de l'imprimante d'origine sont préservées **sauf**
 > - écran tactile originel
-> - ~~Wifi (X-Max3 / X-Plus3 peuvent heureusement communiquer en Ethernet)~~
+> - ~~Wifi~~ (X-Max3 / X-Plus3 peuvent heureusement communiquer en Ethernet)
 
 ## COMMENT PROCÉDER
 
