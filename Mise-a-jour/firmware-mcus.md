@@ -138,15 +138,18 @@ Le firmware a été compilé dans le dossier ~/klipper/out et porte le nom **kli
 ![bootsel](../Images/toolhead.jpg)
 - relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage (le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte, le firmware de l'écran considère qu'il y a un problème 😏)
 - se (re)connecter en ssh en utilisateur ***mks***
-- vérifier que le RP2040 est bien en mode émulation de stockage `lsblk` doit afficher un périphérique sda (partition sda1), un `lsusb` permet également de vérifier que le RP2040 est passé dans le «bon» mode (**ID 2a8a:0003 Raspberry Pi RP2 Boot**):
+- vérifier que le RP2040 est bien en mode émulation de stockage:
+  - `lsblk` doit afficher un périphérique sda (partition sda1), et/ou
+  - un `lsusb` permet également de vérifier que le RP2040 est passé dans le «bon» mode (**ID 2a8a:0003 Raspberry Pi RP2 Boot**):
 
+![lsblk](../Images/lsblk-sda1-automount.jpg)
 ![lsusb](../Images/rp2040-lsusb-boot.jpg)
 - Si aucun périphérique sda1 n'apparait à la suite de la commande `lsblk` ou que le périphérique USB n'est pas `ID 2a8a:0003 Raspberry Pi RP2 Boot`:
   - presser et maintenir enfoncé le bouton BOOT,
   - presser et relâcher le bouton RESET,
   - relâcher alors le bouton BOOT.
   - vérifier à nouveau avec un `lsblk` et/ou un `lsusb`
-- Si l'automontage de clé USB a été ajouté au système, copier le firmware sur l'emplacement émulant le stockage du RP2040:
+- Si l'automontage de clé USB a été ajouté au système lors de la préparation de l'image système, copier le firmware sur l'emplacement émulant le stockage du RP2040:
   - `cp ~/klipper/out/klipper.uf2 ~/printer_data/gcodes/USB`
   - on peut également faire un `cat ~/klipper/out/klipper.uf2 ~/printer_data/gcodes/USB`
 
@@ -172,7 +175,7 @@ sudo umount /mnt
 
 ## Méthode 2
 
-### Firmware Katapult (installer, préparer, flasher)
+### 1 - Firmware Katapult (installer, préparer, flasher)
 
 Connecté en ssh, lancer la suite de commandes:
 
@@ -219,24 +222,28 @@ make -j4
 
 </details>
 
-- l'installation du firmware katapult.uf2 est similaire à l'installation de klipper.uf2 de la **méthode 1**
+- l'installation du firmware katapult.uf2 est similaire à l'installation de klipper.uf2 utilisé avec la **méthode 1**
 <details>
 <summary>Flasher katapult.uf2</summary>
 
-Pour flasher ce firmware, le contrôleur RP2040 doit passer en mode émulation du stockage (DFU mode).
+Pour flasher ce firmware, le contrôleur RP2040 doit passer en mode émulation du stockage (BOOTSEL mode).
 - éteindre l'imprimante et patienter au moins 30 secondes le temps que le supercondensateur se décharge complètement.
-- le capot arrière de la tête étant démonté, presser et maintenir enfoncé le bouton au bas de la carte nommé **BOOT** puis allumer l'imprimante.
-**Ne pas relâcher la pression sur ce bouton  tant que l'imprimante n'a pas complètement démarré.** 
+- le capot arrière de la tête étant démonté:
+  - presser et maintenir enfoncé le bouton au bas de la carte nommé **BOOT**
+  - allumer l'imprimante
+  - **Ne pas relâcher la pression sur ce bouton  tant que l'imprimante n'a pas complètement démarré.** 
 
 ![bootsel](../Images/toolhead.jpg)
-- Relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage (le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte et l'écran et donc le firmware de l'écran considère qu'il y a un problème 😏)
-- Se (re)connecter en ssh en utilisateur ***mks***
-- Vérifier que le RP2040 est bien en mode émulation de stockage `lsblk` doit afficher un périphérique sda (partition sda1), éventuellement sdb (sdb1)
-- Si aucun périphérique sda1 (sdb1) n'apparait à la suite de la commande `lsblk`, c'est que le RP2040 n'est pas passé en mode DFU:
+- relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage (le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte et l'écran et donc le firmware de l'écran considère qu'il y a un problème 😏)
+- se (re)connecter en ssh en utilisateur ***mks***
+- vérifier que le RP2040 est bien en mode émulation de stockage :
+  - `lsblk` doit afficher un périphérique sda (partition sda1)
+  - et/ou vérifier avec un `lsusb` que le RP2040 est passé dans le «bon» mode (**ID 2a8a:0003 Raspberry Pi RP2 Boot**) 
+- Si aucun périphérique sda1 n'apparait à la suite de la commande `lsblk` (et/ou `lsusb`), c'est que le RP2040 n'est pas passé en mode émulation de stockage de masse (BOOTSEL mode):
   - presser en maintenant enfoncé le bouton BOOT,
   - presser et relâcher le bouton RESET,
   - relâcher alors le bouton BOOT.
-  - vérifier à nouveau avec un `lsblk` le passage en mode DFU
+  - vérifier à nouveau avec un `lsblk` (et/ou via `lsusb`) le passage en mode BOOTSEL
 - Si l'automontage de clé USB a été ajouté au système, copier le firmware sur l'emplacement émulant le stockage du RP2040:
 
 `cp ~/katapult/out/katapult.uf2 ~/printer_data/gcodes/USB`
