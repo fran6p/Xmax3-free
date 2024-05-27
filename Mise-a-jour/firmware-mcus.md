@@ -366,12 +366,12 @@ Remplacer ci-dessus dans `/dev/serial/by-id/by-id/usb-katapult_rp2040_xxxxxxxxxx
 > 
 > Ni Fluidd ni Mainsail n'indiquent plus d'erreurs
 
-
+---
 Dernière étape, le fichier de configuration **printer.cfg**, voir [ici](../Configurations/printer-cfg.md)
 
 > [!TIP]
 >
-> Pour palier au non fonctionnement de l'écran tactile, on peut y palier de plusieurs manières.
+> Pour palier au non fonctionnement de l'écran tactile, on peut y remédier de plusieurs manières.
 > Pour en savoir plus, consulter [ce document](../Hardware/ecran-tactile.md)
 
 
