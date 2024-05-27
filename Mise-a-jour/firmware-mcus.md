@@ -70,7 +70,7 @@ Quelques outils sont nécessaires:
 
 > [!NOTE]
 >
-> Les microcontrôleurs dédiés au contrôle des imprimantes 3D disposent d'un nombre limité et pré-configuré de broches exposées pour gérer les principales fonctions d'impression (résistances thermiques, extrudeuses, steppers...). L'utilisation du contrôleur, ici le Rockchip RK3328 où Klipper est installé en tant que MCU secondaire donne la possibilité d'utiliser directement les GPIO et les bus (i2c, spi) du contrôleur à l'intérieur de klipper
+> Les microcontrôleurs dédiés au contrôle des imprimantes 3D disposent d'un nombre limité et pré-configuré de broches exposées pour gérer les principales fonctions d'impression (thermistances, extrudeurs, pilotes moteurs, …). L'utilisation du contrôleur, ici le Rockchip RK3328 où Klipper est installé en tant que MCU secondaire donne la possibilité d'utiliser directement les GPIO et les bus (i2c, spi) du contrôleur à l'intérieur de klipper
 
 ## Firmware Klipper (installer script RC, configurer, flasher)
 
