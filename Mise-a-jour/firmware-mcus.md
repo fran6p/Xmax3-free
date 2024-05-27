@@ -113,10 +113,15 @@ Le menu de configuration du firmware apparait, choisir les options :
 
 - une fois ces options sélectionnées, presser Q pour sortir de ce menu, valider par Y pour sauvegarder la configuration
 
+<details>
+<summary>Quitter en validant</summary>
+ 
 ![sauvegarder-configuration](../Images/make-menuconfig-save.jpg)
 
-- compiler le firmware `make` ou en profitant de plusieurs coeurs du contrôleur RK3328 `make -j4`
-- attendre que le procesus se termine
+</details>
+
+- compiler le firmware `make`. On peut profiter d'une compilation parallèle en utilisant plusieurs coeurs du contrôleur RK3328 avec un `make -j4`
+- attendre que le processus se termine
 <details>
 <summary>Extrait de la compilation</summary>
 
@@ -136,11 +141,11 @@ Le firmware a été compilé dans le dossier ~/klipper/out et porte le nom **kli
   - **ne relâcher la pression sur ce bouton qu'une fois l'imprimante complètement démarrée**. 
 
 ![bootsel](../Images/toolhead.jpg)
-- relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage (le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte, le firmware de l'écran considère qu'il y a un problème 😏)
+- relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage (le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte => le firmware de l'écran considère qu'il y a un problème 😏)
 - se (re)connecter en ssh en utilisateur ***mks***
 - vérifier que le RP2040 est bien en mode émulation de stockage:
   - `lsblk` doit afficher un périphérique sda (partition sda1), et/ou
-  - un `lsusb` permet également de vérifier que le RP2040 est passé dans le «bon» mode (**ID 2a8a:0003 Raspberry Pi RP2 Boot**):
+  - `lsusb` permet également de vérifier que le RP2040 est passé dans le «bon» mode (**ID 2a8a:0003 Raspberry Pi RP2 Boot**):
 
 ![lsblk](../Images/lsblk-sda1-automount.jpg)
 ![lsusb](../Images/rp2040-lsusb-boot.jpg)
@@ -149,11 +154,21 @@ Le firmware a été compilé dans le dossier ~/klipper/out et porte le nom **kli
   - presser et relâcher le bouton RESET,
   - relâcher alors le bouton BOOT.
   - vérifier à nouveau avec un `lsblk` et/ou un `lsusb`
-- Si l'automontage de clé USB a été ajouté au système lors de la préparation de l'image système, copier le firmware sur l'emplacement émulant le stockage du RP2040:
-  - `cp ~/klipper/out/klipper.uf2 ~/printer_data/gcodes/USB`
-  - on peut également faire un `cat ~/klipper/out/klipper.uf2 ~/printer_data/gcodes/USB`
 
-- Sinon, il faudra d'abord monter le stockage :
+> [!TIPS]
+> Si l'automontage de clé USB a été ajouté au système lors de la préparation de l'image système, copier le firmware sur l'emplacement émulant le stockage du RP2040:
+>
+> ```
+> cp ~/klipper/out/klipper.uf2 ~/printer_data/gcodes/USB
+> sync
+> ```
+> on peut également faire un
+>  ```
+> cat ~/klipper/out/klipper.uf2 ~/printer_data/gcodes/USB
+> sync
+> ```
+
+- Sinon, il faudra d'abord monter le stockage (nécessite les droits root):
 ```
 sudo mount /dev/sda1 /mnt
 sudo systemctl daemon-relaod
