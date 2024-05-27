@@ -14,6 +14,7 @@ Pour chacun des contrôleurs (MCU):
 - principal
 - secondaire (la tête «MKS-THR»)
 - Linux
+
 les étapes à suivre sont quasi identiques:
 
 1. se placer dans le répertoire Klipper du dossier personnel de l'utilisateur «mks»: `cd ~/klipper` ou `cd /home/mks/klipper` ou si on est déjà dans le dossier perso `cd klipper` ou `cd ./klipper`
