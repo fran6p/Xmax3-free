@@ -1,4 +1,4 @@
-# PRÉPARATION / INSTALLATION (flashage) du FIRMWARE KLIPPER
+# PRÉPARATION / INSTALLATION du FIRMWARE KLIPPER
 
 ## SOURCES
 
@@ -78,8 +78,8 @@ Quelques outils sont nécessaires:
 ## MCU tête (carte A-4. controleur RP2040)
 
 Ici, le firmware Klipper peut être installé de deux façons:
-1. la première nécessitera à chaque flashage / reflashage le démontage du capot arrière de la tête pour accéder au bouton poussoir «BOOTSEL» permettant de passer le controleur RP2040 en mode émulation de stockage
-2. la seconde ne demandera l'étape ci-dessus qu'une seule fois pour l'installation d'un chargeur de démarrage permettant ensuite le flashage du controleur RP2040 via USB. Elle nécessite par contre l'installation supplémentaire du logiciel KATAPULT (ex CANBOOT) de @arksine
+1. la première nécessitera **à chaque flashage / reflashage le démontage du capot arrière de la tête** pour accéder au bouton poussoir «BOOTSEL» permettant de passer le controleur RP2040 en mode émulation de stockage
+2. la seconde ne demandera l'étape ci-dessus qu'**une seule fois** pour l'installation d'un chargeur de démarrage permettant ensuite le flashage du controleur RP2040 via USB. Elle nécessite par contre l'installation supplémentaire du logiciel KATAPULT (ex CANBOOT) de @arksine
 
 ### Méthode 1
 
@@ -99,7 +99,7 @@ Le menu de configuration du firmware apparait, choisir les options :
 
 </details>
 
-- Pas de chargeur de démarrage
+- **Pas de chargeur de démarrage**
 - USB comme interface de communication
 
 <details>
@@ -114,7 +114,7 @@ Le menu de configuration du firmware apparait, choisir les options :
 ![sauvegarder-configuration](../Images/make-menuconfig-save.jpg)
 
 - compiler le firmware `make` ou en profitant de plusieurs coeurs du contrôleur RK3328 `make -j4`
-- attendre que le proccesus se termine
+- attendre que le procesus se termine
 <details>
 <summary>Extrait de la compilation</summary>
 
@@ -124,20 +124,28 @@ Le menu de configuration du firmware apparait, choisir les options :
 
 Le firmware a été compilé dans le dossier ~/klipper/out et porte le nom **klipper.uf2**
 
-#### Flasher le firmware klipper.uf2
+### Flasher le firmware klipper.uf2
 
-Pour flasher ce firmware, le contrôleur RP2040 doit passer en mode émulation du stockage.
+**Pour flasher ce firmware, le contrôleur RP2040 doit passer en mode émulation du stockage (BOOTSEL mode)**.
 - éteindre l'imprimante et patienter au moins 30 secondes le temps que le supercondensateur se décharge complètement.
-- le capot arrière de la tête étant démonté, presser et maintenir enfoncé le bouton au bas de la carte nommé **BOOT** et allumer l'imprimante.
-**Ne pas relâcher la pression sur ce bouton  tant que l'imprimante n'a pas complètement démarré. 
+- le capot arrière de la tête étant démonté:
+  - presser et maintenir enfoncé le bouton au bas de la carte nommé **BOOT**
+  - allumer l'imprimante
+  - **ne relâcher la pression sur ce bouton qu'une fois l'imprimante complètement démarrée. 
 
 ![bootsel](../Images/toolhead.jpg)
-- Relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage car le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte et l'écran et donc le firmware de l'écran considère qu'il y a un problème 😏
-- Se (re)connecter en ssh en utilisateur ***mks***
-- Vérifier que le RP2040 est bien en mode émulation de stockage `lsblk` doit afficher un périphérique sda (partition sda1), éventuellement ce pourrait être sdb (sdb1)
-- Si aucun périphérique sda1 (sdb1) n'apparait à la suite de la commande `lsblk`, presser en maintenant enfoncé le bouton BOOT, presser et relâcher le bouton RESET, relâcher alors le bouton BOOT. Vérifier à nouveau avec un `lsblk`
+- relâcher le bouton BOOT quand la lumière interne de l'imprimante s'allume ou une fois l'écran affichant un problème de démarrage (le système d'exploitation ne comporte plus les logiciels permettant la communication entre la carte, le firmware de l'écran considère qu'il y a un problème 😏)
+- se (re)connecter en ssh en utilisateur ***mks***
+- vérifier que le RP2040 est bien en mode émulation de stockage `lsblk` doit afficher un périphérique sda (partition sda1), un `lsusb` permet également de vérifier que le RP2040 est passé dans le «bon» mode (**ID 2a8a:0003 Raspberry Pi RP2 Boot**):
+![lsusb](./Images/rp2040-lsusb-boot.jpg)
+- Si aucun périphérique sda1 n'apparait à la suite de la commande `lsblk` ou que le périphérique USB n'est pas `ID 2a8a:0003 Raspberry Pi RP2 Boot`:
+  - presser et maintenir enfoncé le bouton BOOT,
+  - presser et relâcher le bouton RESET,
+  - relâcher alors le bouton BOOT.
+  - vérifier à nouveau avec un `lsblk` et/ou un `lsusb`
 - Si l'automontage de clé USB a été ajouté au système, copier le firmware sur l'emplacement émulant le stockage du RP2040:
   - `cp ~/klipper/out/klipper.uf2 ~/printer_data/gcodes/USB`
+  - on peut également faire un `cat ~/klipper/out/klipper.uf2 ~/printer_data/gcodes/USB`
 
 - Sinon, il faudra d'abord monter le stockage :
 ```
@@ -147,8 +155,16 @@ sudo systemctl daemon-relaod
 Puis procéder au «flashage» via copie du firmware
 ```
 sudo cp /home/mks/klipper/out/*klipper.uf2 /mnt
+sync
 sudo umount /mnt
 ```
+
+> [!NOTE]
+> Une fois le fichier .uf2 copié, le RP2040 se déconnecte automatiquement en tant que périphérique de stockage de masse USB et exécute le code.
+> Par précaution, on démonte tout de même manuellement.
+>
+> Un `lsusb` permet de vérifier que le RP2040 n'est plus en mode émulation de stockage
+> ![](./images/lsusb-rp2040-openmoko.jpg)
 
 ### Méthode 2
 
