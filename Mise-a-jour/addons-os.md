@@ -34,7 +34,7 @@ else
 fi
 ```
 
-Accès au réglages réseaux :
+Accès aux réglages réseaux (Wifi):
 
 ```
 # Start Network Manager Text User Interface
@@ -85,13 +85,13 @@ mks@mkspi:~$ ip addr
 ```
 
 Paquets à ajouter si absents :
+
 PAQUETS_PYTHON="python3-numpy python3-matplotlib libatlas-base-dev libopenblas-dev python3-serial"
 PAQUET_INDISPENSABLE="git"
-PAQUET_CAMERA="ustreamer"
 
 ```
-udo apt update 
-sudo apt install ${PAQUET_INDISPENSABLE} ${PAQUETS_PYTHON} ${PAQUET_CAMERA} -y
+sudo apt update 
+sudo apt install ${PAQUET_INDISPENSABLE} ${PAQUETS_PYTHON} -y
 ```
 
 Automontage des clés USB :
