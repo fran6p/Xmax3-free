@@ -198,8 +198,8 @@ Le récupérer en utilisant Fluidd (clic droit sur le fichier, télécharger)
 ```
 python3 -m http.server -d "/home/mks/klipper/out" 8888
 ```
-Une fois le serveur lancé (en tâche de fond) sur le port 8888:
-- via un navigateur, accéder à l'adresse http://adresse-ip-imprimante:8888
+Une fois le serveur lancé sur le port 8888:
+- via un navigateur, accéder à l'adresse `http://adresse-ip-imprimante:8888`
 
 <details>
 <summary>Navigateur, accès serveur Web</summary>
