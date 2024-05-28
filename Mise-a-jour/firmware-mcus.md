@@ -185,6 +185,15 @@ cp ~/klipper/out/klipper.bin ~/printer_data/config/X_4.bin
 ```
 Le récupérer en utilisant Fluidd (clic droit sur le fichier, télécharger)
 
+<details>
+<summary>Télécharger firmware</summary>
+ 
+<p align="center">
+<img src="/Images/fluidd-telecharger-fichier.jpg"
+</p>
+
+</details>
+
 2. mettre à disposition le firmware sur le réseau local via le serveur web Python
 ```
 python3 -m http.server -d "/home/mks/klipper/out" 8888
