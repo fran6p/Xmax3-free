@@ -109,7 +109,7 @@ Logiciels (*à télécharger si nécessaire* (⏬)) :
 Une fois ces précautions prises :
 - éteindre l'imprimante et débrancher le câble d'alimentation
 - accéder à l'arrière pour démonter la plaque donnant accès à la partie électronique
-- dévisser les deux vis maintenant l'eMMC sur la carte et extraire celle-ci délicatement en veuillant à l'extraire «verticalement» ( *se mettre à la terre avant de faire  ces manipulations est une bonne pratique pour toute manipulation de carte électronique* 😏 ). Qidi met à disposition [cette vidéo](https://drive.google.com/drive/folders/1EPYKbYz4ecUIf17z5wtP-jDAOPeDkXJP) montrant la procédure.
+- dévisser les deux vis maintenant l'eMMC sur la carte et extraire celle-ci délicatement en veillant à l'extraire «verticalement» ( *se mettre à la terre avant de faire  ces manipulations est une bonne pratique pour toute manipulation de carte électronique* 😏 ). Qidi met à disposition [cette vidéo](https://drive.google.com/drive/folders/1EPYKbYz4ecUIf17z5wtP-jDAOPeDkXJP) montrant la procédure.
 
 
 ## Installation Armbian Bookworm
