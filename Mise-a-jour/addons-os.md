@@ -5,7 +5,7 @@ Lignes de commandes, portions de scripts pour préparation «éventuelle» d'un 
 ## Aides
 
 #=== utiles pour flash de MCU Klipper (extrait de KIAUH)
-
+```
 function get_usb_id() {
   unset mcu_list
   sleep 1
@@ -15,7 +15,6 @@ function get_usb_id() {
     mcu_list+=("${mcu}")
   done
 }
-
 function get_uart_id() {
   unset mcu_list
   sleep 1
@@ -25,7 +24,6 @@ function get_uart_id() {
     mcu_list+=("${mcu}")
   done
 }
-
 function get_dfu_id() {
   unset mcu_list
   sleep 1
@@ -35,6 +33,8 @@ function get_dfu_id() {
     mcu_list+=("${mcu}")
   done
 }
+```
+
 ## Empêcher la mise à jour de certains paquets :
 - via l'utilitaire «**armbian-config**»
 
