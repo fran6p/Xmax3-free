@@ -14,7 +14,7 @@
 
 ## Pourquoi ?
 
-La distribution Linux installée d'origine est une Armbian en version Buster, version passée en fin de vie depuis quelques années déjà.
+**La distribution Linux installée d'origine est une Armbian en version Buster, version passée en fin de vie depuis quelques années déjà.**
 
 Armbian dont le développement est bénévole, a supprimé depuis quelques mois les dépôts Buster de ses serveurs (voir [ici](https://fi.mirror.armbian.de/apt/dists/)). 
 
@@ -51,7 +51,7 @@ Le Klipper (klippy) proposé par Qidi Tech a été installé avec l'environnemen
 
 Au moins deux éléments matériels ne seront plus directement utilisables :
 - l'actuel écran tactile,
-- l'accès réseau Wifi avec la clé Wifi Tenda.
+- ~~l'accès réseau Wifi avec la clé Wifi Tenda~~.
 
 <details>
   <summary>On peut y remédier</summary>
@@ -62,6 +62,7 @@ Au moins deux éléments matériels ne seront plus directement utilisables :
 > 
 > - Klipperscreen avec un autre écran et un SBC (Small Board Computer) pour piloter l'imprimante
 > - Une clé USB Wifi gérée nativement par Armbian ([une bonne liste](https://teamgloomy.github.io/armbian_wifi.html)). Il faudra connaitre précisément le fabricant et la puce (chipset) utilisés.
+> - La clé Wifi originelle pourra être utilisable en mettant à jour quelques paquets, au risque de ne plus pouvoir démarrer mais dans un premier temps la connexion Ethernet devra être utilisée pour pouvoir accéder à l'imprimante
 
 </details>
 
