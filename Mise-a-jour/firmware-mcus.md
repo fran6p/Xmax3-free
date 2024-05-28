@@ -224,7 +224,7 @@ Une fois le serveur lancé sur le port 8888:
 
 </details>
 
-3. Si Samba a été ajouté au système, on peut accéder au répertoire personnel de l'utilisateur «mks»
+3. Si Samba a été ajouté au système, on peut accéder au répertoire personnel de l'utilisateur «mks» à partir de l'explorateur de fichiers
 
 <details>
 <summary>Navigateur, accès serveur Web</summary>
