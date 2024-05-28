@@ -187,18 +187,46 @@ Le récupérer en utilisant Fluidd (clic droit sur le fichier, télécharger)
 
 2. mettre à disposition le firmware sur le réseau local via le serveur web Python
 ```
-exec sh -c 'python3 -m http.server -d "/home/mks/klipper/out" 8888' &
+python3 -m http.server -d "/home/mks/klipper/out" 8888
 ```
 Une fois le serveur lancé (en tâche de fond) sur le port 8888:
 - via un navigateur, accéder à l'adresse http://adresse-ip-imprimante:8888
+
+<details>
+<summary>Navigateur, accès serveur Web</summary>
+ 
+<p align="center">
+<img src="/Images/python-web-server.jpg"
+</p>
+
+</details>
+
 - récupérer le fichier klipper.bin
 - le renommer en X_4.bin
-- le copier sur la carte μSD 
+- le copier sur la carte μSD
+- <kbd>CTRL</kbd> + <kbd>C</kbd> pour interrompre et quitter le serveur Web
 
-3. Si Samba a été ajouté au système, on peut accéder à son répertoire personnel
+<details>
+<summary>Navigateur, accès serveur Web</summary>
+ 
+<p align="center">
+<img src="/Images/python-web-server-launch.jpg"
+</p>
 
-ecran samba
-4. Si l'automontage de périphériques de stockage a été installé sur le système, utiliser une clé USB adaptateur SD :
+</details>
+
+3. Si Samba a été ajouté au système, on peut accéder au répertoire personnel de l'utilisateur «mks»
+
+<details>
+<summary>Navigateur, accès serveur Web</summary>
+ 
+<p align="center">
+<img src="/Images/explorateur-fichiers-samba.jpg"
+</p>
+
+</details>
+
+4. Si l'automontage de périphériques de stockage a été installé sur le système, utiliser une clé USB adaptateur SD après l'avoir insérée :
 ```
 cp ~/klipper/out/klipper.bin ~/printer_data/gcodes/USB/X_4.bin
 ```   
