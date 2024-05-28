@@ -153,26 +153,26 @@ Le nouveau système d'exploitation (Armbian, version Bookworm) est installé sur
 - récupérer l'adresse IP par le moyen qui convient (Box internet, routeur, logiciel type [AngryIP](https://angryip.org/)
 - démarrer le logiciel SSH (Putty, SSH natif, Mobaxterm, …) et accéder à l'imprimante via son adresse IP
 - le premier accès se fait en tant qu'utilisateur "**root**", mot de passe "**1234**". Cette première connexion lance le setup initial du systéme Armbian (changement du mot de passe "root", choix de la zone horaire, choix du shell entre autre)
-- ensuite il est demandé de créer un nouvel utilisateur ( par exemple: "**mks**", mot de passe "***makerbase***" ), confirmer par ENTRÉE. Xz nouvel utilisateur possède des droits équivalents à «root» (sudo)
+- ensuite il est demandé de créer un nouvel utilisateur ( par exemple: "**mks**", mot de passe "***makerbase***" ), confirmer par <kbd>ENTRÉE</kbd>. Ce nouvel utilisateur possède des droits équivalents à «root» (sudo)
 - chez moi, la zone horaire (timezone) ayant été détectée (Europe/Paris), l'installateur propose de générer les locales. Plusieurs choix étant possible, je sélectionne le 4 (fr_FR.UTF-8)
 - à l'aide du logiciel SSH, ouvrir une nouvelle session en tant que le nouvel utilisateur créé ( "**mks**" )
 - mettre à jour le système :
 
-```sh
+```
 sudo apt update
 sudo apt upgrade
 ```
 ou en une seule ligne
-```sh
+```
 sudo apt update && sudo apt upgrade
 ```
 Confirmer la mise à jour (manuellement) ou ajouter le paramètre "-y" à la suite de "upgrade" 
-```sh
+```
 sudo apt upgrade -y
 ```
 
 <details>
-  <summary>Apercu des étapes ci-dessus</summary>
+  <summary>Aperçu des étapes ci-dessus</summary>
 
   ```
 Welcome to Armbian-unofficial!
