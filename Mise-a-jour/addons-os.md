@@ -184,5 +184,19 @@ echo "udev rule created. You may need to restart your system or reload udev rule
 sudo udevadm control --reload-rules && sudo udevadm trigger
 
 ```
+## Rechercher si une section du fichier printer.cfg existe et n'est pas commentée
+
+```
+printer_cfg="/home/mks/printer_data/config/printer.cfg"
+grep -R "^\[probe\]" "${printer_cfg}"
+…
+Le résultat de cette commande peut être placé dans une variable pour effectuer un test
+abl=$(grep -R "^\[probe\]" "${printer_cfg}")
+if [[ "${abl}" == "[probe]" ]]; then
+	    sed -i 's/printer\.probe\[\"x_offset\"\]/printer\.configfile\.settings\.probe\.x_offset/g' "${printer_cfg}"
+        sed -i 's/printer\.probe\[\"y_offset\"\]/printer.configfile.settings.probe.y_offset/g' "${printer_cfg}"
+fi
+…
+```
 
 ## …
