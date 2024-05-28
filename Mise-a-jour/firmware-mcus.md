@@ -399,7 +399,7 @@ Le firmware a été compilé dans le dossier ~/klipper/out et porte le nom **kli
 
 <p align="center">
 <img src="/Images/lsblk-sda1-automount.jpg">
-<img src="/Images/rp2040-lsusb-boot.jpg>
+<img src="/Images/rp2040-lsusb-boot.jpg">
 </p>
 
 - Si aucun périphérique sda1 n'apparait à la suite de la commande `lsblk` ou que le périphérique USB n'est pas `ID 2a8a:0003 Raspberry Pi RP2 Boot`:
