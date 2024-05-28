@@ -475,9 +475,9 @@ tmpfs               92M       0   92M   0% /run/user/1000
 
 <details>
   
-<summary>Y accéder</summary>
+<summary>Améliorer le système d'exploitation</summary>
 
-Ce ne sont que des améliorations cosmétiques 😏, pour les ajouter [voir ici](./addons-os.md)
+Ce sont des améliorations pratiques 😏, pour les ajouter [voir ici](./completer-os.md)
 
 </details>
 
