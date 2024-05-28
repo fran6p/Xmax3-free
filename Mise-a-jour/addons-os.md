@@ -1,5 +1,40 @@
 # En vrac
 
+Lignes de commandes, portions de scripts pour préparation «éventuelle» d'un script HELPER à la manière de KIAUH (pour le moment quelques notes)
+
+## Aides
+
+#=== utiles pour flash de MCU Klipper (extrait de KIAUH)
+
+function get_usb_id() {
+  unset mcu_list
+  sleep 1
+  mcus=$(find /dev/serial/by-id/* 2>/dev/null)
+
+  for mcu in ${mcus}; do
+    mcu_list+=("${mcu}")
+  done
+}
+
+function get_uart_id() {
+  unset mcu_list
+  sleep 1
+  mcus=$(find /dev -maxdepth 1 -regextype posix-extended -regex "^\/dev\/tty(AMA0|S0)$" 2>/dev/null)
+
+  for mcu in ${mcus}; do
+    mcu_list+=("${mcu}")
+  done
+}
+
+function get_dfu_id() {
+  unset mcu_list
+  sleep 1
+  mcus=$(lsusb | grep "DFU" | cut -d " " -f 6 2>/dev/null)
+
+  for mcu in ${mcus}; do
+    mcu_list+=("${mcu}")
+  done
+}
 ## Empêcher la mise à jour de certains paquets :
 - via l'utilitaire «**armbian-config**»
 
@@ -138,7 +173,7 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 echo "Udev rule for USB automount with sync option is configured."
 ```
 
-Ajout du support ADB
+## Ajout du support ADB
 
 ```
 #!/bin/bash
