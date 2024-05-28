@@ -114,7 +114,7 @@ Le menu de configuration du firmware apparait, choisir les options :
 </p>
  
 </details>
-Pour la communication on utilise le mode UART; le contrôleur RK3328 est câblé directement au STM32F402 comme indiqué sur ce schéma (extrait)
+Pour la communication on utilise le mode UART; le contrôleur RK3328 est câblé directement au STM32F402 comme indiqué sur [ce schéma](../Images/Qidi-mks-skipr-pins.png]
 
 <details>
 <summary>RK3328<->STM32</summary>
