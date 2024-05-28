@@ -115,7 +115,7 @@ Le menu de configuration du firmware apparait, choisir les options :
  
 </details>
 
-Pour la communication on utilise le mode UART; le contrôleur RK3328 est câblé directement au STM32F402 ([voir ce schéma](https://github.com/fran6p/Xmax3-free/blob/main/Images/Qidi-mks-skipr-pins.png))
+Pour la communication on utilise le mode UART, le contrôleur RK3328 est câblé directement au STM32F402 ([voir ce schéma](https://github.com/fran6p/Xmax3-free/blob/main/Images/Qidi-mks-skipr-pins.png))
 
 <details>
 <summary>Extrait du schéma des broches de connexions</summary>
