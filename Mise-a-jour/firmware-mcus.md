@@ -144,7 +144,12 @@ Au final, la configuration complète doit être comme ci-dessous :
 
 ## Compiler
 
-- compiler le firmware `make -j4` (utiliser une compilation parallèle à l'aide de plusieurs coeurs du contrôleur RK3328)
+- compiler le firmware (utiliser une compilation parallèle à l'aide de plusieurs coeurs du contrôleur RK3328 => paramètre **-j4**)
+
+```
+make -j4
+```
+
 - attendre que le processus se termine
 <details>
 <summary>Fin de la compilation</summary>
@@ -155,11 +160,11 @@ Au final, la configuration complète doit être comme ci-dessous :
 
 </details>  
 
-Le firmware a été compilé dans le dossier ~/klipper/out et porte le nom **klipper.bin**
+Le firmware a été compilé dans le dossier **~/klipper/out** et porte le nom **klipper.bin**
 
 ## Flasher le firmware
 
-Le processus de flashage utilise un carte μSD (formatée FAT32 d'une capacité de moins de 32 Go) introduite dans le lecteur de carte μSD situé sur la carte X-4 (X-6 pour les machines plus récentes)
+Le processus de flashage utilise une carte μSD (formatée FAT32 d'une capacité de moins de 32 Go) introduite dans le lecteur de carte μSD situé sur la carte X-4 (X-6 pour les machines plus récentes)
 <details>
 <summary>Motherboard</summary>
  
@@ -179,7 +184,7 @@ Reste à récupérer ce fichier, le renommer puis le copier à la racine de la c
 
 Plusieurs méthodes permettent de le faire :
 
-1. copier dans le répertoire de configuration de Klipper (~/printer_data/config)
+1. le copier dans le répertoire de configuration de Klipper (~/printer_data/config)
 ```
 cp ~/klipper/out/klipper.bin ~/printer_data/config/X_4.bin
 ```
@@ -198,7 +203,7 @@ Le récupérer en utilisant Fluidd (clic droit sur le fichier, télécharger)
 ```
 python3 -m http.server -d "/home/mks/klipper/out" 8888
 ```
-Une fois le serveur lancé sur le port 8888:
+Une fois le serveur lancé sur le port utilisé dans la commande précédente (8888):
 - via un navigateur, accéder à l'adresse `http://adresse-ip-imprimante:8888`
 
 <details>
