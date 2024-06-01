@@ -618,7 +618,9 @@ Remplacer ci-dessus dans `/dev/serial/by-id/by-id/usb-katapult_rp2040_xxxxxxxxxx
 > <p align="center"><img src="/Images/fluidd-mcus-v0.12.jpg"></p>
 > <p align="center"><img src="/Images/mainsail-mcus-v0.12.jpg"></p>
 >    
-> Ni Fluidd ni Mainsail n'indiquent plus d'erreurs
+> Fluidd indique une erreur et donne la solution pour y remédier
+> <p align="center"><img src="/Images/fluidd-avertissements.jpg"></p>
+
 
 ---
 Dernière étape, le fichier de configuration **printer.cfg**, voir [ici](../Configuration/printer-cfg.md)
