@@ -199,7 +199,7 @@ Le récupérer en utilisant Fluidd (clic droit sur le fichier, télécharger)
 
 </details>
 
-2. mettre à disposition le firmware sur le réseau local via le serveur web Python
+2. le mettre à disposition sur le réseau local via Python qui possède un serveur web
 ```
 python3 -m http.server -d "/home/mks/klipper/out" 8888
 ```
