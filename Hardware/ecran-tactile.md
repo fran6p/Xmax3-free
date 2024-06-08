@@ -42,7 +42,7 @@ En l'absence de connecteur, utiliser un autre écran va nécessiter l'utilisatio
 ## Que choisir ?
 
 Plusieurs possibilités:
-1. utiliser un smartphone / tablette et installer une application type Mobileraker / Klipperoid, voir >>> [ici]( >>> [ici](https://www.lesimprimantes3d.fr/forum/topic/51248-klipper-sur-tablette-android/) <<<
+1. utiliser un smartphone / tablette et installer une application type Mobileraker / Klipperoid, voir >>> [ici](https://www.lesimprimantes3d.fr/forum/topic/51248-klipper-sur-tablette-android/) <<<
 2. utiliser un smartphone / tablette avec Klipperscreen installé sur la carte contrôleur et un serveur X installé côté téléphone (connexion via ADB)
 3. utiliser un mini écran (2,8 ou 3,5") sur lequel est installé / flashé CYD-Klipper, voir >>> [ici](https://www.lesimprimantes3d.fr/forum/topic/56853-klipper-%C3%A9cran-tactile-minimaliste-et-bon-march%C3%A9/) <<<
 4. se passer de l'écran et n'utiliser que l'ordinateur via une interface Web ( Fluidd / Mainsail )
