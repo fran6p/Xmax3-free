@@ -37,7 +37,7 @@ Contrairement à la carte MKS SKIPR de Makerbase sur laquelle les cartes contrô
 - pas de sortie HDMI,
 - pas de connecteur prévu pour un écran LCD
 
-En l'absence de connecteur, utiliser un autre écran va nécessiter l'installation de matériels supplémentaires.
+En l'absence de connecteur, utiliser un autre écran va nécessiter l'utilisation de matériels supplémentaires.
 
 ## Que choisir ?
 
