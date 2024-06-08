@@ -21,11 +21,9 @@ c'est pourquoi les mises à jour du firmware de l'écran sont si lentes. Le micr
 
 ## Pourquoi remplacer l'écran ?
 
-Comme on l'a vu ci-dessus, pour fonctionner, le firmware de l'écran originel doit pouvoir communiquer avec Moonraker / Klipper par l'intermédiaire d'un programme (Xindi). En installant une image du systèmè plus récente (Armbian Bookworm + écosystème Klipper «vanilla»), ce programme n'a pas été réinstallé.
+Comme on l'a vu ci-dessus, pour fonctionner, le firmware de l'écran originel doit pouvoir communiquer avec Moonraker / Klipper par l'intermédiaire d'un programme (Xindi). En installant une image du système plus récente (Armbian Bookworm + écosystème Klipper «vanilla»), ce programme n'a pas été réinstallé.
 
-Pourquoi ?
-
-Xindi et le microgiciel de l'écran utilisent des méthodes / événements codés en «dur» (certains chemins par exemple sont différents (configuration de Klipper, journaux, Gcodes) entre l'écosystème Klipper «officile» et celui de Qidi), le Zoffset est géré par l'écran, sa valeur est stockée dans le fichier ***config.mksini***, des fichiers Python de Klipper et Moonraker ont été modifiés pour pouvoir gérer cet écran.
+Xindi et le microgiciel de l'écran utilisent des méthodes / événements codés en «dur» (certains chemins par exemple sont différents (configuration de Klipper, journaux, Gcodes) entre l'écosystème Klipper «officiel» et celui de Qidi), le Zoffset est géré par l'écran, sa valeur est stockée dans le fichier ***config.mksini***, des fichiers Python de Klipper et Moonraker ont été modifiés pour pouvoir gérer cet écran.
 
 Donc, le simple ajout de Xindi ne permettrait pas le fonctionnement correct de l'écran.
 
@@ -35,4 +33,17 @@ Au premier allumage de l'imprimante après installation du nouveau système, le 
 <img src="/Images/BSOD-screen.jpg">
 </p>
 
+Contrairement à la carte MKS SKIPR de Makerbase sur laquelle les cartes contrôleur Qidi (X-4, X-6) sont basées, ces dernières ne possèdent aucun moyen matériel d'installer un écran:
+- pas de sortie HDMI,
+- pas de connecteur prévu pour un écran LCD
+
+En l'absence de connecteur, utiliser un autre écran va nécessiter l'installation de matériels supplémentaires.
+
+## Que choisir ?
+
+Plusieurs possibilités:
+1. utiliser un smartphone / tablette et installer une application type Mobileraker / Klipperoid
+2. utiliser un mini écran (2,8 ou 3,5") sur lequel est installé / flashé CYD-Klipper
+3. se passer de l'écran et n'utiliser que l'ordinateur via une interface Web ( Fluidd / Mainsail )
+4. utiliser un autre écran tactile de 5", relié en HDMI ou via une nappe DSI à un ordinateur monocarte (SBC) genre Raspberry Pi (minima, un RPi 0v2)
 
