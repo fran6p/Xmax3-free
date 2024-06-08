@@ -43,7 +43,8 @@ En l'absence de connecteur, utiliser un autre écran va nécessiter l'utilisatio
 
 Plusieurs possibilités:
 1. utiliser un smartphone / tablette et installer une application type Mobileraker / Klipperoid
-2. utiliser un mini écran (2,8 ou 3,5") sur lequel est installé / flashé CYD-Klipper
-3. se passer de l'écran et n'utiliser que l'ordinateur via une interface Web ( Fluidd / Mainsail )
-4. utiliser un autre écran tactile de 5", relié en HDMI ou via une nappe DSI à un ordinateur monocarte (SBC) genre Raspberry Pi (minima, un RPi 0v2)
+2. utiliser un smartphone / tablette avec Klipperscreen installé sur la carte contrôleur et un serveur X installé côté téléphone (connexion via ADB)
+3. utiliser un mini écran (2,8 ou 3,5") sur lequel est installé / flashé CYD-Klipper
+4. se passer de l'écran et n'utiliser que l'ordinateur via une interface Web ( Fluidd / Mainsail )
+5. utiliser un autre écran tactile de 5", relié en HDMI ou via une nappe DSI à un ordinateur monocarte (SBC) genre Raspberry Pi (minima, un RPi 0v2)
 
