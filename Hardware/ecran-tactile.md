@@ -151,7 +151,7 @@ C'est la partie la moins amusante. L'ancien écran sur la X-Max3 est maintenu pa
 <img src="/Images/acces-ecran-autocollant-retire.png" width="400" height="300"> <img src="/Images/vis-ecran.png" width="400" height="300">
 </p>
 
-Pour pouvoir accéder aux deux dernières vis, il m'a fallu, retirer les deux coques de côté, puis la façade avant (je n'ai pas repris de photos à cette occasion, celle ci-dessous est issue du test de cette imprimante pour le forum) 
+Pour pouvoir accéder aux deux dernières vis, il m'a fallu, retirer les deux coques de côté, puis la façade avant (je n'ai pas repris de photos à cette occasion, celle ci-dessous est issue du test de cette imprimante pour le forum [lesimprimantes3d.fr](https://www.lesimprimantes3d.fr/forum/topic/54298-la-qidi-tech-x-max-3-revue-d%C3%A9taill%C3%A9e/?do=findComment&comment=556068)) 
 
 <p align="center">
 <img src="/Images/xmax3-a-coeur-ouvert.jpg" width="300" height="400">
