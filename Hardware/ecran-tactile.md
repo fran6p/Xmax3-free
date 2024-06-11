@@ -31,8 +31,6 @@ Donc, le simple ajout de Xindi ne permettrait pas le fonctionnement correct de l
 
 Le hardware des cartes est essentiellement le même. Les cartes TJC étant environ deux fois moins chères que les cartes NX, pour protéger son marché à deux niveaux, Nextion ne propose l'éditeur TJC qu'en langue chinoise.
 
-Pour ceux qui seraient tentés, les dépôts Github de Qidi ont été mis à jour pour la branche 4.x.13 dans lesquels un dossier UI donne accès aux fichiers xxxxx.hmi qui une fois compilés donnent le firmware écran à flasher ( xxxxx.tft) => [Xmax3]( Il faudrait re-programmer tous les évènements. Ce serait éventuellement faisable pour quelqu'un de très motivé (ce qui n'est pas mon cas 😉 ). Nextion commercialise deux versions de sa gamme de produits. Il y a les cartes NX, pour le marché mondial hors Chine, et les cartes TJC pour la Chine continentale. Les cartes sont essentiellement les mêmes. Les cartes TJC sont environ deux fois moins chères que les cartes NX. Pour protéger le marché à deux niveaux, Nextion ne propose l'éditeur TJC qu'en langue chinoise.
-
 Pour ceux qui seraient tentés, les dépôts Github de Qidi ont été mis à jour pour la branche 4.x.13 dans lesquels un dossier UI donne accès aux fichiers xxxxx.hmi qui une fois compilés donnent le firmware écran à flasher ( xxxxx.tft) => [Xmax3](https://github.com/QIDITECH/QIDI_MAX3/tree/MAX3_V4.3.13/UI), [Xplus3](https://github.com/QIDITECH/QIDI_PLUS3/tree/PLUS_V4.2.13/UI) 
 
 <details>
