@@ -148,19 +148,19 @@ A l'issue du redémarrage, si tout s'est bien passé, l'écran de Klipperscreen 
 C'est la partie la moins amusante. L'ancien écran sur la X-Max3 est maintenu par quatre vis sur la façade avant. Seules les deux au bas de l'écran sont accessibles 😞 même après avoir retiré le plastique autocollant. 
 
 <p align="center">
-<img src="/Images/acces-ecran-autocollant-retire.png"  width="300" height="200"> <img src="/Images/vis-ecran.png"  width="120" height="75">
+<img src="/Images/acces-ecran-autocollant-retire.png" width="400" height="300"> <img src="/Images/vis-ecran.png" width="400" height="300">
 </p>
 
 Pour pouvoir accéder aux deux dernières vis, il m'a fallu, retirer les deux coques de côté, puis la façade avant (je n'ai pas repris de photos à cette occasion, celle ci-dessous est issue du test de cette imprimante pour le forum) 
 
 <p align="center">
-<img src="/Images/xmax3-a-coeur-ouvert.jpg">
+<img src="/Images/xmax3-a-coeur-ouvert.jpg" width="400" height="300">
 </p>
 
 Une fois l'écran débranché, les quatre vis ôtées, on peut l'enlever
 
 <p align="center">
-<img src="/Images/qidi-ecran-1.png"> <img src="/Images/qidi-ecran-2.png">
+<img src="/Images/qidi-ecran-1.png" width="400" height="300"> <img src="/Images/qidi-ecran-2.png" width="400" height="300">
 </p>
 
 Le passage des câbles (HDMI, USB) est facilité avec les coques démontées. Un adaptateur imprimé permet de monter le nouvel écran dans l'ancien emplacement (à noter qu'avec cet adaptateur, l'écran rentre au chausse-pieds, une barre métallique sur la X-max 3 met en contrainte l'arrière de l'écran donc la réinstallation de la façade avant doit être réalisée délicatement 😉 ).
@@ -170,7 +170,7 @@ Test pour vérifier que tout fonctionne avant de remettre les coques de côté e
 Au final, l'imprimante est désormais totalement open source 😄 
 
 <p align="center">
-<img src="/Images/ks-accueil.png"> <img src="/Images/ks-accueil-plus.png">
+<img src="/Images/ks-accueil.png" width="400" height="300"> <img src="/Images/ks-accueil-plus.png" width="400" height="300">
 </p>
 
 A noter que l'alimentation du RPi0V2 est comme celle de l'imprimante sur une prise électrique pilotable (Tasmota + Home Assistant). L'extinction de l'imprimante est réalisée par des macros Gcode, plus des macros Shell command qui permettent d'exécuter des scripts shell (le RPi0v2 est d'abord arrêté proprement (shutdown) avant de couper son alimentation électrique). A l'allumage de l'imprimante, l'écran est lui aussi automatiquement allumé (le «delayed_gcode klipperscreen_on» s'en charge) :
