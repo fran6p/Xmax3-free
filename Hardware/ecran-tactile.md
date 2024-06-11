@@ -148,7 +148,7 @@ A l'issue du redémarrage, si tout s'est bien passé, l'écran de Klipperscreen 
 C'est la partie la moins amusante. L'ancien écran sur la X-Max3 est maintenu par quatre vis sur la façade avant. Seules les deux au bas de l'écran sont accessibles 😞 même après avoir retiré le plastique autocollant. 
 
 <p align="center">
-<img src="/Images/acces-ecran-autocollant-retire.png"> <img src="/Images/vis-ecran.png">
+<img src="/Images/acces-ecran-autocollant-retire.png"  width="300" height="200"> <img src="/Images/vis-ecran.png"  width="120" height="75">
 </p>
 
 Pour pouvoir accéder aux deux dernières vis, il m'a fallu, retirer les deux coques de côté, puis la façade avant (je n'ai pas repris de photos à cette occasion, celle ci-dessous est issue du test de cette imprimante pour le forum) 
