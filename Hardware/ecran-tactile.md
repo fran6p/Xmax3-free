@@ -154,7 +154,7 @@ C'est la partie la moins amusante. L'ancien écran sur la X-Max3 est maintenu pa
 Pour pouvoir accéder aux deux dernières vis, il m'a fallu, retirer les deux coques de côté, puis la façade avant (je n'ai pas repris de photos à cette occasion, celle ci-dessous est issue du test de cette imprimante pour le forum) 
 
 <p align="center">
-<img src="/Images/xmax3-a-coeur-ouvert.jpg" width="400" height="300">
+<img src="/Images/xmax3-a-coeur-ouvert.jpg" width="300" height="400">
 </p>
 
 Une fois l'écran débranché, les quatre vis ôtées, on peut l'enlever
