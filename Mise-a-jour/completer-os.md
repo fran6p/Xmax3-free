@@ -6,7 +6,7 @@ On peut se passer de tous ces ajouts mais ce serait dommage de s'en priver, cert
 
 Les OS prévus pour les Single Board Computer (SBC), ordinateurs monocartes dont le plus connu est le Raspberry Pi gèrent moyennement bien les montées de version du noyau (kernel), c'est particulièrement le cas des distributions Armbian.
 
-Des outils existent permettant d'empêcher la mise à jour de paquets (linux-dtb-*, linux-image-*, linux-headers-*, armbian-firmware*, …).
+Des outils existent permettant d'empêcher la mise à jour de paquets (`linux-dtb-*, linux-image-*, linux-headers-*, armbian-firmware*`, …).
 
 Normalement, ces paquets après installation de l'image système sont bloqués. A chaque connexion ssh, c'est normalement indiqué
 
