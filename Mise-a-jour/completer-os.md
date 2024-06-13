@@ -431,7 +431,7 @@ lo        no wireless extensions.
 
 eth0      no wireless extensions.
 ``` 
-J'ai d'autres clés Wifi fonctionnelles sous Linux. Après test, elles fonctionnent avec cette distribution Armbian. Celle-ci (plus efficace) avec son chipset RTW8821C est parfaitement reconnue (y compris le Bluetooth après ajout des paquets «kivonbi1»).
+J'ai d'autres clés Wifi fonctionnelles sous Linux. Après test, elles fonctionnent avec cette distribution Armbian. [Celle-ci](https://www.amazon.fr/dp/B098J4WHYY) (plus efficace) avec son chipset RTW8821C est parfaitement reconnue (y compris le Bluetooth après ajout des paquets «kivonbi1»).
 
 C'est donc un problème avec la clé Tenda et sa puce RTL8188GU
 
