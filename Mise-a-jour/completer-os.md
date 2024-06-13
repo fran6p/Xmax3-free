@@ -316,7 +316,7 @@ Accès au dossier «Home»
 
 ## Agrandir la partition système
 
-L'installation du nouveau système a d'abord été faite sur l'ancienne eMMC de 8 Go. Régulièrement, des images du contenu ont été sauvegardées à l'aide de mon utilitaire favori imageUSB.
+L'installation du nouveau système a d'abord été faite sur l'ancienne eMMC de 8 Go. Régulièrement, des images du contenu ont été sauvegardées à l'aide de mon utilitaire favori [imageUSB](https://www.osforensics.com/tools/write-usb-images.html).
 
 Au départ, la place occupée représentait à peu près moins de la moitié de la capacité totale.
 ``` 
