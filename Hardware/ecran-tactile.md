@@ -36,8 +36,10 @@ Pour ceux qui seraient tentés, les dépôts Github de Qidi ont été mis à jou
 <details>
  <summary>Pour en savoir plus</summary>
 
-- [](https://hackaday.io/page/1652-nextion-hmi-display-a-user-interface-that-is-simple-and-easy-to-use)
-- [](https://www.lyonscomputer.com.au/Electronic-Devices/Nextion-HMI-LCD-Display/Nextion-HMI-LCD-Display.html)
+Quelques liens à propos de ce type d'écran HMI / IHM :
+
+- [1](https://hackaday.io/page/1652-nextion-hmi-display-a-user-interface-that-is-simple-and-easy-to-use)
+- [2](https://www.lyonscomputer.com.au/Electronic-Devices/Nextion-HMI-LCD-Display/Nextion-HMI-LCD-Display.html)
  
 </details>
 Au premier allumage de l'imprimante après installation du nouveau système, le firmware autonome de l'écran ne pouvant communiquer avec la carte, provoque cet affichage sur l'écran
