@@ -539,3 +539,5 @@ sudo nmtui
 ``` 
  
 On peut également utiliser l'utilitaire en ligne de commandes nmcli
+
+La [documentation suivante](./installation-ecosysteme-klipper.md) permet de continuer l'installation avec l'écosystème Klipper
