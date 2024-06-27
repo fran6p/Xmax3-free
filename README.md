@@ -39,4 +39,6 @@ Débutez par ce [premier guide](./Mise-a-jour/installation-OS.md).
 > Comme tout projet Github, vous êtes bienvenus pour remonter des «issues» et pourquoi pas proposer des «pull requests»
 > 
 
+> Si vous appréciez mon travail, vous pouvez m'offrir un café. Bien que ce ne soit en rien obligatoire, j'en serai très flatté :smiley:
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/fran6p)
