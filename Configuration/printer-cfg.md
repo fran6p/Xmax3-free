@@ -5,12 +5,87 @@ Qiditech regroupe dans ce fichier à la fois:
 - la configuration matérielle de tous les composants gérés par le firmware Klipper flashé sur les deux cartes contrôleurs
 - un ensemble de macros
 
-A l'identique des exemples de configuration de Klipper, ce printer.cfg fournit uniquement la configuration matérielle.
+A l'identique [des exemples de fichiers de configuration de Klipper](https://github.com/Klipper3d/klipper/tree/master/config), ici le printer.cfg fournit uniquement la configuration matérielle.
 
 Pour être pleinement fonctionnel, ce fichier ajoute via des inclusions un ensemble de fichiers, le détail en est donné dans [ce document](./inclusions.md)
 
+## En-tête
 
-## Analyse de la configuration matérielle
+Le début du fichier contient les directives de compilation du firmware Klipper pour le MCU principal (à l'identique des exemples de configuration de Klipper) :
+```
+# This file contains common pin mappings for Qidi X-4 (also X-6) board.
+# That board is based on Makerbase MKS-SKRPI, that last board use
+# a different controler (STM32F407) versus STM32F402 on Qidi boards.
+# 
+# To use this config, the firmware should be compiled for the STM32 family,
+# STM32F401 variant.
+# When running "make menuconfig":
+# - select the 32KiB bootloader,
+# - enable "Serial for communication" with "on USART1 PA10/PA9"
+
+# The "make flash" command does not work on the Qidi boards. Instead,
+# after running "make", copy the generated "out/klipper.bin" file to a
+# file named "X_4.bin" on the root of an SD card (FAT32).
+# Power off printer, wait at least 30 seconds for supercapacitor to
+# discharge, insert SDcard on motherboard SD reader, finally power
+# on the Qidi printer to flash main MCU.
+```
+
+## Logo / Figlet
+
+```
+####################################################################
+#   ____             __ _                       _   _              #
+#  / ___|___  _ __  / _(_) __ _ _   _ _ __ __ _| |_(_) ___  _ __   #
+# | |   / _ \| '_ \| |_| |/ _` | | | | '__/ _` | __| |/ _ \| '_ \  #
+# | |__| (_) | | | |  _| | (_| | |_| | | | (_| | |_| | (_) | | | | #
+#  \____\___/|_| |_|_| |_|\__, |\__,_|_|  \__,_|\__|_|\___/|_| |_| #
+#                         |___/                                    #
+#                                                                  #
+####################################################################
+```
+
+## Aperçu rapide des inclusions
+
+```
+########################################################
+#               Included configurations                #
+########################################################
+
+##-------------------------------##
+#        Modèles Series 3         #
+# Décommenter le modèle !         #
+# (un seul modèle sur les trois)  #
+# => Surcharge le printer.cfg     #
+##-------------------------------##
+
+#[include xmax3-blt.cfg]
+#[include xmax3-probe.cfg]
+#[include xplus3.cfg]
+
+
+##-------------------------------##
+#             MACROS              #
+##-------------------------------##
+#        QIDI TECH macros         #
+[include macros/qidi.cfg]
+#        MARLIN G-CODE            #
+[include macros/macros.cfg]
+#         Tools macros            #
+[include macros/tools.cfg]
+#          Variables              #
+[include macros/save_variables.cfg]
+#    Facilitateurs / Helpers      #
+[include macros/helpers.cfg]
+
+##-------------------------------##
+#        EXTERNAL CONFIGS         #
+##-------------------------------##
+#     Client Fluidd / Mainsail    #
+[include mainsail.cfg]
+#        TIMELAPSE PLUGIN         #
+[include timelapse.cfg]
+```
 
 ## Sommaire
 
