@@ -31,8 +31,9 @@ Le début du fichier contient les directives de compilation du firmware Klipper 
 # on the Qidi printer to flash main MCU.
 ```
 
-## Logo / Figlet
+## Logo
 
+Un en-tête créé à l'aide de l'outil **figlet**
 ```
 ####################################################################
 #   ____             __ _                       _   _              #
@@ -47,8 +48,8 @@ Le début du fichier contient les directives de compilation du firmware Klipper 
 
 ## Fichiers annexes ajoutés via des inclusions
 
-Ce fichier `printer.cfg` «modulaire» permet d'inclure les imprimantes X-Max 3 (Bltouch ou Capteur inductif (probe)) et X-Plus 3.
-Pour cela, il suffit de décommenter la configuration correspondant au modèle :
+Ce fichier `printer.cfg` «modulaire» gère trois modéles de la Serie3 (X-Max 3 (Bltouch ou Capteur inductif (probe)) et X-Plus 3).
+Pour cela, il suffit de décommenter la configuration correspondant au modèle utilisé :
 - xmax3-blt.cfg   => X-Max 3 munie du Bltouch
 - xmax3-probe.cfg => X-Max 3 munie du capteur inductif
 - xplus3.cfg      => X-Plus 3 (=capteur inductif)
@@ -56,8 +57,8 @@ Pour cela, il suffit de décommenter la configuration correspondant au modèle :
 ```
 ##-------------------------------##
 #        Modèles Series 3         #
-# !!! Décommenter un seul modèle  #
-# des trois possibles !!!         #
+# ! Décommenter un seul modèle !  #
+#                                 #
 # => Surcharge le printer.cfg     #
 ##-------------------------------##
 
