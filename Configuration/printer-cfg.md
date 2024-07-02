@@ -107,7 +107,7 @@ Le début du fichier contient les directives de compilation du firmware Klipper 
 
 La X-Max 3 gère trois (3) «mcu» (micro controler unit) :
 
-> le principal est celui correspondant au microcontrôleur STM32F402 via une liaison série USB
+> le principal est celui correspondant au microcontrôleur STM32F402 via une liaison série UART (RK3328 et STM32 sont câblés directement sur le PCB)
 
 ```
     [mcu]
@@ -116,15 +116,14 @@ La X-Max 3 gère trois (3) «mcu» (micro controler unit) :
     restart_method: command
 ```
 
-> le second est celui de la carte fille situé sur la tête, microcontrôleur RP2040 (Pi Pico) là encore
->  en liaison série USB
+> le second est celui de la carte fille situé sur la tête, microcontrôleur RP2040 (Pi Pico) via une liaison série (câble USB)
 
 ```
     [mcu MKS_THR]
     serial:/dev/serial/by-id/usb-Klipper_rp2040_65054E953D866458-if00
 ```
 
-> le troisième correspond au contrôleur de la carte (le Rockship RK3328) à l'identique d'un Raspberry Pi
+> le troisième correspond au contrôleur de la carte (Rockship RK3328) à l'identique d'un Raspberry Pi
 
 ```
     [mcu rpi]
@@ -133,14 +132,17 @@ La X-Max 3 gère trois (3) «mcu» (micro controler unit) :
 
 ### [printer]
 
-La section de configuration (printer) précise la cinématique de l'imprimante, ses accélérations et vitesses maximales    
+La section de configuration (printer) précise la cinématique de l'imprimante, ses accélérations et vitesses maximales
+> [!NOTE]
+> # 20240313: The max_accel_to_decel parameter in the [printer] config section has been deprecated. 
+> # [See:](https://www.klipper3d.org/Config_Changes.html#changes)
 
 ```
 [printer]
 kinematics: corexy
 max_velocity: 600
 max_accel: 20000
-max_accel_to_decel: 10000
+minimum_cruise_ratio: 0.5
 max_z_velocity: 20
 max_z_accel: 500
 square_corner_velocity: 8
