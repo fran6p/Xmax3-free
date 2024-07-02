@@ -134,8 +134,8 @@ La X-Max 3 gère trois (3) «mcu» (micro controler unit) :
 
 La section de configuration (printer) précise la cinématique de l'imprimante, ses accélérations et vitesses maximales
 > [!NOTE]
-> # 20240313: The max_accel_to_decel parameter in the [printer] config section has been deprecated. 
-> # [See:](https://www.klipper3d.org/Config_Changes.html#changes)
+> 20240313: The max_accel_to_decel parameter in the [printer] config section has been deprecated. 
+> [See: this](https://www.klipper3d.org/Config_Changes.html#changes)
 
 ```
 [printer]
