@@ -152,13 +152,12 @@ square_corner_velocity: 8
 
 Sections de déclarations de paramètres des moteurs pilotant les axes (stepper …).
 > [!NOTE]
-> La vitesse de mise à l'origine est augmentée (X et Y 80 mm/s (40), Z 15 mm/s (8))
-> 
-> `homing_speed: 80 #40`
+> - vitesse de mise à l'origine augmentée (X et Y 80 mm/s (40), Z 15 mm/s (8))
+> - modification de la sensibilité des pilotes TMC2209 pendant la mise à l'origine (85 => 150) => moins de bruit
 
 Les axes X et Y utilisent la **mise à l'origine sans capteur** permise grâce aux pilotes TMC 2209.
 
-Exemple pour le pilote de l'axe X :
+Exemple avec le pilote de l'axe X :
 
 ```
 [stepper_x]
