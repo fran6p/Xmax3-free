@@ -132,7 +132,7 @@ La X-Max 3 gère trois (3) «mcu» (micro controler unit) :
 
 ### [printer]
 
-La section de configuration (printer) précise la cinématique de l'imprimante, ses accélérations et vitesses maximales
+Cette section précise la cinématique de l'imprimante, ses accélérations et vitesses maximales
 > [!NOTE]
 > 20240313: The max_accel_to_decel parameter in the [printer] config section has been deprecated. 
 > [See: this](https://www.klipper3d.org/Config_Changes.html#changes)
@@ -150,7 +150,7 @@ square_corner_velocity: 8
 
 ### Pilotes moteurs
 
-On trouve évidemment les déclarations de paramètres des moteurs pilotant les axes (stepper …).
+Sections de déclarations de paramètres des moteurs pilotant les axes (stepper …).
 
 Les axes X et Y utilisent la **mise à l'origine sans capteur** permise grâce aux pilotes TMC 2209.
 
@@ -163,80 +163,14 @@ endstop_pin: tmc2209_stepper_x:virtual_endstop
 …
 [tmc2209 stepper_x]
 …
-driver_SGTHRS: 85
+driver_SGTHRS: 150 #85
 …
 ```
 
 L'utilisation de ce mode nécessite la **modification du processus de mise à l'origine** via la directive
-[homing_override] (réduction du courant envoyé aux pilotes moteurs, le temps de cette mise à l'origine) :
+[homing_override] (réduction du courant envoyé aux pilotes moteurs, le temps de cette mise à l'origine),  :
 
-<details>
-    
-```
-## Modification du processus de mise à l'origine
-[homing_override]
-set_position_X: 0
-set_position_y: 0
-set_position_z: 0
-axes: xy
-gcode:
-    {% set HOME_CUR = 1 %}
-    {% set driver_config = printer.configfile.settings['tmc2209 stepper_x'] %}
-    {% set RUN_CUR = driver_config.run_current %}
-    {% set HOLD_CUR = driver_config.hold_current %}
-    {% if params.X is defined %}
-        SET_TMC_CURRENT STEPPER=stepper_x CURRENT={HOME_CUR * 0.8}
-        G28 X
-        SET_TMC_CURRENT STEPPER=stepper_x CURRENT={HOME_CUR}     
-        BEEP I=1 DUR=100       
-        G1 X10 F1200
-    {% endif %}
-    {% if params.Y is defined %}
-        SET_TMC_CURRENT STEPPER=stepper_y CURRENT={HOME_CUR * 0.9}
-        G28 Y
-        SET_TMC_CURRENT STEPPER=stepper_y CURRENT={HOME_CUR}   
-        BEEP I=1 DUR=100          
-       G1 Y10 F1200
-    {% endif %}
-    {% if params.Z is defined %}
-#        G90
-#        G1 X{printer.toolhead.axis_maximum.x/2 - printer.probe["x_offset"]} Y{printer.toolhead.axis_maximum.y/2 - printer.probe["y_offset"]} F7800
-#        G91
-        G28 Z
-        G1 Z20 F600      
-        BEEP I=1 DUR=100      
-    {% endif %}
-    {% if params.X is undefined %}
-    {% if params.Y is undefined %}
-    {% if params.Z is undefined %}
-    G91
-#    G1 Z5 F600    
-    G1 X10 F2400
-    G1 Y10 F2400
-    G4 P2000
-    SET_TMC_CURRENT STEPPER=stepper_x CURRENT={HOME_CUR * 0.8}
-    G28 X
-    SET_TMC_CURRENT STEPPER=stepper_x CURRENT={HOME_CUR}
-    BEEP I=1 DUR=100  
-    G1 X10 F1200
-    SET_TMC_CURRENT STEPPER=stepper_y CURRENT={HOME_CUR * 0.9}
-    G28 Y
-    SET_TMC_CURRENT STEPPER=stepper_y CURRENT={HOME_CUR}
-    BEEP I=1 DUR=100        
-    G90
-    G1 X{printer.toolhead.axis_maximum.x/2 - printer.probe["x_offset"]} Y{printer.toolhead.axis_maximum.y/2 - printer.probe["y_offset"]} F7800
-    G91
-    G28 Z
-    BEEP I=1 DUR=100  
-    G1 Z50  F600
-    {% endif %}
-    {% endif %}
-    {% endif %}
-    SET_TMC_CURRENT STEPPER=stepper_x CURRENT={RUN_CUR}
-    SET_TMC_CURRENT STEPPER=stepper_y CURRENT={RUN_CUR}
-    M204 S10000
-```
-</details>
+Ce mode est géré via le fichier annexe `sensorless_homing_override.cfg`, décrit [ici](./inclusions.md#homing)
     
 ## Gestion des mises en chauffe et surveillance des températures
 
