@@ -51,6 +51,7 @@ Ce fichier `printer.cfg` «modulaire» permet d'inclure les imprimantes X-Max 3 
 Pour cela, il suffit de décommenter la configuration correspondant au modèle :
 - xmax3-blt.cfg   => X-Max 3 munie du Bltouch
 - xmax3-probe.cfg => X-Max 3 munie du capteur inductif
+- xplus3.cfg      => X-Plus 3 (=capteur inductif)
 
 ```
 ##-------------------------------##
