@@ -1,8 +1,8 @@
 # Le fichier de configuration : printer.cfg
 
-Qiditech regroupe dans ce fichier à la fois:
+Qiditech regroupe dans son fichier à la fois:
 
-- la configuration matérielle de tous les composants gérés par le firmware Klipper flashé sur les deux cartes contrôleurs
+- la configuration matérielle de tous les composants gérés par le firmware Klipper
 - un ensemble de macros
 
 A l'identique [des exemples de fichiers de configuration de Klipper](https://github.com/Klipper3d/klipper/tree/master/config), ici le printer.cfg fournit uniquement la configuration matérielle.
@@ -45,7 +45,7 @@ Le début du fichier contient les directives de compilation du firmware Klipper 
 ####################################################################
 ```
 
-## Aperçu rapide des inclusions
+## Fichiers annexes ajoutés via des inclusions
 
 ```
 ########################################################
@@ -54,8 +54,8 @@ Le début du fichier contient les directives de compilation du firmware Klipper 
 
 ##-------------------------------##
 #        Modèles Series 3         #
-# Décommenter le modèle !         #
-# (un seul modèle sur les trois)  #
+# !!! Décommenter un seul modèle  #
+# des trois possibles !!!         #
 # => Surcharge le printer.cfg     #
 ##-------------------------------##
 
