@@ -85,7 +85,7 @@ Les inclusions suivantes ajoutent des fonctionnalités supplémentaires
 ```
 
 Normalement lors de l'installation d'une interface Web via KIAUH, un fichier client a été installé. Ce fichier n'est pas
-modifiable (mode lecture seule) directement, il suffit de recopier la macro _CLIENT_VARIABLE de celui-ci pour pouvoir faire des changements.
+modifiable directement (mode lecture seule), il suffit de recopier la macro _CLIENT_VARIABLE de celui-ci pour pouvoir faire des changements.
 > [!NOTE]
 > Le nom de cette macro débutant par le caractère souligné (_) cache cette macro de la liste
 
