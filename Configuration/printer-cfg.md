@@ -153,7 +153,7 @@ La X-Max 3 utilise trois (3) «mcu» (micro controler unit) :
     restart_method: command
 ```
 
-> le second est celui de la carte fille situé sur la tête, microcontrôleur RP2040 (Pi Pico) accédé via une liaison série (câble USB)
+> le second est celui de la carte fille située sur la tête, microcontrôleur RP2040 (Pi Pico) accédé via une liaison série (câble USB)
 
 ```
     [mcu MKS_THR]
