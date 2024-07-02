@@ -160,10 +160,10 @@ La X-Max 3 utilise trois (3) «mcu» (micro controler unit) :
     serial:/dev/serial/by-id/usb-Klipper_rp2040_65054E953D866458-if00
 ```
 
-> le troisième correspond au contrôleur de la carte (Rockship RK3328) à l'identique d'un Raspberry Pi
+> le troisième correspond au contrôleur de la carte Qidi X-4 ou X-6 (Rockship RK3328)
 
 ```
-    [mcu rpi]
+    [mcu host]
     serial: /tmp/klipper_host_mcu
 ```
 
