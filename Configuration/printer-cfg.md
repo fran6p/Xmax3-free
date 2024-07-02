@@ -47,11 +47,12 @@ Le début du fichier contient les directives de compilation du firmware Klipper 
 
 ## Fichiers annexes ajoutés via des inclusions
 
-```
-########################################################
-#               Included configurations                #
-########################################################
+Ce fichier `printer.cfg` «modulaire» permet d'inclure les imprimantes X-Max 3 (Bltouch ou Capteur inductif (probe)) et X-Plus 3.
+Pour cela, il suffit de décommenter la configuration correspondant au modèle :
+- xmax3-blt.cfg   => X-Max 3 munie du Bltouch
+- xmax3-probe.cfg => X-Max 3 munie du capteur inductif
 
+```
 ##-------------------------------##
 #        Modèles Series 3         #
 # !!! Décommenter un seul modèle  #
@@ -62,8 +63,10 @@ Le début du fichier contient les directives de compilation du firmware Klipper 
 #[include xmax3-blt.cfg]
 #[include xmax3-probe.cfg]
 #[include xplus3.cfg]
+```
 
-
+Les autres inclusions ajoutent des fonctionnalités supplémentaires
+```
 ##-------------------------------##
 #             MACROS              #
 ##-------------------------------##
