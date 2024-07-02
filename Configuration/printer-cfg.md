@@ -66,7 +66,7 @@ Pour cela, il suffit de décommenter la configuration correspondant au modèle :
 #[include xplus3.cfg]
 ```
 
-Les autres inclusions ajoutent des fonctionnalités supplémentaires
+Les inclusions suivantes ajoutent des fonctionnalités supplémentaires
 ```
 ##-------------------------------##
 #             MACROS              #
@@ -81,7 +81,14 @@ Les autres inclusions ajoutent des fonctionnalités supplémentaires
 [include macros/save_variables.cfg]
 #    Facilitateurs / Helpers      #
 [include macros/helpers.cfg]
+```
 
+Normalement lors de l'installation d'une interface Web via KIAUH, un fichier client a été installé. Ce fichier n'est pas
+modifiable (mode lecture seule) directement, il suffit de recopier la macro _CLIENT_VARIABLE de celui-ci pour pouvoir faire des changements.
+> [!NOTE]
+> Le nom de cette macro débutant par le caractère souligné (_) cache cette macro de la liste
+
+```
 ##-------------------------------##
 #        EXTERNAL CONFIGS         #
 ##-------------------------------##
@@ -89,6 +96,31 @@ Les autres inclusions ajoutent des fonctionnalités supplémentaires
 [include mainsail.cfg]
 #        TIMELAPSE PLUGIN         #
 [include timelapse.cfg]
+
+########################################################
+#                   Fluidd / Mainsail                  #
+#       Variable macro from client.cfg settings        #
+########################################################
+[gcode_macro _CLIENT_VARIABLE]
+#variable_use_custom_pos   : False ; use custom park coordinates for x,y [True/False]
+#variable_custom_park_x    : 0.0   ; custom x position; value must be within your defined min and max of X
+#variable_custom_park_y    : 0.0   ; custom y position; value must be within your defined min and max of Y
+#variable_custom_park_dz   : 2.0   ; custom dz value; the value in mm to lift the nozzle when move to park position
+#variable_retract          : 1.0   ; the value to retract while PAUSE
+#variable_cancel_retract   : 5.0   ; the value to retract while CANCEL_PRINT
+#variable_speed_retract    : 35.0  ; retract speed in mm/s
+#variable_unretract        : 1.0   ; the value to unretract while RESUME
+#variable_speed_unretract  : 35.0  ; unretract speed in mm/s
+#variable_speed_hop        : 15.0  ; z move speed in mm/s
+variable_speed_move       : 200.0 ; move speed in mm/s
+#variable_park_at_cancel   : False ; allow to move the toolhead to park while execute CANCEL_PRINT [True/False]
+#variable_park_at_cancel_x : None  ; different park position during CANCEL_PRINT [None/Position as Float]; park_at_cancel must be True
+#variable_park_at_cancel_y : None  ; different park position during CANCEL_PRINT [None/Position as Float]; park_at_cancel must be True
+## !!! Caution [firmware_retraction] must be defined in the printer.cfg if you set use_fw_retract: True !!!
+variable_use_fw_retract   : False ; use fw_retraction instead of the manual version [True/False]
+#variable_idle_timeout     : 0     ; time in sec until idle_timeout kicks in. Value 0 means that no value will be set or restored
+gcode:
+
 ```
 
 ## Sommaire
