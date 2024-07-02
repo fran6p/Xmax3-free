@@ -1,15 +1,14 @@
 # Le fichier de configuration : printer.cfg
 
-Qiditech fournit dans ce fichier à la fois:
+Qiditech regroupe dans ce fichier à la fois:
 
 - la configuration matérielle de tous les composants gérés par le firmware Klipper flashé sur les deux cartes contrôleurs
 - un ensemble de macros
 
-Ayant plutôt l'habitude de séparer «serviettes et torchons», [ma première modification](./MyConfiguration.md) a été de scinder et
-réorganiser ce gros fichiers en deux parties:
+A l'identique des exemples de configuration de Klipper, ce printer.cfg fournit uniquement la configuration matérielle.
 
-- printer.cfg => configuration matérielle uniquement
-- qidi_macros.cfg =>les macros QIDI utilisées via une directive `[include qidi_macros.cfg]` au début du fichier ci-dessus
+Pour être pleinement fonctionnel, ce fichier ajoute via des inclusions un ensemble de fichiers, le détail en est donné dans [ce document](./inclusions.md)
+
 
 ## Analyse de la configuration matérielle
 
