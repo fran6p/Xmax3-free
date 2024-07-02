@@ -143,7 +143,7 @@ gcode:
 
 La X-Max 3 gère trois (3) «mcu» (micro controler unit) :
 
-> le principal est celui correspondant au microcontrôleur STM32F402 via une liaison série UART (RK3328 et STM32 sont câblés directement sur le PCB)
+> le principal est celui correspondant au microcontrôleur STM32F402 accédé via une liaison série UART (RK3328 et STM32 sont câblés directement sur le PCB)
 
 ```
     [mcu]
@@ -152,7 +152,7 @@ La X-Max 3 gère trois (3) «mcu» (micro controler unit) :
     restart_method: command
 ```
 
-> le second est celui de la carte fille situé sur la tête, microcontrôleur RP2040 (Pi Pico) via une liaison série (câble USB)
+> le second est celui de la carte fille situé sur la tête, microcontrôleur RP2040 (Pi Pico) accédé via une liaison série (câble USB)
 
 ```
     [mcu MKS_THR]
@@ -170,8 +170,9 @@ La X-Max 3 gère trois (3) «mcu» (micro controler unit) :
 
 Cette section précise la cinématique de l'imprimante, ses accélérations et vitesses maximales
 > [!NOTE]
-> 20240313: The max_accel_to_decel parameter in the [printer] config section has been deprecated. 
-> [See: this](https://www.klipper3d.org/Config_Changes.html#changes)
+> La version 0.12 de Klipper a introduit quelques changements :
+> - 20240313: The max_accel_to_decel parameter in the [printer] config section has been deprecated. 
+> [Modifications](https://www.klipper3d.org/Config_Changes.html#changes)
 
 ```
 [printer]
