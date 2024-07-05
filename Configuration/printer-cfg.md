@@ -88,7 +88,8 @@ Normalement lors de l'installation d'une interface Web via KIAUH, un fichier cli
 modifiable directement (mode lecture seule), il suffit de recopier la macro _CLIENT_VARIABLE de celui-ci pour pouvoir faire des changements.
 > [!NOTE]
 > Le nom de cette macro débutant par le caractère souligné (_) cache cette macro de la liste
-
+[Voir la documentation](https://github.com/mainsail-crew/mainsail-config?tab=readme-ov-file#customize-macros)
+> 
 ```
 ##-------------------------------##
 #        EXTERNAL CONFIGS         #
