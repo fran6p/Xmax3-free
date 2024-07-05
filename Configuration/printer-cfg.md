@@ -85,10 +85,11 @@ Les inclusions suivantes ajoutent des fonctionnalités supplémentaires
 ```
 
 Normalement lors de l'installation d'une interface Web via KIAUH, un fichier client a été installé. Ce fichier n'est pas
-modifiable directement (mode lecture seule), il suffit de recopier la macro _CLIENT_VARIABLE de celui-ci pour pouvoir faire des changements.
+modifiable directement (mode lecture seule), il suffit de recopier la macro _CLIENT_VARIABLE de celui-ci pour pouvoir faire des changements ([Voir la documentation](https://github.com/mainsail-crew/mainsail-config?tab=readme-ov-file#customize-macros))
+
 > [!NOTE]
 > Le nom de cette macro débutant par le caractère souligné (_) cache cette macro de la liste
-[Voir la documentation](https://github.com/mainsail-crew/mainsail-config?tab=readme-ov-file#customize-macros)
+
 > 
 ```
 ##-------------------------------##
