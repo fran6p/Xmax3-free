@@ -124,6 +124,14 @@ variable_park_at_cancel_y : 10.0 ; different park position during CANCEL_PRINT [
 ## !!! Caution [firmware_retraction] must be defined in the printer.cfg if you set use_fw_retract: True !!!
 variable_use_fw_retract   : False ; use fw_retraction instead of the manual version [True/False]
 #variable_idle_timeout     : 0     ; time in sec until idle_timeout kicks in. Value 0 means that no value will be set or restored
+variable_runout_sensor    : "filament_switch_sensor fila"    ; If a sensor is defined, it will be used to cancel the execution of RESUME in case no filament is detected.
+##                                   Specify the config name of the runout sensor e.g "filament_switch_sensor runout". Hint use the same as in your printer.cfg
+## !!! Custom macros, please use with care and review the section of the corresponding macro.
+## These macros are for simple operations like setting a status LED. Please make sure your macro does not interfere with the basic macro functions.
+## Only  single line commands are supported, please create a macro if you need more than one command.
+#variable_user_pause_macro : ""    ; Everything inside the "" will be executed after the klipper base pause (PAUSE_BASE) function
+#variable_user_resume_macro: ""    ; Everything inside the "" will be executed before the klipper base resume (RESUME_BASE) function
+#variable_user_cancel_macro: ""    ; Everything inside the "" will be executed before the klipper base cancel (CANCEL_PRINT_BASE) function
 gcode:
 
 ```
@@ -209,7 +217,8 @@ square_corner_velocity: 8
 Sections de déclarations de paramètres des moteurs pilotant les axes (stepper …).
 > [!NOTE]
 > - vitesse de mise à l'origine augmentée (X et Y 80 mm/s (40), Z 15 mm/s (8))
-> - modification de la sensibilité des pilotes TMC2209 pendant la mise à l'origine (85 => 150) => moins de bruit
+> - 32 μsteps au lieu de 16 afin de réduire un peu le bruit des déplacements
+> - modification de la sensibilité de détection de mise à l'origine des pilotes TMC2209 (85 => 120) => légèrement moins violent et donc moins de bruit
 
 Les axes X et Y utilisent la **mise à l'origine sans capteur** des pilotes TMC 2209.
 
@@ -218,12 +227,14 @@ Exemple avec le pilote de l'axe X :
 ```
 [stepper_x]
 …
+microsteps: 32
 endstop_pin: tmc2209_stepper_x:virtual_endstop
+homing_speed: 80
 …
 [tmc2209 stepper_x]
 …
 diag_pin: ^PB8
-driver_SGTHRS: 150 #85
+driver_SGTHRS: 120 #85
 …
 ```
 
