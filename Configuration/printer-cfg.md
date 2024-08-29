@@ -162,7 +162,7 @@ La X-Max 3 utilise trois (3) «mcu» (micro controler unit) :
     serial:/dev/serial/by-id/usb-Klipper_rp2040_65054E953D866458-if00
 ```
 
-> le troisième correspond au contrôleur de la carte Qidi X-4 ou X-6 (Rockship RK3328)
+> le troisième correspond au contrôleur de la carte Qidi X-4 ou X-6 (Rockship RK3328). Nécessite une installation complémentaire, voir [ici](https://www.klipper3d.org/fr/RPi_microcontroller.html)
 
 ```
     [mcu host]
@@ -181,6 +181,21 @@ Cette section précise la cinématique de l'imprimante, ses accélérations et v
 kinematics: corexy
 max_velocity: 600
 max_accel: 20000
+minimum_cruise_ratio: 0.5
+max_z_velocity: 20
+max_z_accel: 500
+square_corner_velocity: 8
+```
+Concernant les vitesses et accélérations maximales, elles sont «théoriques». A la suite des tests de résonances, il est préférable d'utiliser celles données pour le formateur utilisé (mzv, ei, …) et de prendre l'accélaration maximale la moins rapide des deux axes.
+
+Exemple avec ma XMax3:
+```
+[printer]
+kinematics: corexy
+max_velocity: 600
+max_accel: 5000 #20000
+# IS Y : suggested max_accel <= 4900 mm/sec^2
+# IS X : suggested max_accel <= 7400 mm/sec^2
 minimum_cruise_ratio: 0.5
 max_z_velocity: 20
 max_z_accel: 500
