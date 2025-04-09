@@ -464,7 +464,7 @@ make menuconfig
 
 - choisir les options
   - [X] Raspberry Pi RP2040
-  - [X] build Katapult deployment application (16 KiB booloader)
+  - [X] build Katapult deployment application (16 KiB bootloader)
   - [X] communication interface (USB)
 
 <details>
