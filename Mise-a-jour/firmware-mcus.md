@@ -545,13 +545,15 @@ sudo umount /mnt
 
 - une fois katapult installé comme chargeur de démarrage, reste à compiler le firmware Klipper et à l'installer
 
+---
 > [!NOTE]
 > Katapult parfois pose des problèmes lors de l'installation via passage en mode BOOTSEL puis copie du fichier katapult.uf2 sur la partie stockage du RP2040.
 > On peut tester [cette méthode alternative](https://canbus.esoterical.online/toolhead_flashing.html#rp2040-based-boards), indiquée dans [le guide d'Esoterical](https://canbus.esoterical.online/) (plutôt orienté CANBus).
 
-
+---
 > [!IMPORTANT]
 > Katapult installé comme chargeur de démarrage permet désormais de ne plus avoir à ouvrir le capot arrière pour pouvoir déclencher le mode émulation de stockage de masse (BOOTSEL mode) du Raspberry Pi RP2040
+---
 
 ### 2 - Firmware Klipper via Katapult (préparer, flasher)
 
