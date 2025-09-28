@@ -243,7 +243,7 @@ Pour réaliser «cette magie», rien de bien sorcier:
 
 - Installer quelques paquets:
 ``` 
-    sudo apt install && sudo apt install samba winbind
+    sudo apt update && sudo apt install samba winbind
 ``` 
 - Éditer le fichier /etc/samba/smb.conf:
 ``` 
