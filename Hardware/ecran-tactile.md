@@ -173,6 +173,8 @@ Au final, l'imprimante est désormais totalement open source 😄
 <img src="/Images/ks-accueil.png" width="400" height="300"> <img src="/Images/ks-accueil-plus.png" width="400" height="300">
 </p>
 
+## Scripts
+
 A noter que l'alimentation du RPi0V2 est comme celle de l'imprimante sur une prise électrique pilotable (Tasmota + Home Assistant). L'extinction de l'imprimante est réalisée par des macros Gcode, plus des macros Shell command qui permettent d'exécuter des scripts shell (le RPi0v2 est d'abord arrêté proprement (shutdown) avant de couper son alimentation électrique). A l'allumage de l'imprimante, l'écran est lui aussi automatiquement allumé (le «delayed_gcode klipperscreen_on» s'en charge) :
 - macros
 ```
